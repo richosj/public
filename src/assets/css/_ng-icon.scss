@@ -1,0 +1,89 @@
+@use "sass:map";
+@use 'utils' as *;
+
+.icon-toggle{
+    display: inline-block;
+    vertical-align: middle;
+    background: url(#{$src}/icon/icon-collapse.png) 50% 50% no-repeat;
+    background-size: 100% auto;
+    height: 14px;
+    width: 24px;
+    transform: rotate(0deg);
+    transition: all 0.15s;
+    .is-active & {
+        transform: rotate(180deg);
+    }
+    @media (max-width: map.get($media,lg)) {
+        width: 14px;
+    }
+}
+.icon-ask{
+    display: inline-block;
+    vertical-align: middle;
+    background: url(#{$src}/icon/icon-ask.png);
+    background-size: 100% auto;
+    width: 20px;
+    height: 20px;
+}
+.icon-options{
+    display: inline-block;
+    vertical-align: middle;
+    background: url(#{$src}/icon/icon-dot.png) 50% 50% no-repeat;
+    background-size: 100% auto;
+    width: 20px;
+    height: 4px;
+    @media (max-width: map.get($media,lg)) {
+        width: 14px;
+    }
+}
+
+.icon-close-white{
+    display: inline-block;
+    vertical-align: middle;
+    background: url(#{$src}/icon/icon-close-white.png)  50% 50% no-repeat;
+    background-size: 100% auto;
+    width: 20px;
+    height: 20px;
+    
+}
+
+.icon-del2{
+    display: inline-block;
+    vertical-align: middle;
+    background: url(#{$src}/icon/icon-del-12x12.png)  50% 50% no-repeat;
+    background-size: 100% auto;
+    width: 12px;
+    height: 12px;
+}
+
+$icons: (
+    "all": "icon-all",
+    "eating": "icon-eating",
+    "supermarket": "icon-supermarket",
+    "store": "icon-store",
+    "research": "icon-research",
+    "cluster": "icon-cluster",
+    "university": "icon-university",
+    "company": "icon-company",
+    "food": "icon-food",
+    "food2": "icon-food2",
+    "market": "icon-market",
+    "product": "icon-product",
+    "sales": "icon-sales"
+);
+
+@each $key, $icon in $icons {
+    .#{$icon} {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        width: 22px;
+        height: 22px;
+        background-image: url("#{$src}/fusion/#{$icon}.png");
+    }
+
+    // 활성화 상태 아이콘
+    .active .#{$icon} {
+        background-image: url("#{$src}/fusion/#{$icon}-on.png");
+    }
+}

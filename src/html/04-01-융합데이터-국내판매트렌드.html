@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+        "title" : "용합데이터",
+        "title2" : "국내 판매 트렌드",
+        })
+        <div class="main-content fusion-data">
+            <div class="row">
+                <div class="container">
+                    <div class="fusion-data-top">
+                        <h3>국내 판매 트렌드</h3>
+                        <button type="button" class="btn-like" title="좋아요">
+                            <i></i>
+                            <span>3,237</span>
+                        </button>
+                    </div>
+
+                    <div class="fusion-data-tab">
+                        <button type="button" class="active" title="선택됨"><i class="icon-1"
+                                aria-hidden="true"></i>전체</button>
+                        <button type="button"><i class="icon-2" aria-hidden="true"></i>외식</button>
+                        <button type="button" onClick="location.href='04-01-융합데이터-국내판매트렌드-슈퍼마켓.html'"><i class="icon-3"
+                                aria-hidden="true"></i>슈퍼마켓</button>
+                        <button type="button"><i class="icon-4" aria-hidden="true"></i>편의점</button>
+                    </div>
+                    <div class="fusion-text-view">
+                        <div>
+                            해당 데이터는 “<span>전국</span>”의 “<span>전체업종</span>”으로 “<span>2023,10~2024,09</span>” 동안의 데이터를
+                            “<span>2024,04</span>” 기준 월로 제공합니다.
+                        </div>
+                        <button type="button" class="btn-st-reset"><i></i>기준조건 변경</button>
+                    </div>
+
+                    <div class="fusion-lv1-btn">
+                        <button type="button" class="active" title="선택됨">판매건수</button>
+                        <button type="button">판매금액</button>
+                        <button type="button">판매단가</button>
+                    </div>
+
+                    <div class="fusion-lv2-group">
+                        <div class="fusion-lv2-btn">
+                            <button type="button" class="active" title="선택됨"><span>전체</span></button>
+                            <div class="line"></div>
+                            <button type="button"><span>지역별</span></button>
+                            <div class="line"></div>
+                            <button type="button"><span>업종별</span></button>
+                        </div>
+                        <div class="fusion-lv2-filter">
+                            <select name="" id="" class="cs-input">
+                                <option value="">기본</option>
+                            </select>
+
+                            <div class="other-filter">
+                                <strong>연관 데이터</strong>
+                                <div class="other-menu">
+                                    <span class="check-open">
+                                        <label class="cs-checkbox">
+                                            <input type="checkbox">
+                                            <i></i>
+                                            <span>팝업</span>
+                                        </label>
+                                    </span>
+                                    <button type="button">원료현황</button>
+                                    <button type="button">국내판매</button>
+                                    <button type="button">지역특성</button>
+                                    <button type="button">갤러리</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="fusion-half-point"></div>
+
+                    <div class="fusion-container">
+                        <div class="hgroup">
+                            <h3>시장동향</h3>
+                            <button type="button" class="collapse-toggle" data-collapse-target="chart-collpase-1">
+                                <i class="icon-toggle" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="chart-collpase-1">
+                            <div class="chart-container">
+                                <!-- 외식 판매순위 -->
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>외식 판매순위 <button type="button" data-toggle-target="ask-content-1"
+                                                data-position="right" title="안내말 열기"><i class="icon-ask"
+                                                    aria-hidden="true"></i>
+                                            </button></strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <ol class="rank-list">
+                                        <li class="up">
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li class="down">
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!-- 외식 판매순위  -->
+                                <!-- 슈퍼마켓 판매순위 -->
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>슈퍼마켓 판매순위 <button type="button" data-toggle-target="ask-content-1"
+                                                data-position="right" title="안내말 열기"><i class="icon-ask"
+                                                    aria-hidden="true"></i>
+                                            </button></strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <ol class="rank-list">
+                                        <li class="up">
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li class="down">
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!-- 편의점 판매순위  -->
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>편의점 판매순위 <button type="button" data-toggle-target="ask-content-1"
+                                                data-position="right" title="안내말 열기"><i class="icon-ask"
+                                                    aria-hidden="true"></i>
+                                            </button></strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <ol class="rank-list">
+                                        <li class="up">
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li class="down">
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!-- 편의점 판매순위  -->
+                                <!-- 편의점 판매순위  -->
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>외식 판매증가율 순위 <small>(기준 월 전월대비)</small> <button type="button"
+                                                data-toggle-target="ask-content-1" data-position="right"
+                                                title="안내말 열기"><i class="icon-ask" aria-hidden="true"></i>
+                                            </button></strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <ol class="rank-list">
+                                        <li class="up">
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li class="down">
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                        <li>
+                                            <span class="sbj">드립 커피</span>
+                                            <span class="price">4604천만원</span>
+                                            <span class="percente">29.61%</span>
+                                            <span class="arw"></span>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!-- 편의점 판매순위  -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: fusion-container  -->
+
+                    <div class="fusion-container">
+                        <div class="hgroup">
+                            <h3>지역별 시장동향 <small>(단위:억원)</small></h3>
+                            <button type="button" class="collapse-toggle" data-collapse-target="chart-collpase-2">
+                                <i class="icon-toggle" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="chart-collpase-2">
+                            <div class="chart-container">
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>서울</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+                                    <div class="chart-area"></div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>기업</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <header class="chart-area">
+                                        <footer class="research-container">
+                                            <header>
+                                                식품연구소 : 3,645개소
+                                            </header>
+                                            <div class="list">
+                                                <div class="item small">소기업 <span>2,173개소</span></div>
+                                                <div class="item medium">중기업 <span>720개소</span></div>
+                                                <div class="item venture">벤처기업 <span>607개소</span></div>
+                                                <div class="item mid-large">중견기업 <span>92개소</span></div>
+                                                <div class="item large">대기업 <span>53개소</span></div>
+                                            </div>
+                                            <footer>
+                                                * 2024년 기준
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: fusion-container  -->
+
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+
+        <div class="option-layer chart-option-layer">
+            <div class="option-layer-inner">
+                <ul>
+                    <li><button>차트1</button></li>
+                    <li><button>차트2</button></li>
+                    <li><button>차트N</button></li>
+                    <li><button>데이터 보기</button></li>
+                    <li><button>이미지 저장</button></li>
+                    <li><button>크게 보기</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ask-layer ask-content-1">
+            <div class="ask-cont">
+                <p class="txt">외식 판매 순위는 다음 조건으로 제공 되고 있습니다.</p>
+                <ul>
+                    <li>금융권 마이테이터</li>
+                    <li>해당지역 지자체의 상권분석 가이드</li>
+                    <li>매출기준 전표 활용</li>
+                </ul>
+                <button type="button" class="btn-close-ask"><i class="icon-close-white"></i></button>
+            </div>
+        </div>
+    </div>
+</body></html>

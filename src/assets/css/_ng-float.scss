@@ -1,0 +1,101 @@
+@use "sass:map";
+@use 'utils' as *;
+
+.float{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+    > a,
+    > button{
+        display: flex;
+        border-radius: 50%;
+        width: 68px;
+        height: 68px;
+        box-shadow: 0 0px 10px 0px rgb(0,0,0,.15);
+        position: relative;
+        background: #fff;
+        border: 1px solid #c6eddc;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        @media (max-width: map.get($media,lg)) {
+            width: 34px;
+            height: 34px;
+        }
+    }
+    .alarm{
+        background-image: url(#{$src}/float-alarm.png);
+        position: relative;
+        @media (max-width: map.get($media,lg)) {
+            background-size: 15px auto;
+        }
+        em{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            border-radius: 50%;
+            right: -5px;
+            top: -5px;
+            //transform: translate(50%,0);
+            height: 28px;
+            width: 28px;
+            border: 1px solid #fff;
+            background-color: #ed7031;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            font-style: normal;
+            @media (max-width: map.get($media,lg)) {
+                font-size: 9px;
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+    .search{
+        background-image: url(#{$src}/float-search.png);
+        @media (max-width: map.get($media,lg)) {
+            background-size: 15px auto;
+        }
+    }
+    .chatbot{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom, #3ABF46, #226F9C);
+        &::after{
+            content:"";
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            background: url(#{$src}/float-chatbot.png) no-repeat 0 0;
+            @media (max-width: map.get($media,lg)) {
+                width: 22px;
+                height: 22px;
+                background-size: 100% auto;
+            }
+        }
+    }
+    .btnTop{
+        background-color: #000;
+        background-image: url(#{$src}/top.png);
+        border: 0;
+        @media (max-width: map.get($media,lg)) {
+            background-size: 12px auto;
+            background-image: url(#{$src}/float-more.png);
+        }
+    }
+}
+
+.chatbot{
+    // position: absolute;
+    // border-radius: 10px;
+    // background-color: #fff;
+    // padding: 10px;
+    // z-index: 9;
+}
+

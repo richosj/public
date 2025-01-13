@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/header.html')
+
+        @@include('./include/subtop.html', {
+            "title" : "기업지원사업",
+            "title2" : "사업 신청"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+
+                <nav class="form-steps">
+                    <div class="active">
+                        <span class="num">1</span>
+                        <span class="text">신청서 작성</span>
+                    </div>
+                    <div>
+                        <span class="num">2</span>
+                        <span class="text">과제명 및 참여기관</span>
+                    </div>
+                    <div>
+                        <span class="num">3</span>
+                        <span class="text">과제 요약 및 사업비 사용 계획</span>
+                    </div>
+                    <div>
+                        <span class="num">4</span>
+                        <span class="text">첨부파일</span>
+                    </div>
+                </nav>
+
+                <div class="bsn-request">
+                    <div class="border-rows hover:border-rows-color">
+                        <div class="border-rows-hgroup">
+                            <h3>(신청용) 사업신청 및 계획서 <em>(상태 : 임시저장)</em></h3>
+                            <div class="flex items-center gap-x-20">
+                                <span class="text-gray-400">접수 마감 일시 : 2025년 2월 28일 18:00</span>
+                                <a class="btn btn-round btn-sm btn-dark">담당자 정보</a>
+                            </div>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-1"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-1">
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <label for="">사업명</label>
+                                    <input type="text" class="cs-input width100p" value="2025년 공동기술개발사업" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <label for="">모집 공고명</label>
+                                    <input type="text" class="cs-input width100p" value="2025년 공동기술개발사업" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 계획서 -->
+                    <div class="border-rows hover:border-rows-color">
+                        <div class="border-rows-hgroup">
+                            <h4>신청 기본 정보</h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-2"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-2">
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <label for="">기업 구분 <i class="cs-icon-req">필수</i></label>
+                                    <div class="radio-line-group">
+                                        <strong>단지 내 기업</strong>
+                                        <div class="lbl_group">
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>분양기업</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>벤처센터입주</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>&nbsp;</strong>
+                                    <div class="radio-line-group">
+                                        <strong>단지 외 기업</strong>
+                                        <div class="lbl_group">
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>중소기업</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>중견기업</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>대기업</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>기업명</strong>
+                                    <input type="text" class="cs-input width100p" value="㈜올포랜드" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>대표자명</strong>
+                                    <input type="text" class="cs-input width100p" value="홍길동" disabled>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>사업자등록번호</strong>
+                                    <input type="text" class="cs-input width100p" value="402-81-62555 (정상)" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>설립 일자</strong>
+                                    <input type="text" class="cs-input width100p" value="2004-12-01" disabled>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>업종/업태</strong>
+                                    <input type="text" class="cs-input width100p" value="기능성 식품 제조업" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>주소</strong>
+                                    <input type="text" class="cs-input width100p" value="[55011]전라북도 전주시 완산구 아중로 33, 2층 (중노송동) 2층" disabled>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>연락처</strong>
+                                    <input type="text" class="cs-input width100p" value="02-855-5724   /   all4land@all4land.com" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>홈페이지 주소</strong>
+                                    <input type="text" class="cs-input width100p" value="http://www.all4land.com" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 신청 기본 정보 -->
+
+                    <div class="border-rows hover:border-rows-color bg-green-300">
+                        <div class="border-rows-hgroup">
+                            <h4>누적 지원금</h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-3"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-3">
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>누적 지원금 (최근 5년)</strong>
+                                    <input type="text" class="cs-input width100p" value="144,861,000원">
+                                </div>
+                                <div class="input-group col">
+                                    <strong>지원 비율</strong>
+                                    <input type="text" class="cs-input width100p" value="80%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 누적지원금 -->
+
+                    <div class="border-rows hover:border-rows-color bg-red-300">
+                        <div class="border-rows-hgroup">
+                            <h4>누적 지원금</h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-4"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-4">
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>참여 제한 제재 사유</strong>
+                                    <input type="text" class="cs-input width100p" value="최종평가 결과 “불량”인 과제 2회">
+                                </div>
+                                <div class="input-group col">
+                                    <strong>참여 제한 기간</strong>
+                                    <input type="text" class="cs-input width100p" value="2024-07-01 ~ 2026-06-30">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 참여 제한 -->
+                    
+                    <div class="contsec contsec-btns">
+                        <a href="" class="btn btn_default-outline btn_l">목록</a>
+                        <a href="01-04-사업지원신청-과제명및참여기관.html" class="btn btn_primary btn_l">다음</a>
+                    </div>
+                </div>
+                <!-- // bsn-request -->
+            </div>
+        </div>
+        
+        @@include('./include/footer.html')
+        <script src="./assets/js/all.min.js"></script>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/header.html')
+
+        @@include('./include/subtop.html', {
+            "title" : "기업지원사업",
+            "title2" : "사업 신청"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+
+                <div class="bsn-request">
+                    <div class="border-rows hover:border-rows-color">
+                        <div class="border-rows-hgroup">
+                            <h3>(신청용) 사업신청 및 계획서 <em>(상태 : 임시저장)</em></h3>
+                            <div class="flex items-center gap-x-20">
+                                <span class="text-gray-400">접수 마감 일시 : 2025년 2월 28일 18:00</span>
+                                <a class="btn btn-round btn-sm btn-dark">담당자 정보</a>
+                            </div>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-1"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-1">
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <label for="">사업명</label>
+                                    <input type="text" class="cs-input width100p" value="2025년 공동기술개발사업" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <label for="">모집 공고명</label>
+                                    <input type="text" class="cs-input width100p" value="2025년 공동기술개발사업" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 계획서 -->
+                    <div class="border-rows hover:border-rows-color">
+                        <div class="border-rows-hgroup">
+                            <h4>신청 기본 정보</h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-2"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-2">
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <label for="">기업 구분 <i class="cs-icon-req">필수</i></label>
+                                    <div class="radio-line-group">
+                                        <strong>단지 내 기업</strong>
+                                        <div class="lbl_group">
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>분양기업</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>벤처센터입주</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>&nbsp;</strong>
+                                    <div class="radio-line-group">
+                                        <strong>단지 외 기업</strong>
+                                        <div class="lbl_group">
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>중소기업</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>중견기업</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>대기업</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>기업명</strong>
+                                    <input type="text" class="cs-input width100p" value="㈜올포랜드" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>대표자명</strong>
+                                    <input type="text" class="cs-input width100p" value="홍길동" disabled>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>사업자등록번호</strong>
+                                    <input type="text" class="cs-input width100p" value="402-81-62555 (정상)" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>설립 일자</strong>
+                                    <input type="text" class="cs-input width100p" value="2004-12-01" disabled>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>업종/업태</strong>
+                                    <input type="text" class="cs-input width100p" value="기능성 식품 제조업" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>주소</strong>
+                                    <input type="text" class="cs-input width100p" value="[55011]전라북도 전주시 완산구 아중로 33, 2층 (중노송동) 2층" disabled>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>연락처</strong>
+                                    <input type="text" class="cs-input width100p" value="02-855-5724   /   all4land@all4land.com" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>홈페이지 주소</strong>
+                                    <input type="text" class="cs-input width100p" value="http://www.all4land.com" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 신청 기본 정보 -->
+
+                    <div class="border-rows hover:border-rows-color bg-green-300">
+                        <div class="border-rows-hgroup">
+                            <h4>누적 지원금</h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-3"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-3">
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <strong>누적 지원금 (최근 5년)</strong>
+                                    <input type="text" class="cs-input width100p" value="144,861,000원" readonly>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>지원 비율</strong>
+                                    <input type="text" class="cs-input width100p" value="80%" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 누적지원금 -->
+
+                    <div class="border-rows hover:border-rows-color bg-green-300">
+                        <div class="border-rows-hgroup">
+                            <h4>질의 진단</h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-4"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-4">
+                            <div class="cs-data-table" style="background:#fff">
+                               <table>
+                                <colgroup>
+                                    <col style="width:200px">
+                                    <col style="width:auto">
+                                    <col style="width:250px">
+                                </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>구분</th>
+                                            <th>진단내용</th>
+                                            <th>적용대상 여부</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>신청자격</td>
+                                            <td>전국 식품 또는 식품 연관 기업</td>
+                                            <td>
+                                                <div class="lbl_group">
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio" name="guide_radio">
+                                                        <i></i>
+                                                        <span>적용
+                                                        </span>
+                                                    </label>
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio" name="guide_radio">
+                                                        <i></i>
+                                                        <span>미적용</span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>제외대상</td>
+                                            <td>정부 또는 한국식품산업클러스터진흥원과 협약·계약과 관련하여 위반·제재 조치 중인 기업 및 대표자</td>
+                                            <td>
+                                                <div class="lbl_group">
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio" name="guide_radio">
+                                                        <i></i>
+                                                        <span>적용
+                                                        </span>
+                                                    </label>
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio" name="guide_radio">
+                                                        <i></i>
+                                                        <span>미적용</span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>제외대상</td>
+                                            <td>동일 또는 유사한 사업계획으로 다른 기관으로부터 중복하여 지원받고 있는 기업</td>
+                                            <td>
+                                                <div class="lbl_group">
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio" name="guide_radio">
+                                                        <i></i>
+                                                        <span>적용
+                                                        </span>
+                                                    </label>
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio" name="guide_radio">
+                                                        <i></i>
+                                                        <span>미적용</span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>제외대상</td>
+                                            <td>국세 또는 지방세 체납으로 규제중인 대표자 또는 기업</td>
+                                            <td>
+                                                <div class="lbl_group">
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio" name="guide_radio">
+                                                        <i></i>
+                                                        <span>적용
+                                                        </span>
+                                                    </label>
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio" name="guide_radio">
+                                                        <i></i>
+                                                        <span>미적용</span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                               </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 누적지원금 -->
+                    <div class="contsec contsec-btns">
+                        <a href="" class="btn btn_default-outline btn_l">초기화</a>
+                        <a href="#" class="btn btn_primary btn_l">진단</a>
+                    </div>
+                </div>
+                <!-- // bsn-request -->
+            </div>
+        </div>
+        
+        @@include('./include/footer.html')
+        <script src="./assets/js/all.min.js"></script>
+    </div>
+    </body>
+</html>

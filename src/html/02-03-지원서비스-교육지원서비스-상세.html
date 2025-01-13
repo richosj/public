@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+        "title" : "지원서비스",
+        "title2" : "교육지원 서비스",
+        })
+        <div class="main-content">
+            <div class="row">
+                <div class="container">
+                    <div class="service-view">
+                        <div class="gate-info">
+                            <div class="thumb"></div>
+                            <div class="desc">
+                                <div class="subject">
+                                    <strong>[2차][식품실무교육] (2회차_재직자, 예비취업자 대상) 식품 Auditor 양성교육</strong>
+                                </div>
+                                <div class="desc-list">
+                                    <dl>
+                                        <dt><span class="badge badge-sm badge-success none">접수중</span></dt>
+                                        <dd>2024.08.26 ~ 2025.02.28</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><span class="badge badge-sm badge-secondary none">교육일</span></dt>
+                                        <dd>2024.08.26 ~ 2025.02.28</dd>
+                                    </dl>
+                                    <dl class="g-full">
+                                        <dt><span class="badge badge-sm badge-gray none">교육내용</span></dt>
+                                        <dd>
+                                            Auditor로서의 역할과 효과적인 심사  수행을 위한 실습을 포함한 교육과정 Auditor로서의 역할과 효과적인 심사  수행을 위한
+                                            실습을 포함한 교육과정
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-round btn-dark">교육문의</button>
+                            </div>
+                        </div>
+                        <div class="border-rows">
+                            <div class="border-rows-hgroup">
+                                <h4>사업신교육 상세 정보</h4>
+                            </div>
+                            <div class="border-rows-content">
+                                <div class="grid grid-cols-2 gap-x-40  mobile:grid-cols-1 mobile:gap-x-15">
+                                    <div class="input-group col">
+                                        <label for="">교육인원</label>
+                                        <input type="text" class="cs-input width100p" value="35명" disabled>
+                                    </div>
+                                    <div class="input-group col">
+                                        <label for="">교육비용</label>
+                                        <input type="text" class="cs-input width100p" value="90,000원" disabled>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-x-40 mobile:grid-cols-1 mobile:gap-x-15">
+                                    <div class="input-group col">
+                                        <label for="">교육장소</label>
+                                        <input type="text" class="cs-input width100p" value="한국식품클러스터진흥원 본원 대강당" disabled>
+                                    </div>
+                                    <div class="input-group col">
+                                        <label for="">환급여부</label>
+                                        <input type="text" class="cs-input width100p" value="환급" disabled>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-x-40 mobile:grid-cols-1 mobile:gap-x-15">
+                                    <div class="input-group col">
+                                        <label for="">담당자</label>
+                                        <input type="text" class="cs-input width100p" value="김성란" disabled>
+                                    </div>
+                                    <div class="input-group col">
+                                        <label for="">담당자 이메일/ 연락처</label>
+                                        <input type="text" class="cs-input width100p" value="foodpolis_edu@foodpolis.kr / 032-123-1234" disabled>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1">
+                                    <div class="input-group col">
+                                        <label for="">담당자</label>
+                                        <input type="text" class="cs-input width100p" value="[확정][웹포스터]2024 전문인력양성지원사업 식품실무교육_식품역량강화 교육과정_식품 Auditor 양성교육.pdf" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- e: border-rows-content -->
+                        </div>
+                        <!-- e: border-rows -->
+                         
+                        <div class="contsec contsec-btns consec-foot">
+                            <div></div>
+                            <div>
+                                <a href="#" class="btn btn_default-outline btn_l">목록</a>
+                                <a href="#" class="btn btn_primary btn_l">교육신청</a>
+                            </div>
+                        </div>
+                        <!-- e: consec-foot -->
+                    </div>
+                    <!-- e: service-view -->
+                </div>
+            </div>
+        </div>
+
+        @@include('./include/ng-footer.html')
+    </div>
+</body>
+
+</html>

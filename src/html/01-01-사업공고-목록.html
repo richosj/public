@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/header.html')
+
+        @@include('./include/subtop.html', {
+            "title" : "기업지원사업",
+            "title2" : "사업공고"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <!-- 사업 공고 -->
+                <div class="search-grid">
+                    <div class="search-main">
+                        <div class="search-header">
+                            <div class="board-list-header">
+                                <!-- 게시물 갯수 등 -->
+                                <div class="board-stat">
+                                    총 게시물 <span>(<b>999</b>건/9999건)</span>
+                                </div>
+                                <div class="align-top">
+                                    <input type="text" class="cs-input" placeholder="공고명, 지원자격 조건 검색" title="검색어 입력">
+                                    <button type="button" class="board-search_btn btn btn_m btn btn btn_primary">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: search-header -->
+                        <div class="post-wrap">
+                            <ul class="post-list">
+                                <li class="post-it">
+                                    <a href="01-02-사업공고-상세.html" class="post-link">
+                                        <div class="post-head">
+                                            <div><span class="badge badge-sm  badge-outline-secondary badge-round">비즈니스지원 활성화</span></div>
+                                            <div class="post-status">
+                                                <dl>
+                                                    <dt>접수기간 :</dt>
+                                                    <dd class="post-date"><span>2024.08.26 ~ 2025.02.28</span><span>18:00</span></dd>
+                                                </dl>
+                                                <span class="color-danger-500">마감 D-25</span>
+                                                <span class="badge badge-sm badge-success badge-outline-none">모집중</span>
+                                            </div>
+                                        </div>
+                                        <div class="post-subject">2025년 제 4차 청년식품 창업 2025년 제 4차 청년식품 창업 (예비창업2025년 제 4차 청년식품 창업 (예비창업2025년 제 4차 청년식품 창업 (예비창업2025년 제 4차 청년식품 창업 (예비창업2025년 제 4차 청년식품 창업 (예비창업2025년 제 4차 청년식품 창업 (예비창업2025년 제 4차 청년식품 창업 (예비창업2025년 제 4차 청년식품 창업 (예비창업(예비창업)</div>
+                                        <div class="post-meta">
+                                            <dl>
+                                                <dt>담당 부서</dt>
+                                                <dd>창업교육부/벤처창업 육성팀</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>지원 자격</dt>
+                                                <dd>예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자예비창업자</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        @@include('./include/paging.html')
+                    </div>
+
+                    <aside class="search-side">
+                        <div class="wraps">
+                            <header class="search-condition-title">
+                                <h3>공고 필터</h3>
+                            </header>
+
+                            <div class="search-unit">
+                                <strong>연도별</strong>
+                                <div class="search-unit-btn">
+                                    <button type="button" class="btn btn-light btn-round active:btn-dark">전체</button>
+                                    <button type="button" class="btn btn-light btn-round">2025</button>
+                                    <button type="button" class="btn btn-light btn-round">2024</button>
+                                </div>
+                            </div>
+                            <div class="search-unit">
+                                <strong>모집상태</strong>
+                                <div class="search-unit-btn">
+                                    <button type="button" class="btn btn-light btn-round active:btn-dark">전체</button>
+                                    <button type="button" class="btn btn-light btn-round">접수중</button>
+                                    <button type="button" class="btn btn-light btn-round">접수 예정</button>
+                                    <button type="button" class="btn btn-light btn-round">접수 마감</button>
+                                </div>
+                            </div>
+                            <div class="search-unit">
+                                <strong>모집상태</strong>
+                                <div class="search-unit-btn">
+                                    <button type="button" class="btn btn-light btn-round active:btn-dark">전체</button>
+                                    <button type="button" class="btn btn-light btn-round">비지니스지원 활성화</button>
+                                    <button type="button" class="btn btn-light btn-round">소스산업화 센터운영</button>
+                                    <button type="button" class="btn btn-light btn-round">접수 마감</button>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <!-- 사업 공고 -->
+            </div>
+        </div>
+        
+        @@include('./include/footer.html')
+
+    </div>
+    </body>
+</html>

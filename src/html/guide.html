@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/header.html')
+
+        @@include('./include/subtop.html',{
+            "title" : "가이드",
+            "title2" : "가이드"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="">
+                    <span class="badge badge-primary">뱃지</span>
+                    <span class="badge badge-warning">뱃지</span>
+                    <span class="badge badge-success">뱃지</span>
+                    <span class="badge badge-secondary">뱃지</span>
+                    <span class="badge badge-info">뱃지</span>
+                    <span class="badge badge-light">뱃지</span>
+                    <span class="badge badge-light badge-sm">뱃지</span>
+                    <span class="badge badge-light badge-lg">뱃지</span>
+                    <span class="badge badge-outline-light">뱃지</span>
+                </div>
+
+                <div class="">
+                    <a href="" class="btn btn_default-outline btn_m">버튼</a>
+                    <a href="" class="btn btn-light">버튼</a>
+                    <a href="" class="btn btn-dark">버튼</a>
+                    <a href="" class="btn btn-light btn-round">버튼</a>
+                    <a href="" class="btn btn-light btn-sm">버튼</a>
+                    <a href="" class="btn btn-light btn-round btn-sm">버튼</a>
+                </div>
+            </div>
+        </div>
+        @@include('./include/footer.html')
+    </div>
+    </body>
+</html>

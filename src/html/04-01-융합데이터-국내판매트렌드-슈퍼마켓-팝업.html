@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+        "title" : "용합데이터",
+        "title2" : "국내 판매 트렌드",
+        })
+        <div class="main-content fusion-data">
+            <div class="row">
+                <div class="container">
+                    <div class="fusion-data-top">
+                        <h3>국내 판매 트렌드</h3>
+                        <button type="button" class="btn-like" title="좋아요">
+                            <i></i>
+                            <span>3,237</span>
+                        </button>
+                    </div>
+
+                    <div class="fusion-data-tab">
+                        <button type="button"><i class="icon-1" aria-hidden="true"></i>전체</button>
+                        <button type="button"><i class="icon-2" aria-hidden="true"></i>외식</button>
+                        <button type="button" class="active" title="선택됨"><i class="icon-3"
+                                aria-hidden="true"></i>슈퍼마켓</button>
+                        <button type="button"><i class="icon-4" aria-hidden="true"></i>편의점</button>
+                    </div>
+
+                    <div class="search-comm">
+                        <div class="frm">
+                            <div>
+                                <strong>지역</strong>
+                                <select name="" id="" class="cs-input w-125" title="지역 선택">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div>
+                                <strong>업종</strong>
+                                <select name="" id="" class="cs-input w-125" title="업종 선택">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="frm">
+                            <div class="frm-full">
+                                <strong>조회기간</strong>
+                                <div class="cs-datepicker-set">
+                                    <select name="" id="" class="cs-input w-115" title="조회기간 선택">
+                                        <option value=""></option>
+                                    </select>
+                                    <span></span>
+                                    <select name="" id="" class="cs-input w-115" title="조회기간 선택">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm">
+                            <div>
+                                <strong>기준년월</strong>
+                                <select name="" id="" class="cs-input w-115" title="기준년월 선택">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div>
+                                <strong>비교년월</strong>
+                                <select name="" id="" class="cs-input w-115" title="비교년월 선택">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search-comm-submit">
+                            <button class="btn btn_m btn btn btn_primary">설정</button>
+                        </div>
+                    </div>
+
+                    <div class="fusion-lv1-btn">
+                        <button type="button" class="active" title="선택됨">판매건수</button>
+                        <button type="button">판매금액</button>
+                        <button type="button">판매단가</button>
+                    </div>
+
+                    <div class="fusion-lv2-group">
+                        <div class="fusion-lv2-btn">
+                            <button type="button" class="active" title="선택됨"><span>전체</span></button>
+                            <div class="line"></div>
+                            <button type="button"><span>지역별</span></button>
+                            <div class="line"></div>
+                            <button type="button"><span>업종별</span></button>
+                        </div>
+                        <div class="fusion-lv2-filter">
+                            <select name="" id="" class="cs-input">
+                                <option value="">기본</option>
+                            </select>
+
+                            <div class="other-filter">
+                                <strong>연관 데이터</strong>
+                                <div class="other-menu">
+                                    <span class="check-open">
+                                        <label class="cs-checkbox">
+                                            <input type="checkbox">
+                                            <i></i>
+                                            <span>팝업</span>
+                                        </label>
+                                    </span>
+                                    <button type="button">원료현황</button>
+                                    <button type="button">국내판매</button>
+                                    <button type="button">지역특성</button>
+                                    <button type="button">갤러리</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="fusion-half-point"></div>
+
+                    <div class="fusion-container">
+                        <div class="chart-container-2">
+                            <div class="chart-map">
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>지역별 지도 보기</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+                                    <div class="chart-area map-zone">
+                                        <div class="legend-layer">
+                                            <div class="legend-check">
+                                                <div class="label">
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio">
+                                                        <i></i>
+                                                        <span class="c1">식품기업</span>
+                                                    </label>
+                                                </div>
+                                                <div class="label">
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio">
+                                                        <i></i>
+                                                        <span class="c2">원료생산자</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="hitmap">
+                                                <strong>히트맵</strong>
+                                                <div class="hitmap-area"></div>
+                                            </div>
+                                            <div class="step-class">
+                                                <strong>단계구분도</strong>
+                                                <div>
+                                                    <span>~100</span>
+                                                    <span>~200</span>
+                                                    <span>201 ~</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-set">
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>업소수</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+                                    <div class="chart-area">
+                                        차트차트
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>가구수</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+                                    <div class="chart-area">
+                                        차트차트
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- e: fusion-container  -->
+
+                    <div class="fusion-container">
+                        <div class="hgroup">
+                            <h3>지역특성<small>(단위:명)</small></h3>
+                            <button type="button" class="collapse-toggle" data-collapse-target="chart-collpase-1">
+                                <i class="icon-toggle" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="chart-collpase-1">
+                            <div class="chart-container">
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>인구수</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="chart-area">
+                                        차트차트
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>가구수</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="chart-area">
+                                        차트차트
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>업소수</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="chart-area">
+                                        차트차트
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: fusion-container  -->
+
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+
+        <div class="option-layer chart-option-layer">
+            <div class="option-layer-inner">
+                <ul>
+                    <li><button>차트1</button></li>
+                    <li><button>차트2</button></li>
+                    <li><button>차트N</button></li>
+                    <li><button>데이터 보기</button></li>
+                    <li><button>이미지 저장</button></li>
+                    <li><button>크게 보기</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ask-layer ask-content-1">
+            <div class="ask-cont">
+                <p class="txt">외식 판매 순위는 다음 조건으로 제공 되고 있습니다.</p>
+                <ul>
+                    <li>금융권 마이테이터</li>
+                    <li>해당지역 지자체의 상권분석 가이드</li>
+                    <li>매출기준 전표 활용</li>
+                </ul>
+
+                <button type="button" class="btn-close-ask"><i class="icon-close-white"></i></button>
+            </div>
+        </div>
+
+        <!-- 연관데이터 - 지역특성 -->
+        <div class="popup-wrap" id="" style="display: none;">
+            <div class="popup-container" style="width:1430px">
+                <!-- header -->
+                <div class="popup-header">
+                    <span class="popup-header-text">연관데이터 – 지역특성</span>
+                    <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+                </div>
+                <!-- content -->
+                <div class="popup-content">
+                    <!-- popup-content-wrap -->
+                    <div class="popup-content-wrap">
+                        <div class="pop-inner-con">
+                            <div class="chart-container">
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>인구수</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="chart-area">
+                                        차트차트
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>가구수</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="chart-area">
+                                        차트차트
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>업소수</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="chart-area">
+                                        차트차트
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- popup-content-wrap -->
+                </div>
+
+            </div>
+        </div>
+
+        <div class="popup-wrap" id="">
+            <div class="popup-container" style="width:1430px">
+                <!-- header -->
+                <div class="popup-header">
+                    <span class="popup-header-text">마이데이터 관리</span>
+                    <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+                </div>
+                <!-- content -->
+                <div class="popup-content">
+                    <!-- popup-content-wrap -->
+                    <div class="popup-content-wrap">
+                        <div class="pop-inner-con">
+
+                            <nav class="stage-view">
+                                <span class="active" title="현재 단계"><i></i><span>데이터 선택</span></span>
+                                <span type="button"><i></i><span>차트 선택</span></span>
+                                <span type="button"><i></i><span>구성 설정</span></span>
+                            </nav>
+
+                            <div class="mydata-stage-grid">
+                                <div class="box box-1">
+                                    <strong class="box-title">금산식품㈜ 님의 데이터</strong>
+                                    <ul class="mydata-list">
+                                        <li>
+                                            <span class="name">데이터 추가</span>
+                                            <button type="button" title="삭제"><i class="icon-del2" aria-hidden="true"></i></button>
+                                        </li>
+                                        <li>
+                                            <span class="name">데이터 추가데이터 추가데이터 추가데이터 추가데이터 추가데데이터 추가데이터 추가데이터 추가데이터
+                                                추가데이터 추가이터 추가데이터 추가데이터 추가데이터 추가데이터 추가데이터 추가</span>
+                                            <button type="button" title="삭제"><i class="icon-del2" aria-hidden="true"></i></button>
+                                        </li>
+                                    </ul>
+                                    <div class="mydata-add-button">
+                                        <button><i class="icon-more" aria-hidden="true"></i>데이터 추가</button>
+                                    </div>
+                                </div>
+                                <div class="box box-2">
+                                    <strong class="box-title">시도별 업체수 <small>(시도별 업체수의 데이터)</small></strong>
+                                    <div class="inbox">
+                                        <div class="inbox-item -chart">
+                                            차트차트
+                                        </div>
+                                        <div class="inbox-item -table">
+                                            <div class="cs-table">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 50%;">
+                                                        <col style="width: 50%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">컬럼명</th>
+                                                            <th scope="col">업체 수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">시/도 코드</td>
+                                                            <td>
+                                                                <select name="" id="" class="cs-input width100p">
+                                                                    <option value="">시/도</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">시/도 명</td>
+                                                            <td>
+                                                                <select name="" id="" class="cs-input width100p">
+                                                                    <option value="">문자열</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">업체 수</td>
+                                                            <td>
+                                                                <select name="" id="" class="cs-input width100p">
+                                                                    <option value="">전국</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 데이터 선택 -->
+                            <div class="mydata-stage-grid" style="display: none;">
+                                <div class="box box-1">
+                                    <strong class="box-title">차트유형 선택</strong>
+                                    <ul class="mydata-chart-select">
+                                        <li><button type="button" class="active" title="선택 됨">단계구분도</button></li>
+                                        <li><button type="button">트리맵</button></li>
+                                        <li><button type="button">SUNBURT</button></li>
+                                        <li><button type="button">바차트</button></li>
+                                        <li><button type="button">파이차트</button></li>
+                                    </ul>
+                                </div>
+                                <div class="box box-2">
+                                    <strong class="box-title">단계구분도 <small>(기준 측정값을 N등분하여 색상으로 주제도를 표현
+                                            합니다.)</small></strong>
+                                    <div class="inbox">
+                                        <div class="inbox-item -chart">
+                                            차트차트
+                                        </div>
+                                        <div class="inbox-item -table">
+                                            <div class="cs-table">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 50%;">
+                                                        <col style="width: 50%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" colspan="2">차트 속성 설정</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">색상</td>
+                                                            <td>
+                                                                <input type="color" class="cs-input width100p">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">등급</td>
+                                                            <td>
+                                                                <select name="" id="" class="cs-input width100p">
+                                                                    <option value="">5</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 차트 선택 -->
+
+                            <div class="mydata-stage-grid2" style="display: none;">
+                                <div class="box">
+                                    <div class="input-group col">
+                                        <label for="">데이터 명 <i class="cs-icon-req"></i></label>
+                                        <input type="text" class="cs-input">
+                                    </div>
+
+                                    <div class="input-group col">
+                                        <label for="">데이터 설명 <i class="cs-icon-req"></i></label>
+                                        <textarea name="" id="" rows="8" class="cs-input">디지털식품정보플랫폼은 대국민, 입주 분양기업, 국내 외 식품기업, 예비 창업자, 식품 관련</textarea>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="input-group col">
+                                        <strong>호환 차트</strong>
+                                        <div class="lbl_group">
+                                            <label class="cs-checkbox">
+                                                <input type="checkbox">
+                                                <i></i>
+                                                <span>단계 구분도</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="checkbox">
+                                                <i></i>
+                                                <span>SUNBURST</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="checkbox">
+                                                <i></i>
+                                                <span>트리맵</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-divider">
+                                        <div class="input-group col">
+                                            <strong>필터 구성</strong>
+                                            <div class="lbl_group">
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>예</span>
+                                                </label>
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>아니요</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col">
+                                            <strong>분석 항목 구성</strong>
+                                            <div class="lbl_group">
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>예</span>
+                                                </label>
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>아니요</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-divider">
+                                        <div class="input-group col">
+                                            <strong>실행 이력 저장</strong>
+                                            <div class="lbl_group">
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>예</span>
+                                                </label>
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>아니요</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col">
+                                            <strong>이미지 다운로드</strong>
+                                            <div class="lbl_group">
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>예</span>
+                                                </label>
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>아니요</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-divider">
+                                        <div class="input-group col">
+                                            <strong>데이터 보기</strong>
+                                            <div class="lbl_group">
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>예</span>
+                                                </label>
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>아니요</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col">
+                                            <strong>데이터 다운로드</strong>
+                                            <div class="lbl_group">
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>예</span>
+                                                </label>
+                                                <label class="cs-checkbox">
+                                                    <input type="radio">
+                                                    <i></i>
+                                                    <span>아니요</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 구성 설정 -->
+                        </div>
+                    </div>
+                    <!-- popup-content-wrap -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="popup-wrap">
+            <div class="popup-container" style="width:600px">
+                <!-- header -->
+                <div class="popup-header">
+                    <span class="popup-header-text">마이데이터 관리</span>
+                    <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+                </div>
+                <!-- content -->
+                <div class="popup-content">
+                    <!-- popup-content-wrap -->
+                    <div class="popup-content-wrap">
+                        <div class="pop-inner-con">
+                            <div class="mydata-add-field">
+                                <div class="input-group col">
+                                    <strong>데이터 명 <i class="cs-icon-req">필수</i></strong>
+                                    <input type="text" class="cs-input width100p" value="㈜올포랜드">
+                                </div>
+                                <div class="input-group col">
+                                    <strong>데이터 설명 <i class="cs-icon-req">필수</i></strong>
+                                    <input type="text" class="cs-input width100p" value="㈜올포랜드">
+                                </div>
+                                <div class="input-group col">
+                                    <strong>데이터 파일 <small>(최근3개월 이내 발급본)</small> <i class="cs-icon-req">필수</i></strong>
+                                    <label class="com-file-uploader-input">
+                                        <input type="file">
+                                        <span class="cs-input">파일을 추가해 주세요.</span>
+                                        <span class="btn btn_default-outline btn_m">파일 첨부</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-footer">
+                            <button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>
+                            <button class="confirm-btn btn btn_primary" data-modal="closebtn">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

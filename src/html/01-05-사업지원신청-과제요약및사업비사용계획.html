@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/header.html')
+
+        @@include('./include/subtop.html', {
+            "title" : "기업지원사업",
+            "title2" : "사업 신청"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+
+                <nav class="form-steps">
+                    <div class="clear">
+                        <span class="num">1</span>
+                        <span class="text">신청서 작성</span>
+                    </div>
+                    <div class="clear">
+                        <span class="num">2</span>
+                        <span class="text">과제명 및 참여기관</span>
+                    </div>
+                    <div class="active">
+                        <span class="num">3</span>
+                        <span class="text">과제 요약 및 사업비 사용 계획</span>
+                    </div>
+                    <div>
+                        <span class="num">4</span>
+                        <span class="text">첨부파일</span>
+                    </div>
+                </nav>
+
+                <div class="bsn-request">
+                    <div class="border-rows hover:border-rows-color">
+                        <div class="border-rows-hgroup">
+                            <h3>사업신청 및 계획서 <em>(상태 : 임시저장)</em></h3>
+                            <div class="flex items-center gap-x-20">
+                                <span class="text-gray-400">접수 마감 일시 : 2025년 2월 28일 18:00</span>
+                                <a class="btn btn-round btn-sm btn-dark">담당자 정보</a>
+                            </div>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-1"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-1">
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">   
+                                    <label for="">사업명</label>
+                                    <input type="text" class="cs-input width100p" value="2025년 공동기술개발사업" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <label for="">모집 공고명</label>
+                                    <input type="text" class="cs-input width100p" value="2025년 공동기술개발사업" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 계획서 -->
+                    <div class="border-rows hover:border-rows-color">
+                        <div class="border-rows-hgroup">
+                            <h4>과제 요약</h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-2"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-2">
+                            <div class="grid grid-cols-2 gap-20">
+                                <div class="input-group col">
+                                    <div class="input-group-head">
+                                        <label for="">과제 목표 <i class="cs-icon-req"></i></label>
+                                        <p class="counting"><b>0</b>자/2,300자</p>
+                                    </div>
+                                    <textarea name="" id="" class="cs-input limited-textarea" placeholder="기술개발 과제의 목표를 기재합니다."></textarea>
+                                </div>
+                                <div class="input-group col">
+                                    <div class="input-group-head">
+                                        <label for="">필요성 <i class="cs-icon-req"></i></label>
+                                        <p class="counting"><b>10</b>자/2,300자</p>
+                                    </div>
+                                    <textarea name="" id="" class="cs-input" placeholder="기술개발 과제의 필요성을 기재합니다."></textarea>
+                                </div>
+                                <div class="input-group col">
+                                    <div class="input-group-head">
+                                        <label for="">수행 내용 <i class="cs-icon-req"></i></label>
+                                        <p class="counting"><b>10</b>자/2,300자</p>
+                                    </div>
+                                    <textarea name="" id="" class="cs-input" placeholder="기술개발 과제의 수행 내용을 기재합니다."></textarea>
+                                </div>
+                                <div class="input-group col">
+                                    <div class="input-group-head">
+                                        <label for="">기대 효과 <i class="cs-icon-req"></i></label>
+                                        <p class="counting"><b>10</b>자/2,300자</p>
+                                    </div>
+                                    <textarea name="" id="" class="cs-input" placeholder="기술개발 과제의 기대 효과를 기재합니다."></textarea>
+                                </div>
+                                <div class="input-group col grid-column-100">
+                                    <div class="input-group-head">
+                                        <label for="">기대 효과 <i class="cs-icon-req"></i></label>
+                                        <p class="counting"><b>10</b>자/2,300자</p>
+                                    </div>
+                                    <textarea name="" id="" class="cs-input" placeholder="기술개발 과제의 기대 효과를 기재합니다."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 지원 분야 선택 -->
+
+                    <div class="border-rows hover:border-rows-color">
+                        <div class="border-rows-hgroup">
+                            <h4>사업비 사용 계획 <em>* 지원사업 참여기관을 입력하셔야 기관별 사업비 사용계획의 입력이 가능합니다.</em></h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-3"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-3">
+                            <div class="bsn-finance">
+                                <div class="bsn-finance-inbox">
+                                    <strong>총 사업비</strong>
+                                    <div class="price text-brand-400"><b>50,000,000</b>원</div>
+                                </div>
+                                <div class="bsn-finance-inbox">
+                                    <strong>기업 분담금 <span class="text-sm">(합계)</span></strong>
+                                    <div class="price text-orange-700"><b>50,000,000</b>원</div>
+                                </div>
+                            </div>
+                            <div class="bsn-finance">
+                                <div class="bsn-finance-inbox">
+                                    <strong>보조금</strong>
+                                    <div class="price"><b>50,000,000</b>원</div>
+                                </div>
+                                <div class="bsn-finance-inbox">
+                                    <div class="in">
+                                        <strong>현금</strong>
+                                        <div class="price"><b>50,000,000</b>원</div>
+                                    </div>
+                                    <div class="in text-25">+</div>
+                                    <div class="in">
+                                        <strong>현물</strong>
+                                        <div class="price"><b>50,000,000</b>원</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <article class="mt-40">
+                                <header class="enter-hgroup">
+                                    <h4>주관 기업(기관) : ㈜올포랜드</h4>
+                                    <div class="enter-hgroup-util">
+                                        <em class="text-secon">* 재료비는 현물로 입력하셔야 하며, 인건비는 협동수행기관에 한해 현물로 입력 가능합니다.</em>
+                                        <button type="button" class="btn-add-row">+ 행 추가</button>
+                                    </div>
+                                </header>
+                                <div class="cs-data-table2">
+                                    <table>
+                                        <colgroup>
+                                            <col class="w-130">
+                                            <col class="w-150">
+                                            <col class="w-100">
+                                            <col class="w-150">
+                                            <col class="w-100">
+                                            <col class="w-150">
+                                            <col class="w-100">
+                                            <col class="w-150">
+                                            <col class="w-auto">
+                                            <col class="w-70">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2">세목</th>
+                                                <th colspan="2">보조금</th>
+                                                <th colspan="5">기업 분담금</th>
+                                                <th rowspan="2">비고</th>
+                                                <th rowspan="2">삭제</th>
+                                            </tr>
+                                            <tr>
+                                                <th>금액<span class="text-sm">(원)</span></th>
+                                                <th>비율</th>
+                                                <th>현금<span class="text-sm">(원)</span></th>
+                                                <th>비율</th>
+                                                <th>현물<span class="text-sm">(원)</span></th>
+                                                <th>비율</th>
+                                                <th>소계<span class="text-sm">(원)</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select name="" id="" class="cs-input width100p">
+                                                        <option value="">인건비</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="cs-input text-right width100p" value="950,000">
+                                                </td>
+                                                <td class="border-left-0  text-center">36.2%</td>
+                                                <td>
+                                                    <input type="text" class="cs-input text-right width100p" value="950,000">
+                                                </td>
+                                                <td class="border-left-0 text-center">36.2%</td>
+                                                <td>
+                                                    <input type="text" class="cs-input text-right width100p" value="950,000">
+                                                </td>
+                                                <td class="border-left-0  text-center">36.2%</td>
+                                                <td><input type="text" class="cs-input text-right width100p" readonly value="950,000"></td>
+                                                <td><input type="text" class="cs-input width100p"></td>
+                                                <td class="text-center"><button class="btn-del" title="삭제"></button></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot class="tfoot">
+                                            <tr>
+                                                <td>사업비 총액<span class="text-sm">(원)</span></td>
+                                                <td colspan="2" class="text-right text-bold">1,300,000</td>
+                                                <td colspan="5" class="text-right text-bold">1,300,000</td>
+                                                <td colspan="2"></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </article>
+                            <article class="mt-40">
+                                <header class="enter-hgroup">
+                                    <h4>협동수행 기업(기관) :  GRB연구원</h4>
+                                    <div class="enter-hgroup-util">
+                                        <em class="text-secon">* 재료비는 현물로 입력하셔야 하며, 인건비는 협동수행기관에 한해 현물로 입력 가능합니다.</em>
+                                        <button type="button" class="btn-add-row">+ 행 추가</button>
+                                    </div>
+                                </header>
+                                <div class="cs-data-table2">
+                                    <table>
+                                        <colgroup>
+                                            <col class="w-130">
+                                            <col class="w-150">
+                                            <col class="w-100">
+                                            <col class="w-150">
+                                            <col class="w-100">
+                                            <col class="w-150">
+                                            <col class="w-100">
+                                            <col class="w-150">
+                                            <col class="w-auto">
+                                            <col class="w-70">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2">세목</th>
+                                                <th colspan="2">보조금</th>
+                                                <th colspan="5">기업 분담금</th>
+                                                <th rowspan="2">비고</th>
+                                                <th rowspan="2">삭제</th>
+                                            </tr>
+                                            <tr>
+                                                <th>금액<span class="text-sm">(원)</span></th>
+                                                <th>비율</th>
+                                                <th>현금<span class="text-sm">(원)</span></th>
+                                                <th>비율</th>
+                                                <th>현물<span class="text-sm">(원)</span></th>
+                                                <th>비율</th>
+                                                <th>소계<span class="text-sm">(원)</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select name="" id="" class="cs-input width100p">
+                                                        <option value="">인건비</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="cs-input text-right width100p" value="950,000">
+                                                </td>
+                                                <td class="border-left-0  text-center">36.2%</td>
+                                                <td>
+                                                    <input type="text" class="cs-input text-right width100p" value="950,000">
+                                                </td>
+                                                <td class="border-left-0 text-center">36.2%</td>
+                                                <td>
+                                                    <input type="text" class="cs-input text-right width100p" value="950,000">
+                                                </td>
+                                                <td class="border-left-0  text-center">36.2%</td>
+                                                <td><input type="text" class="cs-input text-right width100p" readonly value="950,000"></td>
+                                                <td><input type="text" class="cs-input width100p"></td>
+                                                <td class="text-center"><button class="btn-del" title="삭제"></button></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot class="tfoot">
+                                            <tr>
+                                                <td>사업비 총액<span class="text-sm">(원)</span></td>
+                                                <td colspan="2" class="text-right text-bold">1,300,000</td>
+                                                <td colspan="5" class="text-right text-bold">1,300,000</td>
+                                                <td colspan="2"></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!--// 사업비 사용 계획 -->
+
+                    <div class="border-rows hover:border-rows-color">
+                        <div class="border-rows-hgroup">
+                            <h4>성과목표
+                                <em>* 성과목표는 최소 1개 이상 입력 되어야  하고, 증빙방법을 명시 해야 합니다.</em>
+                            </h4>
+                            <button type="button" class="btn-add-row">+ 행 추가</button>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-4"></button>
+                        </div>
+
+                        <div class="border-rows-content bs-request-4">
+                            <div class="cs-data-table2">
+                                <table>
+                                    <colgroup>
+                                        <col class="w-230">
+                                        <col class="w-210">
+                                        <col class="w-210">
+                                        <col class="w-210">
+                                        <col class="w-auto">
+                                        <col class="w-70">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>성과지표 <i class="cs-icon-req"></i></th>
+                                            <th>목표치</th>
+                                            <th>단위</th>
+                                            <th>증빙방법</th>
+                                            <th>비고</th>
+                                            <th>삭제</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <select name="" id=""  class="cs-input width100p">
+                                                    <option value="">매출액</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center"><input type="text" class="cs-input width100p text-right"></td>
+                                            <td class="text-center"><input type="text" class="cs-input width100p"></td>
+                                            <td class="text-center"><input type="text" class="cs-input width100p"></td>
+                                            <td class="text-center"><input type="text" class="cs-input width100p"></td>
+                                            <td class="text-center"><button type="button" class="btn-del" title="삭제"></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="contsec contsec-btns consec-foot">
+                        <div>
+                            <a href="" class="btn btn_default-outline btn_l">임시 저장</a>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn_primary btn_l">이전</a>
+                            <a href="01-06-사업지원신청-첨부파일.html" class="btn btn_primary btn_l">다음</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // bsn-request -->
+            </div>
+        </div>
+        
+        @@include('./include/footer.html')
+        <script src="./assets/js/all.min.js"></script>
+    </div>
+    </body>
+</html>

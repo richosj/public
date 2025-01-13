@@ -1,0 +1,369 @@
+@use "sass:map";
+@use 'utils' as *;
+@use "ng-badge";
+
+/* 탭 */
+.ui-btn-track{
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:has(.btn-tab1){
+        background-color: #eeeeee;
+        border-radius: 7px;
+    }
+    @media (max-width: map.get($media,xl)) {
+        justify-content: flex-start;
+    }
+}
+.btn-tab1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+    color: #555555;
+    border-radius: 7px;
+    width: 156px;
+    height: 56px;
+    font-size: 19px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    &.current{
+        font-weight: 700;
+        color: #fff;
+        background-color: #333333;
+    }
+    &+.btn-tab1{
+        position: relative;
+        &::after{
+            content:"";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 1px;
+            height: 24px;
+            background-color: #c6c6c6;
+            transform: translateY(-50%);
+        }
+    }
+    @media (max-width:map.get($media,lg)) {
+        width: auto;
+        height: 45px;
+        font-size: 15px;
+        padding: 0 15px;
+    }
+}
+
+.ui-btn-track{
+    &:has(.btn-tab2){
+        gap:0 8px;
+    }
+}
+.btn-tab2{
+    color: #717171;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+    background-color: #fff;
+    white-space: nowrap;
+    font-size: 17px;
+    height: 48px;
+    padding: 0 24px;
+    &.current{
+        color: var(--brand-color);
+        border-color: var(--brand-color);
+    }
+    @media (max-width:map.get($media,lg)) {
+        font-size: 13px;
+        height: 40px;
+        padding: 0 17px;
+    }
+}
+
+.ask-layer{
+    position: absolute;
+    border: 1px solid #333333;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    display: none;
+    max-width:500px;
+    margin-left: 10px;
+    margin-top: -20px;
+    &.active{
+        display: block;
+    }
+}
+.ask-cont{
+    position: relative;
+    padding: 25px;
+    padding-right: 70px;
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 30px;
+    //     left: -10px;
+    //     width: 10px;
+    //     height: 13px;
+    //     background: url(#{$src}/misc/tool.png) no-repeat 0 0;
+    // }
+    color: #fff;
+    font-size: 17px;
+    .txt{
+       +ul{
+        margin-top: 25px;
+        @media (max-width:map.get($media,lg)) {
+            margin-top: 10px;
+        }
+       }
+    }
+    ul{
+        li{
+            line-height: 1.4;
+            display: flex;
+            gap: 0 4px;
+            width: 100%;
+            &::before{
+                content:"-";
+                flex-shrink: 1;
+            }
+        }
+    }
+    .btn-close-ask{
+        position: absolute;
+        right: 25px;
+        top: 25px;
+    }
+}
+
+.option-layer{
+    position: absolute;
+    border: 1px solid #333;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    display: none;
+    max-width: 110px;
+    &.active{
+        display: block;
+    }
+    ul{
+        li{
+            display: flex;
+            align-items: center;
+            gap:0 5px;
+            line-height: 1;
+            white-space: nowrap;
+            +li{
+                padding-top: 10px;
+            }
+            &::before{
+                content:"";
+                width: 2px;
+                height: 2px;
+                background-color: #333;
+                flex-grow: 0;
+            }
+            a,
+            button{
+                color: #333333;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+.upload-ui{
+    position: relative;
+    display: flex;
+    gap:0 8px;
+    .hidden{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0.1;
+        overflow: hidden;
+    }
+    .file-name{
+        background-color: #fff;
+        border: 1px solid #c6c6c6;
+        display: flex;
+        align-items: center;
+        color: #8e8e8e;
+        padding: 0 20px;
+        font-size: 17px;
+        border-radius: 5px;
+        height: 48px;
+        flex: 1;
+        flex-wrap: wrap;
+        overflow: hidden;
+        gap:0 5px;
+        @media (max-width: map.get($media, lg)) {
+            height: 34px;
+            font-size: 12px;
+            padding: 0 10px;
+        }
+    }
+    .file-name-item{
+        display: inline-block;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .file-volume{
+        position: absolute;
+        right: 20px;
+        top: -20px;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: #8e8e8e;
+        b{
+            font-weight: 400;
+            color: #555;
+        }
+        @media (max-width: map.get($media,lg)) {
+            font-size: 11px;
+            right: 10px;
+            top: -17px;
+        }
+    }
+    .ico-delete{
+        border-radius: 5px;
+        background-color: #fff;
+        border: 1px solid #c6c6c6;
+        width: 25px;
+        height: 25px;
+        background: url(/dfip/static/front/common/images/bss/icon-del.png) no-repeat 50% 50%;
+        @media (max-width: map.get($media,lg)) {
+            width: 20px;
+            height: 20px;
+            background-size: 10px auto;
+        }
+    }
+    label{
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        background-color: #fff;
+        border: 1px solid #555555;
+        padding: 0 24px;
+        font-size: 17px;
+        flex-shrink: 0;
+        @media (max-width: map.get($media, lg)) {
+            height: 34px;
+            font-size: 12px;
+            padding: 0 12px;
+        }
+    }
+}
+
+.boxing-cont{
+    border-top: 2px solid #000;
+    background-color: #f6f6f6;
+    padding: 25px;
+    @media (max-width: map.get($media, lg)) {
+        padding: 20px 15px;
+    }
+}
+.in-list{
+    line-height: 1;
+    dl{
+        &:not(:first-child){
+            margin-top: 20px;
+        }
+        display: flex;
+        gap:0 30px;
+        dt{
+            font-weight: 400;
+            color: #333;
+            width: 110px;
+        }
+        dd{
+            color: #555555;
+        }
+    }
+    .not-flex{
+        display: block;
+        dt{
+            padding-bottom: 10px;
+            @media (max-width: map.get($media,lg)) {
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 40px;
+    @media (max-width: map.get($media,lg)) {
+        gap: 0 4px
+    }
+}
+
+.pagination a,
+.pagination span {
+    &:not(.page-move){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        text-decoration: none;
+        color: #717171;
+        border-radius: 4px;
+        @media (max-width: map.get($media,lg)) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination .active {
+    background-color: #333;
+    color: #fff !important;
+    pointer-events: none;
+}
+
+.pagination .prev,
+.pagination .next {
+    background-repeat: no-repeat;
+    height: 40px;
+    @media (max-width: map.get($media,lg)) {
+        font-size: 0;
+        background-size: 6px auto;
+    }
+}
+
+.pagination .prev{
+    background-image: url(#{$src}/component/paging-prev.png);
+    background-position: 0 50%;
+    padding-left: 18px;
+    width: auto;
+    margin-right: 10px;
+}
+.pagination .next{
+    background-image: url(#{$src}/component/paging-next.png);
+    background-position: 100% 50%;
+    padding-right: 18px;
+    width: auto;
+    padding-left: 10px;
+}
+
+.alert{
+    background-color: #f9f9fa;
+    border-radius: 10px;
+    padding: 23px;
+    border: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #717171;
+}

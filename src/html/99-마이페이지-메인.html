@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+            "title" : "마이페이지",
+            "title2" : "마이페이지",
+        })
+
+        <div class="main-content mypage-main">
+            <div class="row mypage-main-s1">
+                <div class="container">
+                    <div class="mypage-main-text"><b>금산식품㈜</b>님 환영합니다!</div>
+
+                    <div class="mypage-user-mng">
+                        <strong class="title">나의 알람</strong>
+                        <div class="showing">
+                            <div>
+                                <a href="#">쪽지</a>
+                                <span class="count">2</span>
+                            </div>
+                            <div>
+                                <a href="#">메세지</a>
+                                <span class="count">2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mypage-user-mng">
+                        <strong class="title">나의 관리</strong>
+                        <div class="showing">
+                            <button type="button"><i></i>기관 소속 직원</button>
+                            <button type="button"><i></i>공동인증서</button>
+                            <button type="button"><i></i>즐겨찾기</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row mypage-main-s2">
+                <div class="container">
+                    <ul class="lv1">
+                        <li><a href="#">기업지원사업</a>
+                            <ul class="lv2">
+                                <li><a href="#">사업신청</a></li>
+                                <li><a href="#">사업평가</a></li>
+                                <li><a href="#">협약관리</a></li>
+                                <li><a href="#">사업수행</a>
+                                    <ul class="lv3">
+                                        <li><a href="#">- 진도관리</a></li>
+                                        <li><a href="#">- 계획서 변경</a></li>
+                                        <li><a href="#">- 예산집행</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">성과관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">지원서비스</a>
+                            <ul class="lv2">
+                                <li><a href="#">시험분석</a>
+                                    <ul class="lv3">
+                                        <li><a href="#">- 시험분석 목록</a></li>
+                                        <li><a href="#">- 시험분석 재발급 목록</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">시설장비</a></li>
+                                <li><a href="#">공유시설</a></li>
+                                <li><a href="#">식품실무교육</a></li>
+                                <li><a href="#">전문가활동이력</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객지원</a>
+                            <ul class="lv2">
+                                <li><a href="#">나의 민원</a>
+                                    <ul class="lv3">
+                                        <li><a href="#">- 나의 민원</a></li>
+                                        <li><a href="#">- 나의 QnA</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">나의 고충처리</a>
+                                    <ul class="lv3">
+                                        <li><a href="#">- 기술고충</a></li>
+                                        <li><a href="#">- 경영고충</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">나의 멘토링</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메세지관리</a>
+                            <ul class="lv2">
+                                <li><a href="#">받은 쪽지함</a></li>
+                                <li><a href="#">수신 메시지</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">융합데이터</a>
+                            <ul class="lv2">
+                                <li><a href="#">서비스요청</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">정보관리</a>
+                            <ul class="lv2">
+                                <li><a href="#">직인관리</a></li>
+                                <li><a href="#">기관소속직원 관리</a></li>
+                                <li><a href="#">공동인증서 관리</a></li>
+                                <li><a href="#">즐겨찾기 관리</a></li>
+                                <li><a href="#">회원 정보 수정</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        @@include('./include/ng-footer.html')
+    </div>
+    </body>
+</html>

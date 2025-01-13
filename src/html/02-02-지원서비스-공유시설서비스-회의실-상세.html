@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+    <link rel="stylesheet" href="./assets/js/vendor/splide.min.css">
+    <script src="./assets/js/vendor/splide.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+            "title" : "지원서비스",
+            "title2" : "공유시설 서비스",
+        })
+        <div class="main-content">
+            <div class="row">
+                <div class="container">
+                    <div class="content-hgroup">
+                        <div><strong>공동기술개발 사업</strong></div>
+                        <div class="in-charge">
+                            <span class="team-name">담당부서 : <em>기업협력팀</em></span>
+                            <span class="team-info">문의(기업지원센터) : <em>063-720-0500</em></span>
+                        </div>
+                    </div>
+                    <div class="office-share-app">
+                        <div class="child">
+                            <div class="office-info border-box">
+                                <div class="hgroup">
+                                    <h3><span>[청년식품창업센터] 회의실</span></h3>
+                                    <a class="link-blank" href="#">업무회의 및 미팅</a>
+                                </div>
+                                <div class="photo-slide splide">
+                                    <div class="splide__arrows">
+                                        <span class="slide__indicator">
+                                            <span id="current-slide"></span>
+                                            <i>/</i>
+                                            <span id="total-slides"></span>
+                                        </span>
+                                        <button class="play-pause">일시정지</button>
+                                        <button class="splide__arrow splide__arrow--prev">이전</button>
+                                        <button class="splide__arrow splide__arrow--next">다음</button>
+                                    </div>
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="office-detail">
+                                    <dl>
+                                        <dt>위치</dt>
+                                        <dd>밴처센터 2F <button type="button" class="btn-load-view"></button></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>비용</dt>
+                                        <dd>무료</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>제공타입</dt>
+                                        <dd>4인실, 8인실, 16인실</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>수용인원</dt>
+                                        <dd>100명</dd>
+                                    </dl>
+                                    <dl class="full">
+                                        <dt>기본제공</dt>
+                                        <dd>프로젝션, 대형티비, 의자, 책상</dd>
+                                    </dl>
+                                    <dl class="full">
+                                        <dt>시설안내</dt>
+                                        <dd>창업 활동을 위한 창업자 정주여건 및 관련 행사 참여자, 관계자 등의 편의를 
+                                            위해 제공하는 중·단기 숙박시설 입니다. 창업지원사업 협약/참여 기업(팀) 및 
+                                            관계자, 창업센터 입주기업, 시제품제작실 이용 기업(팀), 진흥원 행사/교육 
+                                            참여자 및 관계자 사용가능며, 1인 1일로 남녀로 층을 분리해 운영중입니다.</dd>
+                                    </dl>
+                                </div>
+                                <div class="office-usetip">
+                                    <strong>이용 안내</strong>
+                                    <div>
+                                        <p>* 월∼금요일 평일로 하며, 공휴일은 운영하지 않음 (센터 운영시간 9시~18시)</p>
+                                        <div><span>- 체크인(키 배부) :</span> 평일 업무 시간 내(9∼18시) 업무 대응은 로비 안내에서 진행하며, 업무시간 외 시설용역에서 업무대응</div>
+                                        <div><span>- 비품구성 :</span> 기숙사는 기본적으로 책상, 침대 및 기본 침구류를 제공하고 그 외 기타 소모품성 비품류는 제공하지 않음</div>
+                                        <div><span>- 편의시설 :</span> 층별 세탁기, 정수기, 공유주방(간단한 취사를 위한 식탁,의자, 전자레인지)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="child">
+                            <div class="border-box">
+                                <div class="border-box-title">1. 타입선택 <i class="cs-icon-req"></i></div>
+                                <div class="office-tab-auto">
+                                    <button type="button" class="selected">4인실(1층)</button>
+                                    <button type="button">4인실(2층)</button>
+                                    <button type="button">8인실</button>
+                                    <button type="button">16인실</button>
+                                </div>
+                            </div>
+
+                            <div class="border-box">
+                                <div class="border-box-title">2. 이용 희망일자 선택 <i class="cs-icon-req"></i></div>
+                                <div class="hope-calendar">
+                                    <div id="calendar"></div>
+                                    <div class="legend">
+                                        <span>선택일</span>
+                                        <span>예약확정</span>
+                                        <span>이용불가</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-box hope-time">
+                                <div class="border-box-title">3. 이용 시간(타입) 선택 <i class="cs-icon-req"></i></div>
+                                <div class="time-list">
+                                    <button type="button">09:00</button>
+                                    <button type="button" disabled>10:00</button>
+                                    <button type="button">11:00</button>
+                                    <button type="button">12:00</button>
+                                    <button type="button">13:00</button>
+                                    <button type="button">14:00</button>
+                                    <button type="button">15:00</button>
+                                    <button type="button" class="selected">16:00</button>
+                                    <button type="button">17:00</button>
+                                    <button type="button">16:00</button>
+                                </div>
+                            </div>
+                            
+                            <div class="border-box">
+                                <div class="border-box-title">4. 예약관련 문의 및 요청 사항</div>
+                                <textarea name="" id="" rows="2" placeholder="특별한 문의 및 요청 사항을 등록해 주시면 입력해 주세요 " class="cs-input"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sec flex justify-end gap-x-12">
+                        <button type="button" class="btn btn_default-outline btn_l">목록</button>
+                        <button type="button" class="btn btn-primary">이용신청</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+
+    </body>
+</html>

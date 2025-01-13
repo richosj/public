@@ -1,0 +1,333 @@
+// Import necessary Sass modules
+@use "sass:map";
+@use "sass:math";
+
+$media-xl : 1425px;
+$media-lg : 1024px;
+$media-md : 768px;
+$media-sm : 400px;
+// Grid Layout Classes
+$max-cols: 12; // 최대 컬럼 수 설정, 필요하면 수정해
+$max-rows: 12; // 최대 컬럼 수 설정, 필요하면 수정해
+
+@for $i from 1 through $max-cols {
+  .grid-cols-#{$i} {
+    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+@for $i from 1 through $max-rows {
+  .grid-rows-#{$i} {
+    grid-template-rows: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+.grid-column-100{
+  grid-column: -1 / 1;
+}
+
+// Flexbox Alignment Classes
+$align-items-options: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch
+);
+
+$justify-content-options: (
+  "normal": normal,
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "between": space-between,
+  "around": space-around,
+  "evenly": space-evenly,
+  "stretch": stretch
+);
+
+@each $name, $value in $align-items-options {
+  .items-#{$name} {
+    align-items: $value;
+  }
+}
+@media (max-width: $media-lg) {
+  @each $name, $value in $align-items-options {
+    .mobile\:items-#{$name} {
+      align-items: $value;
+    }
+  }
+}
+
+@media (max-width: $media-lg){
+  .mobile\:column{
+    flex-direction: column;
+  }
+}
+
+@each $name, $value in $justify-content-options {
+  .justify-#{$name} {
+    justify-content: $value;
+  }
+}
+
+// Display Property Classes
+$display-options: (
+  "block": block,
+  "inline-block": inline-block,
+  "inline": inline,
+  "flex": flex,
+  "inline-flex": inline-flex,
+  "table": table,
+  "inline-table": inline-table,
+  "table-caption": table-caption,
+  "table-cell": table-cell,
+  "table-column": table-column,
+  "table-column-group": table-column-group,
+  "table-footer-group": table-footer-group,
+  "table-header-group": table-header-group,
+  "table-row-group": table-row-group,
+  "table-row": table-row,
+  "flow-root": flow-root,
+  "grid": grid,
+  "inline-grid": inline-grid,
+  "contents": contents,
+  "list-item": list-item,
+  "hidden": none
+);
+
+@each $name, $value in $display-options {
+  .#{$name} {
+    display: $value;
+  }
+}
+// Line Clamp Classes
+$max-line-clamp: 6;
+
+@for $i from 1 through $max-line-clamp {
+  .line-clamp-#{$i} {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $i;
+  }
+}
+
+.line-clamp-none {
+  overflow: visible;
+  display: block;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: none;
+}
+
+// Text Alignment Classes
+$text-align-options: (
+  "left": left,
+  "center": center,
+  "right": right,
+  "justify": justify,
+  "start": start,
+  "end": end
+);
+
+@each $name, $value in $text-align-options {
+  .text-#{$name} {
+    text-align: $value;
+  }
+}
+
+// Word and Break Classes
+$break-options: (
+  "normal": (
+    "overflow-wrap": normal,
+    "word-break": normal
+  ),
+  "words": (
+    "overflow-wrap": break-word
+  ),
+  "all": (
+    "word-break": break-all
+  ),
+  "keep": (
+    "word-break": keep-all
+  )
+);
+
+@each $name, $properties in $break-options {
+  .break-#{$name} {
+    @each $property, $value in $properties {
+      #{$property}: $value;
+    }
+  }
+}
+
+// Vertical Alignment Classes
+$vertical-align-options: (
+  "baseline": baseline,
+  "top": top,
+  "middle": middle,
+  "bottom": bottom,
+  "text-top": text-top,
+  "text-bottom": text-bottom,
+  "sub": sub,
+  "super": super
+);
+
+@each $name, $value in $vertical-align-options {
+  .align-#{$name} {
+    vertical-align: $value;
+  }
+}
+
+// Box Shadow Classes
+$box-shadow-options: (
+  "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+  "default": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)",
+  "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)",
+  "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)",
+  "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+  "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+  "inner": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)",
+  "none": "0 0 transparent"
+);
+
+@each $name, $value in $box-shadow-options {
+  .shadow-#{$name} {
+    box-shadow: #{$value};
+  }
+}
+
+.shadow {
+  box-shadow: map.get($box-shadow-options, "default");
+}
+
+// Opacity Classes
+@for $i from 0 through 20 {
+  $value: 100 - ($i * 5);
+  .opacity-#{$value} {
+    //opacity: math.div($value, 100);
+  }
+}
+
+@for $i from 0 through 50{
+  .gap-x-#{$i}{
+    gap: 0 #{$i}px;
+  }
+  .gap-y-#{$i}{
+    gap: #{$i}px 0;
+  }
+  .gap-#{$i}{
+    gap: #{$i}px;
+  }
+}
+@media (max-width: $media-lg) {
+  @for $i from 0 through 50{
+    .mobile\:gap-x-#{$i}{
+      gap: 0 #{$i}px;
+    }
+    .mobile\:gap-y-#{$i}{
+      gap: #{$i}px 0;
+    }
+    .mobile\:gap-#{$i}{
+      gap: #{$i}px;
+    }
+  }
+}
+
+// Margin and Padding Classes
+@for $i from 0 through 50 {
+  // margin X (left and right)
+  .mx-#{$i} {
+    margin-left: #{$i}px;
+    margin-right: #{$i}px;
+  }
+
+  // margin Y (top and bottom)
+  .my-#{$i} {
+    margin-top: #{$i}px;
+    margin-bottom: #{$i}px;
+  }
+
+  // padding X (left and right)
+  .px-#{$i} {
+    padding-left: #{$i}px;
+    padding-right: #{$i}px;
+  }
+
+  // padding Y (top and bottom)
+  .py-#{$i} {
+    padding-top: #{$i}px;
+    padding-bottom: #{$i}px;
+  }
+
+  // margin 전체
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+
+  // padding 전체
+  .p-#{$i} {
+    padding: #{$i}px;
+  }
+
+  // 개별적으로 margin top, right, bottom, left
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+
+  .mr-#{$i} {
+    margin-right: #{$i}px;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+
+  .ml-#{$i} {
+    margin-left: #{$i}px;
+  }
+
+  // 개별적으로 padding top, right, bottom, left
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+
+  .pr-#{$i} {
+    padding-right: #{$i}px;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+
+  .pl-#{$i} {
+    padding-left: #{$i}px;
+  }
+}
+
+.w-full{width: 100%;}
+@for $i from 0 through 200 {
+  .h-#{$i*5},
+  .w-#{$i*5}{
+    width: #{$i*5}px;
+  }
+}
+.w-auto{width: auto;}
+
+// Font Weight Classes
+$font-weight-options: (
+  "thin": 100,
+  "extralight": 200,
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "extrabold": 800,
+  "black": 900
+);
+
+@each $name, $value in $font-weight-options {
+  .text-#{$name},
+  .font-#{$name} {
+    font-weight: #{$value};
+  }
+}

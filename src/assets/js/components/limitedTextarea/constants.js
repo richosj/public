@@ -1,0 +1,1 @@
+export const TEXTAREA_SELECTOR = '.limited-textarea';

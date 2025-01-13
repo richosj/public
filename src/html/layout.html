@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+    <link rel="stylesheet" href="./assets/css/ng-style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+            "title" : "기업 지원 사업",
+            "title2" : "사업 공고",
+        })
+        <div class="main-content">
+            <div class="row">
+                <div class="container">
+                
+                </div>
+            </div>
+        </div>
+        
+        @@include('./include/ng-footer.html')
+    </div>
+    </body>
+</html>

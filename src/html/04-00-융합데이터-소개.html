@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+        "title" : "용합데이터",
+        "title2" : "융합데이터 소개",
+        })
+        <div class="main-content">
+            <div class="row">
+                <div class="container">
+                    <div class="fusion-intro">
+                        <div>
+        
+                        </div>
+                        <!-- // 완료 -->
+                        <div class="step">
+                            <div class="border-rows">
+                                <div class="child1">
+                                    <div class="black">BIG DATA</div>
+                                    <ul class="list-round">
+                                        <li>
+                                            <strong>식품산업지도</strong>
+                                            <p>지역,업종,품목별 식품기업 분포 규모별 식품기업현황</p>
+                                        </li>
+                                        <li>
+                                            <strong>원료 생산자 현황</strong>
+                                            <p>지역,생산품목별 농가분포 및 경영 현황</p>
+                                        </li>
+                                        <li>
+                                            <strong>국내 제품 트렌드</strong>
+                                            <p>일반품목 및 건강기능성식품 품목동향 원재료 및 영양성분별 품목동향</p>
+                                        </li>
+                                        <li>
+                                            <strong>국내 판매 트렌드</strong>
+                                            <p>외식, 슈퍼마켓, 편의점의  기간,지역별 분류별 메뉴별 판매 동향 및 추의</p>
+                                        </li>
+                                        <li>
+                                            <strong>해외 제품 트렌드</strong>
+                                            <p>주요 8개국 SKU 단위제품 출시 및 가격 동향, 속성 통계</p>
+                                        </li>
+                                        <li>
+                                            <strong>해외 시장 트렌드</strong>
+                                            <p>주요 40개국의 국가별, 분류별 시장 규모 및 예층 회사/브랜드 점유율</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="child2"><img src="/dfip/static/front/common/images/bss/fusion/info.png" alt=""></div>
+                                <div class="child3">
+                                    <div><span>판매 및 마케팅 계획 수립</span></div>
+                                    <div><span>제품 트렌드 분석</span></div>
+                                    <div><span>제품 개발 및 개선</span></div>
+                                    <div><span>해외 시장 전략 수립</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-rows hover:border-rows-color mt-20">
+                            <div class="border-rows-hgroup bdb0">
+                                <h3 class="sm">주요 활용 데이터 목록</h3>
+                                <button type="button" class="collapse-toggle" data-collapse-target="collapse"></button>
+                            </div>
+                            <div class="border-rows-content collapse">
+                                <div class="cs-table">
+                                    <table>
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">데이터 종류</th>
+                                                <th scope="col">활용 대상</th>
+                                                <th scope="col">활용 내용</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">식품기업데이터</td>
+                                                <td>
+                                                    식품산학연 나이스 D&B 식품기업Data<br>
+                                                    - 기업기본정보, 형태, 종사자수, 재무구조 등
+                                                </td>
+                                                <td>국가표준지역코드</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">원료생산자현황 데이터</td>
+                                                <td>
+                                                    농업경영체DB<br>
+                                                    - 농업경영체 기본정보, 생산정보, 농지정보 등
+                                                </td>
+                                                <td>국가표준지역코드</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">일반식품정보 데이터</td>
+                                                <td>
+                                                    100만여개 일반식품정보 (품목단위) <br>
+                                                    - 품목제조보고 : 일자, 품목제조번호, 제조사명, 제품명, 인허가번호, 품목유형명<br>
+                                                    - 품목제조보고 원재료 : 일자, 품목별 제조번호, 제조사명, 제품명, 원료명<br>
+                                                    - 생산실적보고 : 일자, 품목제조번호, 제조사명, 제품명, 인허가번호, 연간생산능력 생산량
+                                                </td>
+                                                <td>
+                                                    인허가정보 전처리 후생성 <br>
+                                                    품목제조정보 전처리 후생성<br>
+                                                    생산실책정보 전처리 후생성<br>
+                                                    현재 유형 및 속성분류<br>
+                                                    부가속성분류
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">건강기능식품 데이터</td>
+                                                <td>
+                                                    18만여개 건강기능식품 정보 (품목단위)<br>
+                                                    - 품목제조보고 : 일자,품목제조번호, 제조사형, 제품명,인허가번호, 품목유형형,섭취방법,보관방법, 주의사항,기준규격,제품형태 등<br>
+                                                    - 품목제조보고 원재료 : 일자, 품목제조번호 제조사 제품명, 원재료명, 보관방법, 기준규격 제품형태 등<br>
+                                                    - 생산실적보고 : 일자, 품목제조번호, 제조사명, 제품명, 인허가번호, 연간생산능력 생산량
+                                                </td>
+                                                <td>
+                                                    인허가정보 전처리 후생성 <br>
+                                                    품목제조정보 전처리 후생성<br>
+                                                    생산실책정보 전처리 후생성<br>
+                                                    현재 유형 및 속성분류<br>
+                                                    부가속성분류
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2" class="text-center">외식/슈퍼마켓/편의점 업소 데이터</td>
+                                                <td>국내 편의점/수퍼마켓 각1개 브랜드사지역단위 식품판매정보 (제품단위POS정보)<br>
+                                                    - 지역 : 전국 시군구 단위<br>
+                                                    - 기간 :  2년, 월단위<br>
+                                                    - 분류체계 : 대-중-소-세분류단위제품<br>
+                                                    - 항목 : 판매수량, 판매액 판매단가</td>
+                                                <td>
+                                                    표준품목분류체계<br>
+                                                    국가표준지역코드
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    국내 편의점/수퍼마켓 각1개 브랜드사지역단위 식품판매정보 (제품단위POS정보)<br>
+                                                    - 지역 : 전국 시군구 단위<br>
+                                                    - 기간 :  2년, 월단위<br>
+                                                    - 분류체계 : 대-중-소-세분류단위제품<br>
+                                                    - 항목 : 판매수량, 판매액 판매단가
+                                                </td>
+                                                <td>
+                                                    메뉴분류체계<br>
+                                                    국가표준지역코드
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">해외시장 / 제품정보 데이터</td>
+                                                <td>
+                                                    해외식품시장 및 제품정보<br>
+                                                    - 지역 : 국가별<br>
+                                                    - 기간 : 1년,  분기, 주 단위<br>
+                                                    - 분류체계 : 유로모니터 Category 체계
+                                                </td>
+                                                <td>
+                                                    국가표준지역코드<br>
+                                                    주/분기/연단위 업데이트
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">외부통계정보</td>
+                                                <td>인구, 공동주택, 상업시설계<br>- 인구수, 주택수, 업종별 업체수</td>
+                                                <td>
+                                                    국가표준지역코드 <br>
+                                                    웰/연단위 업데이트
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="flex justify-end mt-20 gap-x-10">
+                            <a href="#" class="btn btn_default-outline btn_l">활용 가이드</a>
+                            <a href="#" class="btn btn_primary btn_l">데이터 서비스 요청</a>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('./include/ng-footer.html')
+    <div class="popup-wrap" style="display: none;">
+        <div class="popup-container" style="width:600px">
+            <!-- header -->
+            <div class="popup-header">
+                <span class="popup-header-text">융합데이터 서비스 요청</span>
+                <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+            </div>
+            <!-- content -->
+            <div class="popup-content">
+                <!-- popup-content-wrap -->
+                <div class="popup-content-wrap">
+                    <div class="pop-inner-con">
+                        <div class="boxing-cont in-list">
+                            <dl class="not-flex">
+                                <dt>기업명(팀명) <i class="cs-icon-req"></i></dt>
+                                <dd>
+                                    <input type="text" class="cs-input width100p" placeholder="서비스요청명 입력">
+                                </dd>
+                            </dl>
+                            <dl class="not-flex">
+                                <dt>신청 내용 <i class="cs-icon-req"></i></dt>
+                                <dd>
+                                    <textarea name="" id="" class="cs-input" rows="4" placeholder="신청 내용 입력"></textarea>
+                                </dd>
+                            </dl>
+                            <dl class="not-flex">
+                                <dt>자료 첨부 <i class="cs-icon-req"></i></dt>
+                                <dd>
+                                    <div class="upload-ui">
+                                        <div class="file-volume"><b>0MB</b>/5MB</div>
+                                        <div class="file-name">파일을 첨부해 주세요.</div>
+                                        <label for="exmfile">파일선택</label>
+                                        <input type="file" class="hidden" id="exmfile">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="not-flex">
+                                <dt>자료 첨부</dt>
+                                <dd>
+                                    <div class="upload-ui">
+                                        <div class="file-name">
+                                            <span class="file-name-item">dasjklfasjfklajklfsajklfdsajlfkdjaklfjsaklfdjaskldfjsaklfsjaklf.pdf</span>
+                                            <button class="ico-delete"></button>
+                                        </div>
+                                        <label for="exmfile2">파일선택</label>
+                                        <input type="file" class="hidden" id="exmfile2">
+                                        <div class="file-volume"><b>0</b>MB/5MB</div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <!-- popup-content-wrap -->
+            </div>
+        </div>
+    </div>
+</body></html>

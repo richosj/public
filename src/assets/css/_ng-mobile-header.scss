@@ -1,0 +1,269 @@
+@use "sass:map";
+@use 'utils' as *;
+
+
+.mobile-header{
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #c6c6c6;
+    z-index: 5;
+    @media (max-width: map.get($media,lg)) {
+        display: block;
+    }
+    &-top{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+    .brand{
+        a{
+            display: block;
+            background: url(#{$src}/mi.png) 50% 50% no-repeat;
+            background-size: 100% auto;
+            width: 125px;
+            height: 13px;
+        }
+    }
+    .easy-hgroup{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0 8px;
+        height: 100%;
+        .home{
+            display: inline-block;
+            width: 14px;
+            height: 32px;
+            background: url(#{$src}/home.png) no-repeat 50% 50%;
+            background-size: 100% auto;
+        }
+        .toggle{
+            position: relative;
+            padding-right: 20px;
+            height: 32px;
+            &::after{
+                content:"";
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                background: url(#{$src}/m-easy-arw.png) no-repeat 0 0 / cover;
+                width: 10px;
+                height: 6px;
+                transform: translateY(-50%) rotate(0deg);
+                transition: all 0.25s;
+            }
+            &.active{
+                &::after{
+                    transform: translateY(-50%) rotate(180deg);
+                }
+                +.dropmenu{
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+        .dropmenu{
+            opacity: 0;
+            visibility: hidden;
+            z-index: -2;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            max-width: 320px;
+            width: 50vw;
+            background-color: #fff;
+            border: 1px solid #111;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 5px 5px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+            transform: translateY(-30px);
+            li{
+                a{
+                    display: block;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+
+    .utils{
+        display: flex;
+        align-items: center;
+        gap:0 10px;
+    }
+    .bookmark-actions{
+        width: 17px;
+        height: 17px;
+        background: url(#{$src}/bookmark.png) no-repeat 50% 50%;
+        background-size: 100% auto;
+    }
+    .open-search{
+        width: 16px;
+        height: 17px;
+        background: url(#{$src}/search.png) no-repeat 50% 50%;
+        background-size: 100% auto;
+    }
+    .open-menu{
+        width: 18px;
+        height: 17px;
+        background: url(#{$src}/menu.png) no-repeat 50% 50%;
+        background-size: 100% auto;
+        
+    }
+    nav{
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        top: 0;
+        transform: translateY(-100%);
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        height: 100dvh;
+        padding: 0 16px;
+        transition: all .7s;
+        
+    }
+    .mobile-nav-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        border-bottom: 1px solid #000;
+        .user-prompt{
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #1d1d1d;
+            &::after{
+                content:"";
+                display: inline-block;
+                background: url(#{$src}/m-prompt-arw.png) no-repeat 0 50% / 13px auto;
+                width: 13px;
+                height: 8px;
+                margin-left: 10px;
+            }
+        }
+        .login-prompt{
+            position: relative;
+            background: url(#{$src}/icon-m-login.png) no-repeat 0 50% / 16px auto;
+            padding-left: 22px;
+            
+            a{
+                font-weight: 700;
+                color: #1d1d1d;
+            }
+        }
+    }
+    .multi-group{
+        display: flex;
+        align-items: center;
+        gap:0 10px;
+        .links{
+            color: #555555;
+            font-size: 11px;
+        }
+        .close{
+            position: relative;
+            width: 20px;
+            height: 20px;
+            &::after,
+            &::before{
+                content:"";
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 2px;
+                background-color: black; /* 선의 색상 */
+                transform-origin: center;
+                border-radius: 5px;
+                transform: translateY(-50%);
+            }
+            &::after{
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            &::before{
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+    &.menu-open {
+        nav{
+            transform: translateY(0%);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+#mgnb{
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    > li{
+        border-bottom: 1px solid #dddddd;
+        transform: all 0.5s linear;
+        > a{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-weight: 700;
+            color: #000;
+            font-size: 16px;
+            height: 50px;
+            transition: all 0.25s;
+            &::after{
+                content:"";
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%) rotate(0deg);
+                background: url(#{$src}/m-nav-arw.png) no-repeat 0 50% / 12px auto;
+                width: 12px;
+                height: 7px;
+                transition: all 0.25s;
+            }
+        }
+        &.active{
+            > a{
+                color: var(--brand-color);
+                &::after{
+                    background-image: url(#{$src}/m-nav-arw-active.png);
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+        }
+        .depth{
+            overflow: hidden; 
+            visibility: hidden;
+            opacity: 0;
+            border-top: 1px solid #ddd;
+            height: 0;
+            //transition: visibility 0s ease 0.5s;
+            ul{
+                padding: 12px 0;
+            }
+            li{
+                a{
+                    display: block;
+                    color: #2d2d2d;
+                    font-weight: 300;
+                    font-size: 12px;
+                    padding: 8px 0;
+                }
+            }
+        }
+    }
+}

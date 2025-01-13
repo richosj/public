@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/header.html')
+
+        @@include('./include/subtop.html', {
+            "title" : "기업지원사업",
+            "title2" : "사업 신청"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+
+                <nav class="form-steps">
+                    <div class="clear">
+                        <span class="num">1</span>
+                        <span class="text">신청서 작성</span>
+                    </div>
+                    <div class="active">
+                        <span class="num">2</span>
+                        <span class="text">과제명 및 참여기관</span>
+                    </div>
+                    <div>
+                        <span class="num">3</span>
+                        <span class="text">과제 요약 및 사업비 사용 계획</span>
+                    </div>
+                    <div>
+                        <span class="num">4</span>
+                        <span class="text">첨부파일</span>
+                    </div>
+                </nav>
+
+                <div class="bsn-request">
+                    <div class="border-rows hover:border-rows-color">
+                        <div class="border-rows-hgroup">
+                            <h3>사업신청 및 계획서 <em>(상태 : 임시저장)</em></h3>
+                            <div class="flex items-center gap-x-20">
+                                <span class="text-gray-400">접수 마감 일시 : 2025년 2월 28일 18:00</span>
+                                <a class="btn btn-round btn-sm btn-dark">담당자 정보</a>
+                            </div>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-1"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-1">
+                            <div class="grid grid-cols-2 gap-x-40">
+                                <div class="input-group col">
+                                    <label for="">사업명</label>
+                                    <input type="text" class="cs-input width100p" value="2025년 공동기술개발사업" disabled>
+                                </div>
+                                <div class="input-group col">
+                                    <label for="">모집 공고명</label>
+                                    <input type="text" class="cs-input width100p" value="2025년 공동기술개발사업" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 계획서 -->
+                    <div class="border-rows hover:border-rows-color bg-gray-300">
+                        <div class="border-rows-hgroup">
+                            <h4>지원 분야 선택</h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-2"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-2">
+                            <div class="flex gap-x-20">
+                                <div class="input-group col flex-basis-410">
+                                    <label for="">지원 분야 <i class="cs-icon-req">필수</i></label>
+                                    <select name="" id="" class="cs-input width100p">
+                                        <option value="식품포장 종합개선">식품포장 종합개선</option>
+                                    </select>
+                                </div>
+                                <div class="input-group col flex-grow">
+                                    <strong>&nbsp;</strong>
+                                    <div class="input-container flex justify-between">
+                                        <div class="lbl_group">
+                                            <label class="cs-checkbox">
+                                                <input type="checkbox">
+                                                <i></i>
+                                                <span>포장구조 및 재질설계</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="checkbox">
+                                                <i></i>
+                                                <span>친환경 포장 개발</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="checkbox">
+                                                <i></i>
+                                                <span>원가절감</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="checkbox">
+                                                <i></i>
+                                                <span>상품성 개선</span>
+                                            </label>
+                                        </div>
+                                        <div class="text-gray-400 text-sm">* 2가지 이상 복합 지원가능</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-20 text-gray-400 text-sm">* 지원사업 참여기관(주관/참여기업, 협동수행, 전문수행기관)은 사전에 디지털 식품정보 플랫폼에 기업회원으로 가입되어야 합니다.</div>
+                        </div>
+                    </div>
+                    <!--// 지원 분야 선택 -->
+
+                    <div class="border-rows hover:border-rows-color">
+                        <div class="border-rows-hgroup">
+                            <h4>참여 과제 정보</h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-3"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-3">
+                            <div class="grid grid-cols-2 gap-x-20">
+                                <div class="input-group col">
+                                    <label for="">과제명 <i class="cs-icon-req"></i></label>
+                                    <input type="text" class="cs-input width100p" placeholder="과제명을 입력하세요" title="과제명 입력">
+                                </div>
+                                <div class="input-group col">
+                                    <label for="">사업 기간 <i class="cs-icon-req">필수</i></label>
+                                    <div class="bsn-date-set">
+                                        <input type="text" class="js__date-from cs-input-date" placeholder="2022-01-01" title="시작일">
+                                        <input type="text" class="js__date-from cs-input-date" placeholder="2022-01-01" title="시작일">
+                                        <div class="input-container justify-center">수행기간 총 <b class="text-orange-700">(9)</b>개월</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-x-20 mt-35">
+                                <div class="input-group col">
+                                    <strong>지원 가능 금액</strong>
+                                    <div class="input-container disabled">
+                                        <span class="bsn-amount"><b>144,861,000</b>원</span>
+                                    </div>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>연간 지원금 <em>(기 신청금액 / 지원한도)</em></strong>
+                                    <div class="input-container disabled">
+                                        <div class="bsn-amount-group">
+                                            <div class="text-gray-400">45,000,000원</div>
+                                            <div class="text-gray-400">/</div>
+                                            <div class="text-orange-700"><b>70,000,000</b>원</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 참여 과제 정보 -->
+
+                    <div class="border-rows hover:border-rows-color bg-gray-300">
+                        <div class="border-rows-hgroup">
+                            <h4>참여 기관</h4>
+                            <button type="button" class="collapse-toggle" data-collapse-target="bs-request-4"></button>
+                        </div>
+                        <div class="border-rows-content bs-request-4">
+                            <div class="item-container">
+                                <div class="item-head">
+                                    <div class="item-01">지원 분야 <i class="cs-icon-req">필수</i></div>
+                                    <div class="item-02">기업/기관명 <i class="cs-icon-req">필수</i></div>
+                                    <div class="item-03">담당자/역할 <i class="cs-icon-req">필수</i></div>
+                                    <div class="item-04">성명 <i class="cs-icon-req">필수</i></div>
+                                    <div class="item-05">직위 <i class="cs-icon-req">필수</i></div>
+                                    <div class="item-06">연락처 <i class="cs-icon-req">필수</i></div>
+                                    <div class="item-07">이메일 <i class="cs-icon-req">필수</i></div>
+                                    <div class="item-08">&nbsp;</div>
+                                </div>
+                                <div class="item-body">
+                                    <div class="item-row">
+                                            <div class="item-01">
+                                                <select name="" id="" class="cs-input width100p">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </div>
+                                            <div class="item-02"><input type="text" class="cs-input width100p"></div>
+                                            <div class="item-03">
+                                                <select name="" id="" class="cs-input width100p">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </div>
+                                            <div class="item-04"><input type="text" class="cs-input width100p"></div>
+                                            <div class="item-05"><input type="text" class="cs-input width100p"></div>
+                                            <div class="item-06"><input type="text" class="cs-input width100p"></div>
+                                            <div class="item-07"><input type="text" class="cs-input width100p"></div>
+                                            <div class="item-08"><button type="button" class="btn-del">삭제</button></div>
+                                    </div>
+                                </div>
+                                        
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 참여 과제 정보 -->
+                    
+                    <div class="contsec contsec-btns consec-foot">
+                        <div>
+                            <a href="" class="btn btn_default-outline btn_l">임시 저장</a>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn_primary btn_l">이전</a>
+                            <a href="01-05-사업지원신청-과제요약및사업비사용계획.html" class="btn btn_primary btn_l">다음</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // bsn-request -->
+            </div>
+        </div>
+        
+        @@include('./include/footer.html')
+        <script src="./assets/js/all.min.js"></script>
+    </div>
+    </body>
+</html>

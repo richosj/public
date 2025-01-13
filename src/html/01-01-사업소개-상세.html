@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+
+        @@include('./include/subtop.html', {
+            "title" : "기업지원사업",
+            "title2" : "사업 소개"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                
+                <div class="content-hgroup">
+                    <div><strong>공동기술개발 사업</strong></div>
+                    <div class="in-charge">
+                        <span class="team-name">담당부서 : <em>기업협력팀</em></span>
+                        <span class="team-info">문의(기업지원센터) : <em>063-720-0500</em></span>
+                    </div>
+                </div>
+
+                <div class="bsn-info">
+                    <div class="simple-explan">
+                        <div class="subject">사업개요</div>
+                        <div class="desc">
+                            식품기업들의 성공적인 상품화 및 제품화를 위해 식품신기술과 푸드테크 관련 종합 기술 지원을 제공하여, 기업 기술경쟁력을 확보합니다.
+                        </div>
+                    </div>
+                    <div class="detail-explan">
+                        <div class="group">
+                            <div class="subject">사업기간</div>
+                            <div class="desc">2024년 1월 ~ 12월</div>
+                        </div>
+                        <div class="group">
+                            <div class="subject">지원대상</div>
+                            <div class="desc">전국 식품 또는 식품연관기업</div>
+                        </div>
+                        <div class="group">
+                            <div class="subject">지원내용</div>
+                            <div class="desc">지원 내용</div>
+                        </div>
+                        <div class="group">
+                            <div class="subject">지원절차</div>
+                            <div class="desc-step">
+                                <div>
+                                    <strong>사업신청</strong>
+                                    <div>
+                                        사업공고<br>
+                                        사전상담<br>
+                                        신청서제출<br>
+                                        서류확인
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>선정</strong>
+                                    <div>
+                                        사전검토<br>선정평가<br>지원기업선정
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>협약</strong>
+                                    <div>
+                                        사업계획서작성<br>
+                                        기업부담금 입금<br>
+                                        협약 체결
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>사업수행</strong>
+                                    <div>
+                                        중간보고(점검)<br>
+                                        최종보고<br>
+                                        사업비정산
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>사후관리</strong>
+                                    <div>성과추적</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group">
+                            <div class="subject">신청방법</div>
+                            <div class="desc">
+                                디지털식품정보플랫폼 홈페이지를 통해 온라인 지원 :  홈 > 기업지원사업 > 사업공고
+                                <a href="#" class="link-jump">사업공고 바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="avacheck">
+                    <div>신청 전 <b>지원가능여부</b>를 가늠해 볼 수 있습니다.</div>
+                    <button type="button" class="btn">신청 자가진단</button>
+                </div>
+
+                <div class="flex justify-end mt-20">
+                    <button type="button" class="btn btn_default-outline btn_l">목록</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="popup-wrap" style="display: none;">
+            <div class="popup-container" style="width:600px">
+                <!-- header -->
+                <div class="popup-header">
+                    <span class="popup-header-text">지원가능여부</span>
+                    <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+                </div>
+                <!-- content -->
+                <div class="popup-content">
+                    <!-- popup-content-wrap -->
+                    <div class="popup-content-wrap">
+                        <div class="pop-inner-con">
+                            <div class="alert-warning">
+                                <div class="icon-warning"></div>
+                                <div class="text">
+                                    최종과제평가“불량 2회”인 사유로,<br>
+                                    “2024-07-01~2026-06-30” 까지 참여제한 합니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- popup-content-wrap -->
+                </div>
+            </div>
+        </div>
+        
+        @@include('./include/ng-footer.html')
+
+    </div>
+    </body>
+</html>

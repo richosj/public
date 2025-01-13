@@ -1,0 +1,33 @@
+@use "sass:map";
+@use 'utils' as *;
+@use "./ng-icon";
+@use "./ng-custom";
+@use "./ng-header";
+@use "./ng-mobile-header";
+@use "./ng-search";
+@use "./ng-footer";
+@use "./ng-float";
+@use "./ng-sublayout";
+@use "./ng-components";
+@use "./ng-list";
+@use "./ng-office";
+@use "./ng-edu";
+@use "./ng-fusion";
+@use "./ng-mypage";
+@use "./ng-auigrid";
+
+
+.row{
+    margin-left: var(--gutter-width);
+    margin-right: var(--gutter-width);
+    @media (max-width: map.get($media,lg)) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.container{
+    max-width: var(--max-width);
+}
+.html, body{
+    font-weight: 400;
+}

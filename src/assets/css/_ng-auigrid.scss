@@ -1,0 +1,55 @@
+@use "sass:map";
+@use 'utils' as *;
+
+.auiTable{
+    table{
+        border-top: 2px solid #000;
+        table-layout: fixed;
+        width: 100%;
+        tr{
+            border-bottom: 1px solid #c6c6c6;
+        }
+        th,
+        td{
+            height: 56px;
+            padding: 0 10px;
+            &:not(:first-child){
+                border-left: 1px solid #c6c6c6;
+            }
+        }
+        thead{
+            background-color: #f6f6f6;
+            th{
+                text-align: center;
+            }
+        }
+        tbody{
+            td{
+                color: var(--text-color);
+            }
+        }
+        .bdl{
+            border-left: 1px solid #c6c6c6;
+        }
+        .cut{
+            display: inline-block;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .cm-num{width: 50px;}
+        .cm-size{
+            width: 80px;
+        }
+        tfoot{
+            background-color: #f4f4f4;
+            td{
+                &:not(.text-right){
+                    text-align: center;
+                }
+                font-weight: 500;
+            }
+        }
+    }
+}

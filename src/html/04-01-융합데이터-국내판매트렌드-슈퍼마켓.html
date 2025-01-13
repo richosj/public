@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+        "title" : "용합데이터",
+        "title2" : "국내 판매 트렌드",
+        })
+        <div class="main-content fusion-data">
+            <div class="row">
+                <div class="container">
+                    <div class="fusion-data-top">
+                        <h3>국내 판매 트렌드</h3>
+                        <button type="button" class="btn-like" title="좋아요">
+                            <i></i>
+                            <span>3,237</span>
+                        </button>
+                    </div>
+
+                    <div class="fusion-data-tab">
+                        <button type="button"><i class="icon-1" aria-hidden="true"></i>전체</button>
+                        <button type="button"><i class="icon-2" aria-hidden="true"></i>외식</button>
+                        <button type="button" class="active" title="선택됨"><i class="icon-3"
+                                aria-hidden="true"></i>슈퍼마켓</button>
+                        <button type="button"><i class="icon-4" aria-hidden="true"></i>편의점</button>
+                    </div>
+
+                    <div class="search-comm">
+                        <div class="frm">
+                            <div>
+                                <strong>지역</strong>
+                                <select name="" id="" class="cs-input w-125" title="지역 선택">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div>
+                                <strong>업종</strong>
+                                <select name="" id="" class="cs-input w-125" title="업종 선택">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="frm">
+                            <div class="frm-full">
+                                <strong>조회기간</strong>
+                                <div class="cs-datepicker-set">
+                                    <select name="" id="" class="cs-input w-115" title="조회기간 선택">
+                                        <option value=""></option>
+                                    </select>
+                                    <span></span>
+                                    <select name="" id="" class="cs-input w-115" title="조회기간 선택">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm">
+                            <div>
+                                <strong>기준년월</strong>
+                                <select name="" id="" class="cs-input w-115" title="기준년월 선택">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div>
+                                <strong>비교년월</strong>
+                                <select name="" id="" class="cs-input w-115" title="비교년월 선택">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search-comm-submit">
+                            <button class="btn btn_m btn btn btn_primary">설정</button>
+                        </div>
+                    </div>
+
+                    <div class="fusion-lv1-btn">
+                        <button type="button" class="active" title="선택됨">판매건수</button>
+                        <button type="button">판매금액</button>
+                        <button type="button">판매단가</button>
+                    </div>
+
+                    <div class="fusion-lv2-group">
+                        <div class="fusion-lv2-btn">
+                            <button type="button" class="active" title="선택됨"><span>전체</span></button>
+                            <div class="line"></div>
+                            <button type="button"><span>지역별</span></button>
+                            <div class="line"></div>
+                            <button type="button"><span>업종별</span></button>
+                        </div>
+                        <div class="fusion-lv2-filter">
+                            <select name="" id="" class="cs-input">
+                                <option value="">기본</option>
+                            </select>
+
+                            <div class="other-filter">
+                                <strong>연관 데이터</strong>
+                                <div class="other-menu">
+                                    <span class="check-open">
+                                        <label class="cs-checkbox">
+                                            <input type="checkbox">
+                                            <i></i>
+                                            <span>팝업</span>
+                                        </label>
+                                    </span>
+                                    <button type="button">원료현황</button>
+                                    <button type="button">국내판매</button>
+                                    <button type="button">지역특성</button>
+                                    <button type="button">갤러리</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="fusion-half-point"></div>
+
+                    <div class="fusion-container">
+                        <div class="chart-container-2">
+                            <div class="chart-map">
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>지역별 지도 보기</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+                                    <div class="chart-area map-zone">
+                                        <div class="legend-layer">
+                                            <div class="legend-check">
+                                                <div class="label">
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio">
+                                                        <i></i>
+                                                        <span class="c1">식품기업</span>
+                                                    </label>
+                                                </div>
+                                                <div class="label">
+                                                    <label class="cs-checkbox">
+                                                        <input type="radio">
+                                                        <i></i>
+                                                        <span class="c2">원료생산자</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="hitmap">
+                                                <strong>히트맵</strong>
+                                                <div class="hitmap-area"></div>
+                                            </div>
+                                            <div class="step-class">
+                                                <strong>단계구분도</strong>
+                                                <div>
+                                                    <span>~100</span>
+                                                    <span>~200</span>
+                                                    <span>201 ~</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-set">
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>업소수</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+                                    <div class="chart-area">
+                                        차트차트
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-hgroup">
+                                        <strong>가구수</strong>
+                                        <button type="button" class="btn-open-option"
+                                            data-toggle-target="chart-option-layer" title="옵션 열기">
+                                            <i class="icon-options"></i>
+                                        </button>
+                                    </div>
+                                    <div class="chart-area">
+                                        차트차트
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- e: fusion-container  -->
+
+                    <div class="fusion-container">
+                        <div class="chart-item">
+                            <div class="chart-item-hgroup">
+                                <strong>업종 소분류별 외식 판매 트렌드</strong>
+                                <button type="button" class="btn-open-option" data-toggle-target="chart-option-layer" title="옵션 열기">
+                                    <i class="icon-options"></i>
+                                </button>
+                            </div>
+
+                            <div class="fusion-mng">
+                                <div class="fir">
+                                    <strong>갤러리</strong>
+                                    <select name="" id="" class="cs-input">
+                                        <option value="">시도별 인구/가구수, 상가 업소수 비교</option>
+                                    </select>
+                                    <div class="text">
+                                        갤러리는 사전 분석된 데이터 시각화 화면 캡처 이미지를 전시하는 공간으로<br>
+                                        연관된 이미지를 통해 융합적 데이터 인사이트 제공을 목적으로 합니다. 
+                                    </div>
+                                </div>
+                                <div class="end">
+                                    <select name="" id="" class="cs-input">
+                                        <option value="">마이데이터 선택</option>
+                                    </select>
+                                    <button type="button" class="btn">마이데이터 관리</button>
+                                </div>
+                            </div>
+
+                            <div class="hgroup">
+                                <h3>지역특성<small>(단위:명)</small></h3>
+                            </div>
+                            <div class="chart-collpase-1">
+                                <div class="chart-container">
+                                    <div class="chart-item">
+                                        <div class="chart-item-hgroup">
+                                            <strong>인구수</strong>
+                                            <button type="button" class="btn-open-option"
+                                                data-toggle-target="chart-option-layer" title="옵션 열기">
+                                                <i class="icon-options"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="chart-area">
+                                            차트차트
+                                        </div>
+                                    </div>
+                                    <div class="chart-item">
+                                        <div class="chart-item-hgroup">
+                                            <strong>가구수</strong>
+                                            <button type="button" class="btn-open-option"
+                                                data-toggle-target="chart-option-layer" title="옵션 열기">
+                                                <i class="icon-options"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="chart-area">
+                                            차트차트
+                                        </div>
+                                    </div>
+                                    <div class="chart-item">
+                                        <div class="chart-item-hgroup">
+                                            <strong>업소수</strong>
+                                            <button type="button" class="btn-open-option"
+                                                data-toggle-target="chart-option-layer" title="옵션 열기">
+                                                <i class="icon-options"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="chart-area">
+                                            차트차트
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: fusion-container  -->
+
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+
+
+
+
+        <div class="option-layer chart-option-layer">
+            <div class="option-layer-inner">
+                <ul>
+                    <li><button>차트1</button></li>
+                    <li><button>차트2</button></li>
+                    <li><button>차트N</button></li>
+                    <li><button>데이터 보기</button></li>
+                    <li><button>이미지 저장</button></li>
+                    <li><button>크게 보기</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ask-layer ask-content-1">
+            <div class="ask-cont">
+                <p class="txt">외식 판매 순위는 다음 조건으로 제공 되고 있습니다.</p>
+                <ul>
+                    <li>금융권 마이테이터</li>
+                    <li>해당지역 지자체의 상권분석 가이드</li>
+                    <li>매출기준 전표 활용</li>
+                </ul>
+
+                <button type="button" class="btn-close-ask"><i class="icon-close-white"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

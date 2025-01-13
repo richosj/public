@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/header.html')
+
+        @@include('./include/subtop.html', {
+            "title" : "기업지원사업",
+            "title2" : "사업공고"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="bsn-view">
+                    <div class="bsn-view-top border-rows hover:border-rows-color">
+                        <header class="hgroup">
+                            <div class="subject">
+                                <span class="badge badge-lg badge-outline-secondary badge-round">비즈니스지원 활성화 </span>
+                                <h3>2025년 제 4차 청년식품 창업 (예비창업)</h3>
+                            </div>
+                            <div class="status">
+                                <span class="date">마감 D-7</span>
+                                <span class="badge badge-outline-none badge-success">접수중</span>
+                            </div>
+                        </header>
+                        <article class="details">
+                            <div class="col-list">
+                                <dl>
+                                    <dt>사업구분</dt>
+                                    <dd>기업 기술지원 > 기업기술력 강화지원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>입주여부</dt>
+                                    <dd>입주무관</dd>
+                                </dl>
+                                <dl>
+                                    <dt>접수기간</dt>
+                                    <dd>2025.05.28 ~ 2025.06.17  18:00</dd>
+                                </dl>
+                            </div>
+                            <div class="col-list">
+                                <dl>
+                                    <dt>사업명</dt>
+                                    <dd>기업 기술지원 > 기업기술력 강화지원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>담당부서</dt>
+                                    <dd>기업협력팀</dd>
+                                </dl>
+                                <dl>
+                                    <dt>공고기간</dt>
+                                    <dd>2025.05.28 ~ 2025.06.17  18:00</dd>
+                                </dl>
+                            </div>
+                            <div class="col-list gap-sm">
+                                <dl>
+                                    <dt>지원대상</dt>
+                                    <dd>대기업</dd>
+                                </dl>
+                                <dl>
+                                    <dt>담당자</dt>
+                                    <dd><a href="#" class="btn btn-dark btn-round btn-sm">담당자 정보</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>등록일</dt>
+                                    <dd>2025.02.01   12:11</dd>
+                                </dl>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- 사업공고 정보 -->
+                    <div class="bsn-view-details border-rows hover:border-rows-color">
+                        <strong class="subject">사업목적: 국가식품클러스터 입주기업의 조기정착 및 안정적 생산을 지원하기 위한 애로기술 해결</strong>
+                        <ul class="list-inside">
+                            <li>지원대상 : <span class="text-gray-400">국가식품클러스터 단지 입주(분양, 벤처)기업</span></li>
+                            <li>공고기간 : <span class="text-gray-400">‘24. 5. 28.(화) ~ 6. 17.(월) 18:00까지</span></li>
+                            <li>
+                                사업기간 :
+                                <span class="text-gray-400"> 협약체결일로부터 6개월 이내(‘24년 이내 종료 사업, 이월 불가)</span>
+                                <p class="text-orange-700">※ 선정평가 전(’24.1. 부터) 컨설팅 수행 가능하며 협약전 인증 완료된 건은 협약 불가능</p>
+                            </li>
+                        </ul>
+
+                        <ul class="list-inside mt-30">
+                            <li>
+                                접수기간 :
+                                <div class="inline-flex items-align-center gap-x-35 mobile:gap-y-5 mobile:items-baseline mobile:column">
+                                    <span class="text-gray-400">‘24. 6. 3.(월) ~ 6. 24.(월) 18:00까지</span><span class="text-orange-700 text-md">*마감(18시) 후 접수 불가</span>
+                                </div>
+                            </li>
+                            <li>신청방법 : <span class="text-gray-400">식품진흥원 포털(<a href="https://fiis.foodpolis.kr/" class="text-underline text-blue-400" target="_blank">https://fiis.foodpolis.kr/</a>)을 통한 온라인 신청</span></li>
+                            <li>지원규모 : <span class="text-gray-400">기업별 최대 20백만원 * 총 지원규모는 예산상황에 변동될 수 있음</span></li>
+                        </ul>
+                    </div>
+                    <!-- // 사업 정보 상세 -->
+
+                    <div class="bsn-view-keword border-rows hover:border-rows-color">
+                        <div class="bsn-view-title">관련키워드</div>
+                        <div class="flex flex-wrap items-center gap-x-8">
+                            <span class="badge badge-light badge-sm badge-round badge-outline-none">#공동기술개발</span>
+                        </div>
+                    </div>
+                    <!-- // 키워드 -->
+
+                    <div class="bsn-view-keword border-rows hover:border-rows-color blur-field-foot">
+                        <div class="bsn-view-title">공고 첨부파일</div>
+                        <div>
+                            첨부파일
+                        </div>
+                    </div>
+                    <!-- // 키워드 -->
+                </div>
+                <!-- e: bsn-notice-view -->
+
+                <div class="flex justify-center gap-x-10">
+                    <button type="button" class="btn btn_primary-outline">목록</button>
+                    <button type="button" onClick="location.href='01-03-사업지원신청-기본정보.html'" class="btn btn_primary">신청</button>
+                </div>
+
+            </div>
+        </div>
+        
+        @@include('./include/footer.html')
+
+    </div>
+    </body>
+</html>

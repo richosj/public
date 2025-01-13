@@ -1,0 +1,14 @@
+# 빌드 폴더 제외
+dist/
+
+# Node.js 모듈 제외
+node_modules/
+
+# VS Code 설정 파일 제외
+.vscode/
+
+# 히스토리 관련 파일 제외
+.history/
+
+# 패키지 잠금 파일 제외
+package-lock.json

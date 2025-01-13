@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+
+        @@include('./include/subtop.html', {
+            "title" : "기업지원사업",
+            "title2" : "사업 소개"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="ui-btn-track">
+                    <button type="button" class="btn-tab1 current" title="선택 됨">지원 분야 전체</button>
+                    <button type="button" class="btn-tab1">기술</button>
+                    <button type="button" class="btn-tab1">입주/창업</button>
+                    <button type="button" class="btn-tab1">원료</button>
+                    <button type="button" class="btn-tab1">시설·장비</button>
+                    <button type="button" class="btn-tab1">시험·인증</button>
+                    <button type="button" class="btn-tab1">마케팅</button>
+                    <button type="button" class="btn-tab1">인력</button>
+                    <button type="button" class="btn-tab1">네트워크</button>
+                </div>
+                <div class="ui-btn-track">
+                    <button type="button" class="btn-tab2 current" title="선택 됨">지원 대상 전체</button>
+                    <button type="button" class="btn-tab2">클러스터 단지 내 기업</button>
+                    <button type="button" class="btn-tab2">회원사</button>
+                    <button type="button" class="btn-tab2">전국 식품 기업</button>
+                    <button type="button" class="btn-tab2">예비 창업자</button>
+                    <button type="button" class="btn-tab2">공공기관</button>
+                    <button type="button" class="btn-tab2">학교·연구기관</button>
+                    <button type="button" class="btn-tab2">개인</button>
+                </div>
+
+                <div class="bsn-intro">
+                    <ul class="gall-list">
+                        @@for (var i = 0; i < 8; i++){
+                            <li>
+                                <a href="#">
+                                    <div class="thumb">
+                                        <span class="badge">기업기술지원</span>
+                                        <img src="https://via.placeholder.com/310x130" alt="sample">
+                                    </div>
+                                    <div class="group">
+                                        <h2 class="subject">공동기술개발 사업</h2>
+                                        <div class="desc">
+                                            식품기업의 상품화·제품화를 위한 식품신기술,
+                                            푸드테크 관련 종합 기술지원을 통해 기업
+                                            기술경쟁력 확보
+                                            식품기업의 상품화·제품화를 위한 식품신기술,
+                                            푸드테크 관련 종합 기술지원을 통해 기업
+                                            기술경쟁력 확보
+                                            식품기업의 상품화·제품화를 위한 식품신기술,
+                                            푸드테크 관련 종합 기술지원을 통해 기업
+                                            기술경쟁력 확보
+                                        </div>
+                                        <div class="tag-group">
+                                            #전국식품기업,#전국식품기업#전국식품기업,#전국식품기업#전국식품기업,#전국식품기업#전국식품기업,#전국식품기업#전국식품기업,#전국식품기업
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        
+        @@include('./include/ng-footer.html')
+
+    </div>
+    </body>
+</html>

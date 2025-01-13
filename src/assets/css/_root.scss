@@ -1,0 +1,439 @@
+@use "sass:map";
+@use 'utils' as *;
+$src : "#{$src}";
+
+:root {
+    /* Font and Typography */
+    --font-family: 'Pretendard';
+    --font-size-body: 15px;
+    --font-size-default: 17px;
+    --text-color : #555;
+    --line-height: 1.34;
+    --letter-spacing: 0.5px;
+    /* Input Styles */
+    --input-color: #fff;
+    --input-background-color: #f9f9f9;
+    --input-border-color: #ccc;
+    --input-border-radius: 4px;
+    --input-padding: 10px;
+    --input-height: 36px;
+    --input-font-size: 16px;
+    --input-border-width: 1px;
+    --input-border-style: solid;
+    --input-placeholder-color: #6c757d;
+    --input-focus-border-color: #80bdff;
+    --input-disabled-background-color: #e9ecef;
+    --input-disabled-text-color: #6c757d;
+
+    /* Select Styles */
+    --select-background-color: #fff;
+    --select-border-color: #ccc;
+    --select-border-radius: 4px;
+    --select-padding: 8px;
+
+    /* Button Styles */
+    --button-background-color: #135784;
+    --button-text-color: #fff;
+    --button-border-radius: 4px;
+    --button-padding: 10px 20px;
+    --button-hover-background-color: #0056b3;
+    --button-disabled-background-color: #2da34f;
+    --button-disabled-text-color: #6c757d;
+    --button-border-width: 1px;
+    --button-border-style: solid;
+
+    /* Border and Box Styles */
+    --border-radius: 12px;
+    --border-radius-sm: 4px;
+    --border-color: #c6c6c6;
+    --border-color2: #c6c6c6;
+    --border-color-active: #135784;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Color Palette */
+    --brand-color: #135784;
+    --brand-color-300: #78a5eb;
+    --primary-color: #1764dc;
+    --secondary-color: #c6c6c6;
+    --success-color: #2da34f;
+    --warning-color: #ffa81f;
+    --danger-color: #d22c2c;
+    --info-color: #703ad2;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --orange-color: #eb6100;
+    --gray-color: #757575;
+
+    /* Link Styles */
+    --link-color: #2da34f;
+    --link-hover-color: #2da34f;
+
+    /* Header and Footer Styles */
+    --header-background-color: #343a40;
+    --header-text-color: #ffffff;
+    --header-height: 60px;
+    --footer-background-color: #f8f9fa;
+    --footer-text-color: #6c757d;
+    --footer-height: 50px;
+
+    /* Modal Styles */
+    --modal-background-color: rgba(0, 0, 0, 0.5);
+    --modal-content-background: #ffffff;
+    --modal-border-radius: 8px;
+    --modal-padding: 20px;
+
+    /* Tooltip Styles */
+    --tooltip-background-color: #000;
+    --tooltip-text-color: #fff;
+    --tooltip-padding: 5px 10px;
+    --tooltip-border-radius: 4px;
+
+    /* Transition and Animation */
+    --transition-easy: all 0.2s ease-in-out;
+    --transition-duration: 0.2s;
+    --transition-timing-function: ease-in-out;
+    --transition-delay: 0s;
+
+    /* Sizing and Spacing */
+    --max-width: 1410px;
+    --gutter-width: 15px;
+    --container-padding: 20px;
+    --spacing-small: 5px;
+    --spacing-medium: 10px;
+    --spacing-large: 20px;
+
+    /* Z-Index */
+    --z-index-tooltip: 1000;
+    --z-index-modal: 1050;
+    --z-index-navbar: 1100;
+
+    /* Opacity */
+    --opacity-disabled: 0.6;
+    --opacity-hover: 0.8;
+    
+    /* Table */
+    --table-border : #ddd;
+    --table-border-width : 2px;
+    --table-padding : 10px;
+    --talbe-background-color: #000;
+    
+    /* Paging */
+    --paging-width : 10px;
+    --paging-height : 10px;
+    --paging-border-radius:50%;
+    --paging-hover-color: #fff;
+
+    /* Badge */
+    --badge-border-radius: 20px;
+    --badge-font-size: 15px;
+}
+@media (max-width: 768px) {
+    :root{
+        --font-size-body: 11px;
+        --font-size-default: 12px;
+    }
+}
+
+
+html,
+body{
+    font-weight: 400;
+    font-size: var(--font-size-default);
+}
+body, th, td, input, select, textarea, button{
+    color: var(--text-color);
+}
+
+
+a:active,a:hover {
+    text-decoration: none
+}
+
+.transition-ease{
+    transition: all 0.15s ease;
+}
+
+.collapse-content{
+    display: none;
+}
+
+.text-brand-400{
+    color: var(--brand-color) !important;
+}
+
+.text-blue-400{
+    color: var(--primary-color) !important;
+}
+
+.text-gray-400{
+    color: var(--gray-color) !important;
+}
+
+.text-danger-400{
+    color: var(--danger-color) !important;
+}
+
+.text-orange-700{
+    color: var(--orange-color) !important;
+}
+.text-underline{
+    text-decoration: underline;
+}
+.text-sm{
+    font-size: 15px;
+}
+
+.bg-green-300{
+    background-color: #f7faf8;
+}
+
+.bg-red-300{
+    background-color: #fef8f4;
+}
+
+.bg-gray-300{
+    background-color: #f3f4f5;
+}
+
+/* 목록 */
+.consec-foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 폼그룹 */
+.input-group{
+    display: flex;
+    &-head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .counting{
+            color: #8e8e8e;
+            font-size: 13px;
+            b{color: #555;}
+        }
+        .under-download{
+            text-decoration: underline;
+            color: #000;
+            font-weight: 400;
+            font-size: 15px;
+        }
+    }
+}
+.input-group.col{
+    flex-direction: column;
+    gap:10px 0;
+    > strong{
+        em{
+            font-style: normal;
+            color: #555555;
+            font-size: 13px;
+            font-weight: 400;
+            padding-left: 5px;
+        }
+    }
+}
+.radio-line-group{
+    display: flex;
+    align-items: center;
+    border: 1px solid #c6c6c6;
+    border-radius: var(--input-border-radius);
+    padding: 0 20px;
+    height: var(--input-height);
+    strong{
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1;
+        padding-right: 35px;
+        margin-right: 35px;
+        &::after{
+            content:"";
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 3px;
+            height: 12px;
+            width: 1px;
+            background-color: #dedede;
+            border-right: 1px solid #c6c6c6;
+        }
+    }
+}
+
+/* input과 같은 box형태 */
+.input-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: var(--input-border-radius);
+    padding: 0 20px;
+    height: var(--input-height);
+    border: 1px solid var(--input-border-color);
+    background-color: #fff;
+    &.disabled{
+        background-color: #f3f4f5;
+        border-color: #f0f0f0;
+    }
+}
+
+
+@media (max-width : 768px) {
+    .mobile\:grid-cols-1 {
+        grid-template-columns:repeat(1, minmax(0, 1fr)) !important;
+    }
+    .mobile\:gap-x-15{
+        gap:15px !important;
+    }
+}
+
+.border-rows{
+    border: 1px solid #c6c6c6;
+    border-radius: 10px;
+    transition: all 0.25s;
+    padding: 30px 38px;
+    &-hgroup{
+        position: relative;
+        border-bottom: 1px solid #dedede;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 25px;
+        padding-right: 60px;
+        &.bdb0{border: 0;padding-bottom: 0;}
+        h3{
+            font-size: 25px;
+            em{
+                font-style: normal;
+                color: #8e8e8e;
+                font-weight: 400;
+                font-size: 15px;
+            }
+        }
+        
+        .collapse-toggle{
+            position: absolute;
+            right: 0;
+            top: 10px;
+            width: 24px;
+            height: 14px;
+            background: url("#{$src}/icon-collapse.png");
+            transform: rotate(0deg);
+            &.is-active{
+                transform: rotate(180deg);
+            }
+        }
+        &:has(h4){
+            border-bottom: 0;
+            padding-bottom: 0;
+            h4{
+                font-size: 21px;
+                em{
+                    color: var(--gray-color);
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+            }
+            .collapse-toggle{
+                top: 6px;
+            }
+        }
+    }
+    &-content{
+        margin-top: 40px;
+    }
+    @media (max-width: map.get($media,lg)) {
+        padding: 15px;
+    }
+}
+.hover\:border-rows-color:hover{
+    border-color:var(--border-color-active);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 목록 스타일 */
+.list-inside{
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    li{
+        position: relative;
+        line-height: 1.3;
+        padding-left: 21px;
+
+        &::after{
+            content:"";
+            border-radius: 50%;
+            width: 9px;
+            aspect-ratio: 1;
+            background-color: #555;
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+    }
+}
+
+.btn-del{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    background-color: #ffffff;
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    transition: all 0.25s;
+    &::before{
+        display: inline-block;
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: url(#{$src}/icon-del.png) no-repeat center / 100% 100%;
+    }
+    &:hover,
+    &:focus{
+        background-color: #f3f4f5;
+    }
+}
+.table-line-none{
+    th,
+    td{border: 0;padding:6px;}
+}
+
+
+/* 1차 사업  추 후 커스텀
+root에서 변수만 변경하면 전체 적용 될 수 있게 하는 영역
+*/
+
+.btn-light{
+    background-color: #fbfbfb;
+    border: 1px solid #c6c6c6;
+    color: #555555;
+}
+.btn-dark{
+    background-color: #333333;
+    color: #fff;
+}
+.active\:btn-dark{
+    background-color: #333333;
+    color: #fff;
+    background-color: #333333;
+}
+.hover\:btn-light{
+    background-color: #fbfbfb;
+    color: #555555;
+    border: 1px solid #c6c6c6;
+}
+
+.flex-basis-410{
+    flex-basis: 410px;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
