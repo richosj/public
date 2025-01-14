@@ -208,20 +208,29 @@
     .fc-button-group{margin-left: 0;}
     .fc .fc-button-primary{background: none;border: 0;color: #000;}
     .fc .fc-button-primary:hover{background: none;border: 0;color: #000;}
-    .reserved {
-    background-color: #4CAF50;
-    color: white;
-    }
+    .fc td, .fc th{padding: 1px;}
     .unavailable {
-    background-color: #999;
-    color: white;
+        background-color: #999;
+        color: white;
     }
-    .fc-daygrid-day.selected {
-    border: 2px solid #4CAF50;
-    border-radius: 50%;
+    .fc-daygrid-day.selected-date {
+        .fc-daygrid-day-number{
+            background-color: #fff;
+            color: var(--brand-color);
+            border: 1px solid var(--brand-color);
+            border-radius: 50%;
+        }
+        .fc-daygrid-day-bg{display: none;}
     }
     .fc-theme-standard td, .fc-theme-standard th{
         border: 0;
+    }
+    .abled-date{
+        .fc-daygrid-day-number{
+            border-radius: 50%;
+            color: #fff;
+            background-color: var(--brand-color);
+        }
     }
     .fc .fc-day-disabled{
         background-color: #fff;
@@ -233,11 +242,10 @@
     
     .fc-day-today {}
     .fc .fc-daygrid-day.fc-day-today{background: none;}
-    .fc-day-today .fc-daygrid-day-number{border-radius: 50%;color: #fff;background-color: var(--brand-color);}
+    //.fc-day-today .fc-daygrid-day-number{border-radius: 50%;color: #fff;background-color: var(--brand-color);}
     
     .fc .fc-daygrid-day-number{width: 30px;height: 30px;display: inline-flex;align-items: center;justify-content: center;}
-    
-    .fc .fc-highlight{background-color: var(--brand-color);border-radius: 10px;}
+
     .fc .fc-day.custom-selected .fc-daygrid-day-number{color: #fff;}
     .fc-day-sun .fc-daygrid-day-number,
     .fc-day-sat .fc-daygrid-day-number{color: #c6c6c6;}

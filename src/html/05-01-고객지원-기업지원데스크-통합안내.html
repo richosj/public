@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+        "title" : "고객지원",
+        "title2" : "기업 지원데스크",
+        })
+        <div class="main-content">
+            <div class="igd-desk">
+                <div class="row igd-desk-top">
+                    <div class="container">
+                        <h3>“ 디지털 식품정보 플랫폼이 식품 기업의 고민을 함께 하겠습니다.” </h3>
+                        <div class="igd-statics">
+                            <div class="child-1">
+                                <div class="subject"><i></i><strong>일반민원 접수</strong></div>
+                                <div class="group">
+                                    <div class="chart-zone"></div>
+                                    <div class="link-zone">
+                                        <a href="#" class="btn btn_success-outline btn-round">일반민원 접수</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="child-2">
+                                <div class="subject"><i></i><strong>일반민원 접수</strong></div>
+                                <div class="grid">
+                                    <div>
+                                        <div class="group">
+                                            <div class="chart-zone"></div>
+                                            <div class="link-zone">
+                                                <a href="#" class="btn btn_success-outline btn-round">기술고충 접수</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="group">
+                                            <div class="chart-zone"></div>
+                                            <div class="link-zone">
+                                                <a href="#" class="btn btn_success-outline btn-round">경영고충 접수</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- e: grid -->
+                            </div>
+                        </div>
+                        <!-- e: igd-statics -->
+                    </div>
+                </div>
+                <!-- e: igd-desk-top -->
+                <div class="idg-desk-foot">
+                    <div class="row">
+                        <div class="container">
+                            <div class="idg-step-info">
+                                <div class="column">
+                                    <strong>
+                                        <svg 
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="14px" height="11px">
+                                        <image  x="0px" y="0px" width="14px" height="11px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAQAAADljHTpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfpAQ4KKhKxZYbfAAAAuElEQVQY023QMUtCYRQG4Od+lYMNTtESOFwIQsJwzyGCDIeQcMo/4O4Wzs4uLQ5uDjZJEKgIToJ70NYmNLUEDULUIFrCPesD5z3viaoSJ6vvZjeRDkzE8iGBMkZiLcMg5WiL0p6c6bgn6Jk63NCevnOP6n4IXsXGMiDSVTZS8w1B04NTz9JouzNXsVyt2ckxdOxawYmGF5c+1xlRFVIGSnhTtPi7bVVl6dbMu6v/xPoJXy7s+9gu/AsSLiMUjQDgKwAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        일반민원</strong>
+                                    <div class="item-group g1">
+                                        <span>1. 신청 접수</span><span>2. 부서 배정</span><span>3. 담당자 검토</span><span>4. 민원 처리</span><span>.5 결과안내</span>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <strong>
+                                        <svg 
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="14px" height="11px">
+                                        <image  x="0px" y="0px" width="14px" height="11px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAMAAAB4W0xQAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhFBMVEUAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbsAcbv///9chyUVAAAAKnRSTlMAH8kYFdxHD8+GBhwKwpoBrBcFtKoDg9KkuZXFksintoTTEbfdG+ckBxJNCbvuAAAAAWJLR0QrJLnkCAAAAAd0SU1FB+kBDgoqHrjTyvQAAABnSURBVAjXY2BAAEYmZiQeC6sWG4LHzqHFycDAxQ3h8fBq8fEzMAiwCoJ4QsJaIqJAWkxLnJ2BgV9CS5ILrEpKS5qHQUZLlgeiSVROS15BS1EJZiSXspaWiirCCh5pNXUk+xk0NGEsAJXhBdmy0OemAAAAAElFTkSuQmCC" />
+                                        </svg>
+                                        기술고충</strong>
+                                    <div class="item-group g2">
+                                        <span>1. 신청 접수</span><span>2. 검토 / 선정</span><span>3. 전문가 자문</span><span>4. 고충 처리</span><span>5. 결과안내</span>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <strong>
+                                        <svg 
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="14px" height="11px">
+                                       <image  x="0px" y="0px" width="14px" height="11px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAMAAAB4W0xQAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhFBMVEUto08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to08to0/////yLpV2AAAAKnRSTlMAH8kYFdxHD8+GBhwKwpoBrBcFtKoDg9KkuZXFksintoTTEbfdG+ckBxJNCbvuAAAAAWJLR0QrJLnkCAAAAAd0SU1FB+kBDgoqL+kNys4AAABnSURBVAjXY2BAAEYmZiQeC6sWG4LHzqHFycDAxQ3h8fBq8fEzMAiwCoJ4QsJaIqJAWkxLnJ2BgV9CS5ILrEpKS5qHQUZLlgeiSVROS15BS1EJZiSXspaWiirCCh5pNXUk+xk0NGEsAJXhBdmy0OemAAAAAElFTkSuQmCC" />
+                                       </svg>
+                                        경영고충</strong>
+                                    <div class="item-group g3">
+                                        <span>1. 신청 접수</span><span>2. 검토 / 선정</span><span>3. 전문가 자문</span><span>4. 고충 처리</span><span>5. 결과안내</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: idg-desk-foot -->
+            </div>
+        </div>
+    </div>
+    @@include('./include/ng-footer.html')
+</body>
+
+</html>

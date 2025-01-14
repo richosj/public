@@ -1,0 +1,220 @@
+@use "sass:map";
+@use 'utils' as *;
+/* 고객지원 */
+.main-content:has(.igd-desk){
+    padding-top: 0;
+}
+.igd-desk{
+    &-top{
+        background: url(#{$src}/customer/bg.png) no-repeat 50% 50%;
+        background-size: cover;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 60px 0 40px;
+        h3{
+            text-align: center;
+            color: #fff;
+            font-size: 25px;
+            padding-bottom: 40px;
+        }
+    }
+    @media (max-width : map.get($media, lg)) {
+        padding: 30px 0 20px;
+        h3{font-size: 18px;padding-bottom: 20px;}
+    }
+    @media (max-width : map.get($media, md)) {
+        h3{
+            font-size: 16px;
+        }
+    }
+}
+
+.igd-statics{
+    display: flex;
+    gap:0 30px;
+    @media (max-width : map.get($media, lg)) {
+        gap: 15px 0;
+        flex-direction: column;
+    }
+    .child-1,
+    .child-2{
+        background: rgba(247,250,248,0.9);
+        border: 1px solid rgba(216,216,216,0.9);
+        padding: 40px;
+        border-radius: 17px;
+        @media (max-width : map.get($media, lg)) {
+            padding: 20px;
+        }
+    }
+    .child-1{
+        width: 31.6%;
+        @media (max-width : map.get($media, lg)) {
+            width: 100%;
+        }
+    }
+    .child-2{
+        flex-grow: 1;
+        @media (max-width : map.get($media, lg)) {
+            width: 100%;
+        }
+    }
+    .subject{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        gap:0 8px;
+        @media (max-width : map.get($media, lg)) {
+            padding-bottom: 10px;
+        }
+        strong{
+            color: #000;
+            font-size: 21px;
+            @media (max-width : map.get($media, lg)) {
+                font-size: 16px;
+            }
+            @media (max-width : map.get($media, md)) {
+                font-size: 14px;
+            }
+        }
+        i{
+            display: inline-block;
+            width: 14px;
+            height: 11px;
+            background: url(#{$src}/support/check.png);
+        }
+    }
+    .group{
+        background-color: #fff;
+        padding: 25px;
+        border: 1px solid #d8d8d8;
+        border-radius: 10px;
+        @media (max-width : map.get($media, lg)) {
+            padding: 13px;
+        }
+        .chart-zone{
+            height: 280px;
+            margin-bottom: 25px;
+        }
+        .btn{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 0 30px;
+        @media (max-width : map.get($media, md)) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            grid-gap: 15px 0;
+            flex-direction: column;
+        }
+    }
+}
+
+.idg-step-info{
+    border-radius: 10px;
+    background: #f2f2f2;
+    padding: 40px;
+    margin-top: 40px;
+    @media (max-width : map.get($media, lg)) {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .column{
+        display: flex;
+        @media (max-width : map.get($media, lg)) {
+            flex-direction: column;
+            gap: 15px;
+        }
+        +.column{
+            margin-top: 20px;
+            @media (max-width : map.get($media, lg)) {
+                margin-top: 15px;
+            }
+        }
+        strong{
+            display: inline-flex;
+            align-items: center;
+            color: #000;
+            gap: 0 8px;
+            font-size: 21px;
+            width: 166px;
+            @media (max-width : map.get($media, lg)) {
+                font-size: 16px;
+                width: auto;
+            }
+            @media (max-width : map.get($media, md)) {
+                font-size: 14px;
+            }
+        }
+        .item-group{
+            border: 1px solid #ffffff;
+            border-radius: 6px;
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(5,minmax(0,1fr));
+            overflow: hidden;
+            border-radius: 10px;
+            @media (max-width : map.get($media, lg)) {
+                grid-template-columns: repeat(1,minmax(0,1fr));
+                flex-direction: column;
+            }
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                color: #fff;
+                &:nth-child(1){z-index: 5;}
+                &:nth-child(2){z-index: 4;}
+                &:nth-child(3){z-index: 3;}
+                &:nth-child(4){z-index: 2;}
+                &:nth-child(5){z-index: 1;}
+                &:nth-child(1),
+                &:nth-child(2){color: #000;}
+                &:not(:last-child){
+                    position: relative;
+                    &::after{
+                        content: "";
+                        display: block;
+                        height: 0;
+                        width: 0;
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        transform: translateX(100%);
+                    }
+                }
+            }
+        }
+        .g1{
+            span:nth-child(1){background-color: #d8d8d8;}
+            span:nth-child(2){background-color: #c6c6c6;}
+            span:nth-child(3){background-color: #8e8e8e;}
+            span:nth-child(4){background-color: #717171;}
+            span:nth-child(5){background-color: #555555;}
+        }
+        .g2{
+            span:nth-child(1){background-color: #97c5e4;}
+            span:nth-child(2){background-color: #7db6dd;}
+            span:nth-child(3){background-color: #5ca4d4;}
+            span:nth-child(4){background-color: #338dc9;}
+            span:nth-child(5){background-color: #0071bb;}
+        }
+        .g3{
+            span:nth-child(1){background-color: #81c895;}
+            span:nth-child(2){background-color: #6cbf84;}
+            span:nth-child(3){background-color: #57b572;}
+            span:nth-child(4){background-color: #42ac61;}
+            span:nth-child(5){background-color: #2da34f;}
+        }
+    }
+}
+
+/* 고충접수 */

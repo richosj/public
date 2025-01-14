@@ -141,6 +141,7 @@
                                 <span>예약확정</span>
                                 <span>이용불가</span>
                             </div>
+                            
                         </div>
                     </div>
                     
@@ -150,6 +151,71 @@
 
         @@include('./include/ng-footer.html')
     </div>
+
+    <script>
+        // 임시 공유서비스 상세 공통 스크립트
+        var calendarEl = document.getElementById("calendar");
+        if (calendarEl) {
+            // 선택 불가능한 날짜 목록
+            const disabledDates = ["2025-01-10", "2025-01-15", "2025-01-20"];
+            const disabledDates2 = ["2025-01-21","2025-01-22","2025-01-28","2025-01-91"];
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: "dayGridMonth",
+            locale: "ko",
+            initialDate: "2025-01-01",
+            selectable: true, // 날짜 선택 가능
+            showNonCurrentDates: false,
+            height: "auto",
+            dayCellClassNames: function (date) {
+                // 특정 날짜에 클래스 추가
+                const inDate = new Date(
+                date.date.getTime() - date.date.getTimezoneOffset() * 60000
+                );
+                const dateStrs = inDate.toISOString().split("T")[0];
+                
+                if (disabledDates2.includes(dateStrs)) {
+                return ['abled-date']; // 클래스 추가
+                }
+                return [];
+            },
+            dateClick: function (info) {
+                // 기존 클래스 제거
+                document.querySelectorAll('.selected-date').forEach((el) => {
+                el.classList.remove('selected-date');
+                });
+        
+                // 선택된 날짜에 클래스 추가
+                info.dayEl.classList.add('selected-date');
+            },
+            dayCellContent: function (info) {
+                const dateNumber = info.date.getDate(); // 날짜 숫자만 가져오기
+                return { html: `<span>${dateNumber}</span>` }; // 숫자만 렌더링
+
+            },
+            dayCellDidMount: function (info) {
+                const localDate = new Date(
+                info.date.getTime() - info.date.getTimezoneOffset() * 60000
+                );
+                const dateStr = localDate.toISOString().split("T")[0];
+                // 선택 불가능한 날짜 스타일 적용
+                if (disabledDates.includes(dateStr)) {
+                const cell = info.el;
+                cell.classList.add("disabled-date"); // 클래스 추가
+                }
+                // 오늘 날짜 표시
+                const today = new Date().toISOString().slice(0, 10);
+                if (dateStr === today) {
+                info.el.classList.add("fc-today");
+                }
+                
+                
+            },
+            });
+
+            calendar.render();
+        }
+    </script>
 </body>
 
 </html>

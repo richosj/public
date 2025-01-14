@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+            "title" : "지원서비스",
+            "title2" : "창업지원 서비스",
+        })
+        <div class="main-content">
+            <div class="row">
+                <div class="container">
+                    <div class="startup-intro">
+                        <div class="content-hgroup">
+                            <div><strong>멘토링 신청서</strong></div>
+                            <div>
+                                <a href="#" class="btn btn_sm btn-dark btn-round">담당자 정보</a>
+                            </div>
+                        </div>
+
+                        <div class="mentoring">
+                            <div class="border-rows">
+                                <div class="border-rows-hgroup">
+                                    <h4>신청인 정보</h4>
+                                    <button type="button" class="collapse-toggle" data-collapse-target="bs-request-1"></button>
+                                </div>
+                                <div class="border-rows-content bs-request-1">
+                                    <div class="grid grid-cols-2 gap-x-40">
+                                        <div class="input-group col">
+                                            <strong>신청자명</strong>
+                                            <input type="text" class="cs-input width100p" value="홍길동" disabled>
+                                        </div>
+                                        <div class="input-group col">
+                                            <strong>연락처/이메일</strong>
+                                            <input type="text" class="cs-input width100p" value="02-855-5724   /   all4land@all4land.com" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border-rows">
+                                <div class="border-rows-hgroup">
+                                    <h4>멘토링 신청 내역</h4>
+                                    <button type="button" class="collapse-toggle" data-collapse-target="bs-request-2"></button>
+                                </div>
+                                <div class="border-rows-content bs-request-2">
+                                    <div class="grid">
+                                        <div class="input-group col flex-grow">
+                                            <strong>멘토링 희망 분야 <i class="cs-icon-req">필수</i></strong>
+                                            <div class="input-container flex justify-between">
+                                                <div class="lbl_group">
+                                                    <label class="cs-checkbox">
+                                                        <input type="checkbox">
+                                                        <i></i>
+                                                        <span>개발 및 생산</span>
+                                                    </label>
+                                                    <label class="cs-checkbox">
+                                                        <input type="checkbox">
+                                                        <i></i>
+                                                        <span>패키징</span>
+                                                    </label>
+                                                    <label class="cs-checkbox">
+                                                        <input type="checkbox">
+                                                        <i></i>
+                                                        <span>재무</span>
+                                                    </label>
+                                                    <label class="cs-checkbox">
+                                                        <input type="checkbox">
+                                                        <i></i>
+                                                        <span>지식재산권</span>
+                                                    </label>
+                                                    <label class="cs-checkbox">
+                                                        <input type="checkbox">
+                                                        <i></i>
+                                                        <span>마케팅</span>
+                                                    </label>
+                                                    <label class="cs-checkbox">
+                                                        <input type="checkbox">
+                                                        <i></i>
+                                                        <span>사업전략 및 투자유치</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid">
+                                        <div class="input-group col">
+                                            <strong>멘토링 희망 기간  <i class="cs-icon-req">필수</i></strong>
+                                            <div class="bsn-date-set" style="max-width:590px">
+                                                <input type="text" class="js__date-from cs-input-date" placeholder="2022-01-01" title="시작일">
+                                                <input type="text" class="js__date-from cs-input-date" placeholder="2022-01-01" title="시작일">
+                                                <div class="input-container justify-center bd0">멘토링  총 <b class="text-orange-700">(9)</b>개월</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid">
+                                        <div class="input-group col">
+                                            <div class="input-group-head">
+                                                <strong>멘토링 요청 내용  <i class="cs-icon-req">필수</i></strong>
+                                                <p class="counting"><b>0</b>자/1,500자</p>
+                                            </div>
+                                            <textarea name="" id="" class="cs-input limited-textarea" placeholder="멘토링 요청내용에 대해서 가급적 자세히 적어주세요."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border-rows bg-gray-300">
+                                <div class="border-rows-content">
+                                    <div class="border-areement">
+                                        <strong class="subject">개인정보 수집 및 이용 <b class="text-orange-700">(필수)</b></strong>
+                                        <div class="text-view">내용</div>
+                                        <div class="areement-select">
+                                            <p>귀하는 개인정보 수집‧이용에 대한 동의를 거부할 권리가 있으며 동의를 거부할 경우 서비스 신청·이용 등에 제한을 받을 수 있습니다.</p>
+                                            <label class="cs-checkbox">
+                                                <input type="radio">
+                                                <i></i>
+                                                <span>동의</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio">
+                                                <i></i>
+                                                <span>미동의</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // mentoring -->
+                        <div class="flex justify-end mt-20 gap-x-10">
+                            <a href="#" class="btn btn_default-outline btn_l">취소</a>
+                            <a href="#" class="btn btn_primary btn_l">신청</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('./include/ng-footer.html')
+    
+</body>
+
+</html>
