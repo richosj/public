@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "진도관리"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title">
+                            <h2>진도관리</h2>
+                            <div class="utils-area">
+                                <select name="" id="" class="cs-input" title="연도 선택">
+                                    <option value="">AR에 반응하는 가상현실 식품포장 설비…</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="convention-list">
+                            <div class="item">
+                                <div class='info'>
+                                    <div class="cate">비즈니스 지원 활성화 > 제품생산 > 원료소재가공</div>
+                                    <div class="date">수행기간  :  2025,02,28 ~ 07.16</div>
+                                </div>
+                                <div class="subject"><span class="badge badge-sm badge-gray">과제명</span>AR에 반응하는 가상현실 식품포장 설비 개발</div>
+                            </div>
+                        </div>
+
+                        <div class="board-utils-group">
+                            <div class="strong">주관기업 :  ㈜올포랜드 / 협업기관 : GRB연구소</div>
+                        </div>
+                        <div class="auiTable">
+                            <table>
+                                <colgroup>
+                                    <col style="width:120px">
+                                    <col style="width: auto">
+                                    <col style="width:160px">
+                                    <col style="width:80px">
+                                    <col style="width:80px">
+                                    <col style="width:80px">
+                                    <col style="width:80px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th colspan="3">진도등록</th>
+                                        <th colspan="4">평가결과</th>
+                                    </tr>
+                                    <tr>
+                                        <th>보고유형</th>
+                                        <th>발표자료 등록</th>
+                                        <th>보고(평가)<br>일시</th>
+                                        <th>검토일</th>
+                                        <th>평가점수</th>
+                                        <th>결과</th>
+                                        <th>평가결과지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">결과평가</td>
+                                        <td>
+                                            <label class="com-file-uploader-input">
+                                                <input type="file">
+                                                <span class="cs-input">파일을 추가해 주세요.</span>
+                                                <span class="btn btn_default-outline btn_m">파일 첨부</span>
+                                            </label>
+                                        </td>
+                                        <td class="text-center">2025.10.22 15:00</td>
+                                        <td class="text-center">-</td>
+                                        <td class="text-center">-</td>
+                                        <td class="text-center">-</td>
+                                        <td class="text-center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">중간평가</td>
+                                        <td>
+                                            <ul class="com-files-list com-files-list-col1">
+                                                <li><strong>첨부파일입니다첨부파일입니.</strong><button type="button">삭제</button></li>
+                                            </ul>
+                                        </td>
+                                        <td class="text-center">미정</td>
+                                        <td class="text-center">03.25</td>
+                                        <td class="text-center">95.5</td>
+                                        <td class="text-center">평가중</td>
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn_m btn_warning-outline w-full">보완</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">중간평가</td>
+                                        <td>
+                                            <ul class="com-files-list com-files-list-col1">
+                                                <li><strong>첨부파일입니다첨부파일입니.</strong><button type="button">삭제</button></li>
+                                            </ul>
+                                        </td>
+                                        <td class="text-center">미정</td>
+                                        <td class="text-center">03.25</td>
+                                        <td class="text-center">95.5</td>
+                                        <td class="text-center">우수</td>
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn_m btn_dark-outline w-full">보기</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">실적보고</td>
+                                        <td>
+                                            <ul class="com-files-list com-files-list-col1">
+                                                <li><strong>첨부파일입니다첨부파일입니.</strong><button type="button">삭제</button></li>
+                                            </ul>
+                                        </td>
+                                        <td class="text-center">미정</td>
+                                        <td class="text-center">03.25</td>
+                                        <td class="text-center">95.5</td>
+                                        <td class="text-center text-green-400">우수</td>
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn_m btn_dark-outline w-full">보기</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+</body>
+
+</html>

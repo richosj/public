@@ -173,6 +173,10 @@ a:active,a:hover {
     color: var(--danger-color) !important;
 }
 
+.text-green-400{
+    color: var(--success-color) !important;
+}
+
 .text-orange-700{
     color: var(--orange-color) !important;
 }
@@ -194,6 +198,7 @@ a:active,a:hover {
 .bg-gray-300{
     background-color: #f3f4f5;
 }
+
 
 /* 목록 */
 .consec-foot{

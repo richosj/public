@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (calendarEl) {
     // 선택 불가능한 날짜 목록
     const disabledDates = ["2025-01-10", "2025-01-15", "2025-01-20"];
+    const disabledDates2 = ["2025-01-21"];
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: "dayGridMonth",
@@ -39,9 +40,30 @@ document.addEventListener("DOMContentLoaded", () => {
       selectable: true, // 날짜 선택 가능
       showNonCurrentDates: false,
       height: "auto",
+      dayCellClassNames: function (date) {
+        // 특정 날짜에 클래스 추가
+        const inDate = new Date(
+          date.date.getTime() - date.date.getTimezoneOffset() * 60000
+        );
+        const dateStrs = inDate.toISOString().split("T")[0];
+        
+        if (disabledDates2.includes(dateStrs)) {
+          return ['abled-date']; // 클래스 추가
+        }
+        return [];
+      },
+      dateClick: function (info) {
+        // 기존 클래스 제거
+        document.querySelectorAll('.selected-date').forEach((el) => {
+          el.classList.remove('selected-date');
+        });
+  
+        // 선택된 날짜에 클래스 추가
+        info.dayEl.classList.add('selected-date');
+      },
       dayCellContent: function (info) {
         const dateNumber = info.date.getDate(); // 날짜 숫자만 가져오기
-    return { html: `<span>${dateNumber}</span>` }; // 숫자만 렌더링
+        return { html: `<span>${dateNumber}</span>` }; // 숫자만 렌더링
 
       },
       dayCellDidMount: function (info) {

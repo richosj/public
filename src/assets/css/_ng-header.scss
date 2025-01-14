@@ -29,12 +29,21 @@
     }
     .user-util{
         display: flex;
+        align-items: center;
         a{
             color: #fff;
             display: inline-block;
             color: #8d8d8d;
             margin-right: 25px;
             font-size: 15px;
+        }
+        .bar{
+            display: inline-flex;
+            vertical-align: middle;
+            width: 1px;
+            height: 11px;
+            background: #534e4e;
+            margin-right: 25px;
         }
     }
     .screen-zoom{

@@ -183,6 +183,10 @@ a:active,a:hover {
         color:var(--success-color);
         border:1px solid var(--success-color);
     }
+    &_dark-outline{
+        color: #000;
+        border: 1px solid #000;
+    }
     @media (max-width: map.get($media,lg)) {
         height: 34px;
     }
