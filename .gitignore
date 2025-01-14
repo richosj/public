@@ -11,4 +11,5 @@ node_modules/
 .history/
 
 # 패키지 잠금 파일 제외
+package.json
 package-lock.json

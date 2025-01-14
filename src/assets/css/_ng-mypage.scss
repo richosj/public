@@ -28,11 +28,279 @@
 .main-content.mypage-main{
     padding-top: 0;
 }
+.mypage-main-text{
+    margin-bottom: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color:#555555;
+    b{
+        color:#2da34f
+    }
+    @media (max-width: map.get($media,lg)) {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+}
+.mypage-user-mng-felx{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    @media (max-width: map.get($media,xl)) {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+}
+.mypage-user-mng{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex:1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 40px;
+    @media (max-width: map.get($media,lg)) {
+        padding: 10px 20px;
+    }
+    @media (max-width: map.get($media,sm)) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .title{
+        font-size: 19px;
+        color:#1d1d1d;
+        @media (max-width: map.get($media,lg)) {
+            font-size: 14px;
+        }
+    }
+    .showing{
+        display: flex;
+        align-items: center;
+        
+        .badge{
+            height: 40px;
+            background: #f7faf8;
+            border: 1px solid #f1f1f1;
+            @media (max-width: map.get($media,lg)) {
+                height: auto;
+            }
+        }
+    }
+    
+    &.left{
+        .showing{
+            &>div{
+                position: relative;
+                padding: 0 20px; 
+                display: flex;
+                align-items: center;
+                @media (max-width: map.get($media,lg)) {
+                    padding: 0 10px;
+                }
+                .badge{
+                    margin-right: 20px;
+                    @media (max-width: map.get($media,lg)) {
+                        margin-right: 10px;
+                    }
+                }
+                .count{
+                    font-size: 40px;
+                    font-weight: bold;
+                    @media (max-width: map.get($media,lg)) {
+                     font-size: 19px;
+                    }
+                }
+                &:first-child{
+                    &:after{
+                        content:'';
+                        position: absolute;
+                        right: 0;
+                        display: block;
+                        width: 1px;
+                        height: 24px;
+                        background: #e4e4e4;
+                    }
+                }
+            }
+        }
+    }
+    &.right{
+        .showing{
+            .badge{
+                margin-left: 10px;
+                &:first-child{
+                    margin-left: 0;
+                }
+                i{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                    background: url(#{$src}/mypage/mypage-user-ico01.png)  50% 50% no-repeat;
+                    background-size: 100% auto;
+                    width: 16px;
+                    height: 18px;
+                    @media (max-width: map.get($media,sm)) {
+                        display: none;
+                    }
+                }
+                & + .badge{
+                    i{
+                        vertical-align: middle;
+                        background: url(#{$src}/mypage/mypage-user-ico02.png)  50% 50% no-repeat;
+                        width: 16px;
+                        height: 19px;
+                    }
+                    & + .badge{
+                        i{
+                            vertical-align: middle;
+                            background: url(#{$src}/mypage/mypage-user-ico03.png)  50% 50% no-repeat;
+                            width: 19px;
+                            height: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.main-grid{
+    display: flex;
+    gap:30px;
+    @media (max-width: map.get($media,xl)) {
+        flex-direction: column;
+    }
+    @media (max-width: map.get($media,lg)) {
+        gap: 20px;
+    }
+    @media (max-width: map.get($media,md)) {
+        gap:10px;
+    }
+    .mypage-user-state{
+        padding: 30px 40px;
+        background: #fff;
+        border-radius: 10px;
+        @media (max-width: map.get($media,lg)) {
+            padding: 15px 20px;
+        }
+        &>h3{
+            position: relative;
+            font-size: 19px;
+            padding: 0 12px 15px 35px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e4e4e4;
+            @media (max-width: map.get($media,md)) {
+                font-size: 14px;
+                margin-bottom: 8px;
+                padding: 0 8px 11px 20px;
+            }
+            &:after{
+                position: absolute;
+                left: 13px;
+                top:8px;
+                display: block;
+                background-image: url(#{$src}/mypage/check@14x11.png);
+                content:'';
+                width: 14px;
+                height: 11px;
+                @media (max-width: map.get($media,md)) {
+                    left: 2px;
+                    top: 4px;
+                }
+            }
+        }
+        &-body{
+            text-align: center;
+            p{
+                color:#1d1d1d;
+                font-size: 19px;
+                margin-bottom: 20px;
+                @media (max-width: map.get($media,md)) {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+            }
+            .badge-green{
+                border: 1px solid #2da34f;
+                color:#2da34f;   
+            }
+        }
+        &.green-box{
+            background: #f7faf8;
+            color:#2da34f;
+            p{
+                color:#2da34f;
+            }
+        }
+    }
+    .left{
+        width: 450px;
+        @media (max-width: map.get($media,xl)) {
+            width: 100%;
+        }
+        .mypage-user-state{
+            border: 2px solid #2da34f;
+            height: 100%;
+            &>h4{
+                font-size: 25px;
+                margin-bottom: 35px;
+                @media (max-width: map.get($media,lg)) {
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+            .log-step-view-inner{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 200px;
+                padding: 0 20px; 
+                background: #f7faf8;    
+                border: 1px solid #f0f0f0;
+                border-radius: 10px;
+            }
+            .log-step-view{
+                margin: 0;
+                &.current-2{
+                    &:after{
+                        width: 50%;
+                    }
+                }
+            }
+            .log-step-view .step-item:nth-child(1){
+                left: 10%;
+            }
+            .log-step-view .step-item:nth-child(2){
+                left: 50%;
+            }
+            .log-step-view .step-item:nth-child(3){
+                left: 90%;
+            }
+        }
+    }
+    .right{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 2fr));
+        grid-gap: 30px;
+        flex-grow: 1;
+        @media (max-width: map.get($media,lg)) {
+            grid-gap: 20px;
+        }
+        @media (max-width: map.get($media,md)) {
+            grid-template-columns: repeat(2, minmax(0, 3fr));
+            grid-gap: 10px;
+        }
+    }
+}
 .mypage-main-s1{
+    border-top: 1px solid #2da34f;
     background-color: #f2f2f2;
     padding: 60px var(--gutter-width);
     margin-left: 0 !important;
     margin-right: 0 !important;
+    background-image: url(#{$src}/mypage/main-bg.png);
+    background-position: center 20px;
+    
 }
 
 .mypage-main-s2{
@@ -43,12 +311,31 @@
         padding: 40px;
         display: grid;
         grid-template-columns: repeat(6,minmax(0,1fr));
+        @media (max-width: map.get($media,lg)) {
+            padding: 20px;
+            grid-template-columns: repeat(3,minmax(0,2fr));
+            grid-gap: 20px;
+        }
+        @media (max-width: map.get($media,sm)) {
+            padding: 10px;
+            grid-template-columns: repeat(2,minmax(0,3fr));
+            grid-gap: 10px;
+        }
         > li{
             padding-left: 35px;
+            @media (max-width: map.get($media,lg)) {
+                padding-left: 20px;
+            }
             > a{
                 font-weight: 700;
                 color: #1d1d1d;
                 font-size: 21px;
+                @media (max-width: map.get($media,lg)) {
+                    font-size: 18px;
+                }
+                @media (max-width: map.get($media,md)) {
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -61,6 +348,12 @@
             &:last-child{padding-bottom: 0;}
             > a{
                 font-size: 17px;
+                @media (max-width: map.get($media,lg)) {
+                    font-size: 15px;
+                }
+                @media (max-width: map.get($media,md)) {
+                    font-size: 13px;
+                }
             }
         }
     }
@@ -71,6 +364,12 @@
             > a{
                 color: #717171;
                 font-size: 15px;
+                @media (max-width: map.get($media,lg)) {
+                    font-size: 12px;
+                }
+                @media (max-width: map.get($media,md)) {
+                    font-size: 10px;
+                }
             }
         }
     }

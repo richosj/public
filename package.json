@@ -32,11 +32,11 @@
   },
   "dependencies": {
     "gulp-dart-sass": "^1.1.0",
-    "gulp-imagemin": "^9.1.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^5.1.0",
-    "gulp-webp": "^5.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-optipng": "^8.0.0",
+    "gulp-webp": "^4.0.1",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-optipng": "^5.2.1",
     "terser": "^5.36.0"
   }
 }
