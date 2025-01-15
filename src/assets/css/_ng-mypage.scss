@@ -379,14 +379,22 @@
 .mypage-bookmark{
     display: flex;
     gap:30px;
+    @media (max-width: map.get($media,md)) {
+        flex-direction: column;
+        gap: 10px;
+    }
     &>div{
         flex:1;
-        
-        
     }
     .mypage-user-state{
         border: 1px solid #2da34f;
         margin-bottom: 30px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        @media (max-width: map.get($media,md)) {
+            margin-bottom: 10px;
+        }
         .mypage-bookmark-body{
             li{
                 display: block;
@@ -395,14 +403,21 @@
                 background: #f7faf8;
                 border-radius: 10px;
                 display: flex;
+                gap:10px;
                 align-items: center;
                 justify-content: space-between;
                 margin-top: 4px;
+                @media (max-width: map.get($media,md)) {
+                    padding: 8px 12px;
+                }
                 &:first-child{
                     margin-top: 0;
                 }
                 a{
                     font-size: 17px;
+                    @media (max-width: map.get($media,md)) {
+                        font-size: 14px;
+                    }
                 }
                 .del{
                     display: inline-block;
@@ -410,8 +425,179 @@
                     margin-right: 8px;
                     background: url(#{$src}/mypage/close@13x13.png)  50% 50% no-repeat;
                     background-size: 100% auto;
-                    width: 16px;
-                    height: 18px;
+                    width: 13px;
+                    height: 13px;
+                    @media (max-width: map.get($media,md)) {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.certifi-li{
+    .certifi-li-item{
+        display: flex;
+        border: 1px solid #c6c6c6;
+        padding: 25px 30px;
+        border-radius: 10px;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        transition: all .3s;
+        @media (max-width: map.get($media,md)) {
+            padding: 12px 15px;
+        }
+        &:hover{
+            border: 1px solid #2da34f;
+        }
+        &+div{
+            margin-top: 10px;
+        }
+        .certifi-li-left{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            @media (max-width: map.get($media,md)) {
+                gap:10px
+            }
+            i{
+                display: block;
+                width: 48px;
+                height: 48px;
+                border: 1px solid #c6c6c6;
+                background: url(#{$src}/mypage/lock@21x24.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 10px;
+                @media (max-width: map.get($media,md)) {
+                    width: 24px;
+                    height: 24px;
+                    background-size: 10px;
+                }
+            }
+            h3{
+
+                font-size: 25px;
+                @media (max-width: map.get($media,md)) {
+                    font-size: 15px;
+                }
+            }
+        }
+        .certifi-li-right{
+            display: flex;
+            
+            dt{
+                font-weight: bold;
+                color:#555555;
+                font-size: 15px;
+                @media (max-width: map.get($media,md)) {
+                    font-size: 12px;
+                }
+            }
+            dd{
+                color:#717171;
+                font-size: 15px;
+                @media (max-width: map.get($media,md)) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.certificate-pop{
+    margin: auto;
+    padding: 60px 40px;
+    border: 1px solid #c6c6c6;
+    max-width: 820px;
+    .certificate-pop-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        @media (max-width: map.get($media,md)) {
+            margin-bottom: 40px;
+        }
+        .bi{
+            background: url(#{$src}/mypage/certificate-logo.png);
+            width: 222px;
+            height: 41px;
+            @media (max-width: map.get($media,md)) {
+                width: 111px;
+                height: 20.5px;
+                background-size: contain;
+            }
+        }
+    }
+    .certificate-pop-ti{
+        margin-bottom: 60px;
+        text-align: center;
+        @media (max-width: map.get($media,md)) {
+            margin-bottom: 30px;
+        }
+        h2{
+            font-size: 40px;
+            margin-bottom: 20px;
+            color:#000;
+            @media (max-width: map.get($media,md)) {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        p{
+            letter-spacing: 2px;
+            font-size: 17px;
+            color:#8e8e8e;
+            @media (max-width: map.get($media,md)) {
+                font-size: 14px;
+            }
+        }
+    }
+    .certificate-pop-tbl{
+        margin-bottom: 115px;
+        @media (max-width: map.get($media,md)) {
+            margin-bottom: 50px;
+        }
+        .cs-table{
+            margin-bottom: 60px;
+            @media (max-width: map.get($media,md)) {
+                margin-bottom: 30px;
+            }
+            &+p{
+                text-align: center;
+                font-size: 17px;
+                @media (max-width: map.get($media,md)) {
+                    font-size: 14px;
+                }
+            }
+        }
+        
+    }
+    .certificate-pop-bottom{
+        text-align: right;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: flex-end;
+        @media (max-width: map.get($media,md)) {
+            gap:10px;
+        }
+        dl{
+            dt{
+                font-size: 17px;
+                color:#555555;
+                @media (max-width: map.get($media,md)) {
+                    font-size: 14px;
+                }
+            }
+            dd{
+                color:#1d1d1d;
+                font-size: 21px;
+                @media (max-width: map.get($media,md)) {
+                    font-size: 1;
                 }
             }
         }
