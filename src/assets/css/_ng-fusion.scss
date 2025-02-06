@@ -899,3 +899,110 @@
     }
 }
 
+/*
+ 버튼 구성
+*/
+.example{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 10px;
+}
+
+.btn-fn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    gap:0 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    color: #000;
+    height: 40px;
+    font-size: 15px;
+    padding: 0 18px;
+}
+.btn-comp-add{
+    border-color: #2da34f;
+    color: #2da34f;
+    i{
+        display: inline-block;
+        vertical-align: top;
+        width: 16px;
+        height: 16px;
+        background: url(#{$src}/fusion/btn-icon-1-active.png) no-repeat 50% 50%;
+    }
+}
+.btn-ex-view{
+    i{
+        display: inline-block;
+        vertical-align: top;
+        width: 16px;
+        height: 16px;
+        background: url(#{$src}/fusion/btn-icon-6.png) no-repeat 50% 50%;
+    }
+}
+
+.btn-temp-view{
+    i{
+        display: inline-block;
+        vertical-align: top;
+        width: 16px;
+        height: 16px;
+        background: url(#{$src}/fusion/btn-icon-7.png) no-repeat 50% 50%;
+    }
+}
+.btn-edit-end{
+    i{
+        display: inline-block;
+        vertical-align: top;
+        width: 16px;
+        height: 16px;
+        background: url(#{$src}/fusion/btn-icon-8.png) no-repeat 50% 50%;
+    }
+}
+.btn-edit-start{
+    border: 1px solid #fff;
+    background-color: #2da34f;
+    color: #fff;
+    i{
+        display: inline-block;
+        vertical-align: top;
+        width: 16px;
+        height: 16px;
+        background: url(#{$src}/fusion/btn-icon-9.png) no-repeat 50% 50%;
+    }
+}
+.btn-fn-sm{height: 32px;}
+
+.btn-ic-add,
+.btn-ic-up,
+.btn-ic-down,
+.btn-ic-del,
+.btn-ic-set{
+    height: 32px;
+    padding: 0;
+    width: 32px;
+    i{
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100% auto;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.btn-ic-add{
+    i{background-image: url(#{$src}/fusion/btn-icon-1.png);}
+}
+.btn-ic-set{
+    i{background-image: url(#{$src}/fusion/btn-icon-2.png);}
+}
+.btn-ic-up{
+    i{background-image: url(#{$src}/fusion/btn-icon-3.png);}
+}
+.btn-ic-down{
+    i{background-image: url(#{$src}/fusion/btn-icon-4.png);}
+}
+.btn-ic-del{
+    i{background-image: url(#{$src}/fusion/btn-icon-5.png);}
+}

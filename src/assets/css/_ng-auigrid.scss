@@ -4,7 +4,7 @@
 .auiTable{
     table{
         border-top: 2px solid #000;
-        table-layout: fixed;
+        //table-layout: fixed;
         width: 100%;
         tr{
             border-bottom: 1px solid #c6c6c6;
@@ -12,7 +12,7 @@
         th,
         td{
             height: 56px;
-            padding: 0 10px;
+            padding: 5px 10px;
             &:not(:first-child){
                 border-left: 1px solid #c6c6c6;
             }
@@ -38,6 +38,8 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        .cm-file{width: 100px;}
+        .cm-subject{width: auto;}
         .cm-num{width: 50px;}
         .cm-size{
             width: 80px;

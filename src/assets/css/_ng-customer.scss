@@ -218,3 +218,20 @@
 }
 
 /* 고충접수 */
+.grievances-wrap{
+    .border-rows{margin-top: 20px;
+        &:first-child{margin-top: 0;}
+    }
+    .border-rows-content{margin-top: 30px;}
+    .border-rows-content{
+        .grid+.grid{margin-top: 20px;}
+    }
+    .input-grid-full{margin-top: 0;}
+    .input-container{
+        &.h-auto{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+    }
+}

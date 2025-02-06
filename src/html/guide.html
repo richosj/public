@@ -6,15 +6,22 @@
 
 <body>
     <div id="wrap">
-        @@include('./include/header.html')
-
-        @@include('./include/subtop.html',{
-            "title" : "가이드",
-            "title2" : "가이드"
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+            "title" : "기업지원사업",
+            "title2" : "사업 신청"
         })
 
         <div class="lay-container" id="lay-container">
             <div class="container">
+
+                <div class="">
+                    <button class="badge badge-primary open-tooltip" data-title="제출자료 목록22" data-content="ㅇㅇㅇ">간단둘팁</button>
+                    <button class="badge badge-primary open-tooltip">간단하지않은 툴팁</button>
+                    
+                </div>
+            
                 <div class="">
                     <span class="badge badge-primary">뱃지</span>
                     <span class="badge badge-warning">뱃지</span>
@@ -37,7 +44,40 @@
                 </div>
             </div>
         </div>
-        @@include('./include/footer.html')
+        @@include('./include/ng-footer.html')
     </div>
+    
+    <script>        
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll(".open-tooltip");
+            buttons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+
+                const html = `
+                    <ul class="com-files-list">
+                        <li><a href="#">2023_123_123485681.zip</a></li>
+                        <li><a href="#">2023_123_123485681.zip</a></li>
+                        <li><a href="#">2023_123_123485681.zip</a></li>
+                        <li><a href="#">2023_123_123485681.zip</a></li>
+                        <li><a href="#">2023_123_123485681.zip</a></li>
+                        <li><a href="#">2023_123_123485681.zip</a></li>
+                        <li><a href="#">2023_123_123485681.zip</a></li>
+                        <li><a href="#">2023_123_123485681.zip</a></li>
+                        <li><a href="#">2023_123_123485681.zip</a></li>
+                    </ul>`
+                
+                openTooltip({ target: event.currentTarget,
+                    title : '제출자료 목록',
+                    content : html,
+                    classes: ["list-document"],
+                    //width: "300px",
+                    //height: "150px"
+                 });
+                });
+            });
+            
+        });
+    </script>
+
     </body>
 </html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "정보관리"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title">
+                            <h2>즐겨찾기 관리</h2>
+                        </div>
+                        
+                        <div class="mypage-bookmark">
+                            <div class="mypage-bookmark-left">
+                                <div class="mypage-user-state">
+                                    <h3>기업 지원 서비스</h3>
+                                    <ul class="mypage-bookmark-body">
+                                        <li>
+                                            <a href="">사업소개</a>
+                                            <button class="del"><span class="sr-only">삭제</span></button>
+                                        </li>
+                                        <li>
+                                            <a href="">사업소개</a>
+                                            <button class="del"><span class="sr-only">삭제</span></button>
+                                        </li>
+                                        <li>
+                                            <a href="">사업소개</a>
+                                            <button class="del"><span class="sr-only">삭제</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mypage-user-state">
+                                    <h3>지원 서비스</h3>
+                                    <ul class="mypage-bookmark-body">
+                                        <li>
+                                            <a href="">사업소개</a>
+                                            <button class="del"><span class="sr-only">삭제</span></button>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="mypage-user-state">
+                                    <h3>융합 데이터</h3>
+                                    <ul class="mypage-bookmark-body">
+                                        <li>
+                                            <a href="">사업소개</a>
+                                            <button class="del"><span class="sr-only">삭제</span></button>
+                                        </li>
+                                        <li>
+                                            <a href="">사업소개</a>
+                                            <button class="del"><span class="sr-only">삭제</span></button>
+                                        </li>
+                                        <li>
+                                            <a href="">사업소개</a>
+                                            <button class="del"><span class="sr-only">삭제</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mypage-bookmark-right">
+                                <div class="mypage-user-state">
+                                    <h3>마이페이지 - 기업 지원 사업</h3>
+                                    <ul class="mypage-bookmark-body">
+                                        <li>
+                                            <a href="">사업소개</a>
+                                            <button class="del"><span class="sr-only">삭제</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mypage-user-state">
+                                    <h3>마이페이지 -지원 서비스</h3>
+                                    <ul class="mypage-bookmark-body">
+                                        <li>
+                                            <a href="">사업소개</a>
+                                            <button class="del"><span class="sr-only">삭제</span></button>
+                                        </li>
+                                        <li>
+                                            <a href="">사업소개</a>
+                                            <button class="del"><span class="sr-only">삭제</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+</body>
+
+</html>

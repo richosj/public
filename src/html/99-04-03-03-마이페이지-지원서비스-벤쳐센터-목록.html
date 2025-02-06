@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "지원서비스"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title">
+                            <h2>벤처센터 장비예약</h2>
+                        </div>
+
+                        <div class="board-search-filter">
+                            <div>
+                                <div class="rows">
+                                    <strong>조회기간 <i class="cs-icon-req"></i></strong>
+                                    <div class="search-input">
+                                        <select name="" id="" class="cs-input">
+                                            <option value="">사용일</option>
+                                        </select>
+                                        <div class="cs-datepicker-set">
+                                            <input type="text" class="js__datepicker js__date-from cs-input-date" placeholder="시작날짜" title="시작날짜" autocomplete="off">
+                                            <span></span>
+                                            <input type="text" class="js__datepicker js__date-to cs-input-date" placeholder="종료날짜" title="종료날짜" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <strong>공유장비 구분</strong>
+                                    <div class="search-input">
+                                        <select name="" id="" class="cs-input">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <div class="serach-buttons">
+                                    <button type="button" title="초기화" class="btn-search-reset">초기화</button>
+                                    <button type="button" title="검색" class="btn btn_primary">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="board-utils-group">
+                            <div class="strong"><b>10</b>건</div>
+                            <div>
+                                <button type="button" class="btn btn_m btn_primary" onClick="show()">장비신청</button>
+                            </div>
+                        </div>
+                        <div class="auiTable">
+                            
+                        </div>
+
+                        @@include('./include/ng-paging.html')
+
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+
+    <div class="popup-wrap" style="display: none;">
+        <div class="popup-container" style="width:700px">
+            <!-- header -->
+            <div class="popup-header">
+                <span class="popup-header-text">벤처센터 장비예약</span>
+                <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+            </div>
+            <!-- content -->
+            <div class="popup-content">
+                <!-- popup-content-wrap -->
+                <div class="popup-content-wrap">
+                    <div class="pop-inner-con">
+                        <div class="euqment-pop">
+                            <div class="border-box">
+                                <div class="border-box-title">장비선택<i class="cs-icon-req"></i></div>
+                                <div class="office-tab-auto">
+                                    <button type="button" class="selected">지게차</button>
+                                    <button type="button">3단사다리</button>
+                                    <button type="button">고소작업대</button>
+                                </div>
+                            </div>
+    
+                            <div class="border-box">
+                                <div class="border-box-title">2. 이용 희망일자 선택 <i class="cs-icon-req"></i></div>
+                                <div class="hope-calendar">
+                                    <div id="calendar"></div>
+                                    <div class="legend">
+                                        <span>선택일</span>
+                                        <span>예약확정</span>
+                                        <span>이용불가</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="border-box hope-time">
+                                <div class="border-box-title">3. 이용 시간(타입) 선택 <i class="cs-icon-req"></i></div>
+                                <div class="time-list">
+                                    <button type="button">09:00</button>
+                                    <button type="button" disabled>10:00</button>
+                                    <button type="button">11:00</button>
+                                    <button type="button">12:00</button>
+                                    <button type="button">13:00</button>
+                                    <button type="button">14:00</button>
+                                    <button type="button">15:00</button>
+                                    <button type="button" class="selected">16:00</button>
+                                    <button type="button">17:00</button>
+                                    <button type="button">16:00</button>
+                                </div>
+                            </div>
+                            
+                            <div class="border-box">
+                                <div class="border-box-title">4. 예약관련 문의 및 요청 사항</div>
+                                <textarea name="" id="" rows="2" placeholder="특별한 문의 및 요청 사항을 등록해 주시면 입력해 주세요 " class="cs-input"></textarea>
+                            </div>
+
+                            <div class="border-box">
+                                <div class="border-areement">
+                                    <strong class="subject">개인정보 수집 및 이용 <b class="text-orange-700">(필수)</b></strong>
+                                    <div class="text-view">
+                                        <div class="cs-data-table">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width:33.33%">
+                                                    <col style="width:33.33%">
+                                                    <col style="width:33.33%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>수집 및 이용 목적</th>
+                                                        <th>수집 항목</th>
+                                                        <th>보유 및 이용기간</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center">시설이용접수 및 운영관리</td>
+                                                        <td class="text-center">성명, 직위, 연락처, 이메일</td>
+                                                        <td class="text-center">2년</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="areement-select">
+                                        <p>귀하는 개인정보 수집‧이용에 대한 동의를 거부할 권리가 있으며 동의를 거부할 경우 서비스 신청·이용 등에 제한을 받을 수 있습니다.</p>
+                                        <label class="cs-checkbox">
+                                            <input type="radio">
+                                            <i></i>
+                                            <span>동의</span>
+                                        </label>
+                                        <label class="cs-checkbox">
+                                            <input type="radio">
+                                            <i></i>
+                                            <span>미동의</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-footer">
+                        <button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>
+                        <button class="confirm-btn btn btn_primary" data-modal="closebtn">확인</button>
+                    </div>
+                </div>
+                <!-- popup-content-wrap -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+
+        function show(){
+            document.querySelector('.popup-wrap').style.display = 'flex';
+            const calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                editable: true,
+                selectable: true
+            });
+            calendar.render();
+        }
+
+    </script>
+</body></html>

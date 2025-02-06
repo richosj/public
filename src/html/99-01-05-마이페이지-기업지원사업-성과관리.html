@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "사업수행"
+        })
+        
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title">
+                            <h2>성과관리</h2>
+                            <div class="utils-area">
+                                <select name="" id="" class="cs-input" title="연도 선택">
+                                    <option value="">AR에 반응하는 가상현실 식품포장 설비…</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="convention-list">
+                            <div class="item">
+                                <div class="info">
+                                    <div class="cate">비즈니스 지원 활성화 &gt; 제품생산 &gt; 원료소재가공</div>
+                                    <div class="date">수행기간  :  2025.02.02 ~ 07.16</div>
+                                </div>
+                                <div class="subject"><span class="badge badge-sm badge-gray">과제명</span>AR에 반응하는 가상현실 식품포장 설비 개발</div>
+                            </div>
+                        </div>
+                        <!-- e: convention-list -->
+                        
+                        <div class="border-rows">
+                            <div class="border-rows-hgroup">
+                                <h4>성과목표 – 수출증대
+                                    <button type="button" data-toggle-target="ask-content-1" data-position="right" title="안내말 열기">
+                                </h4>
+                                <button type="button" class="collapse-toggle" data-collapse-target="cont-1"></button>
+                            </div>
+                            <p class="help-txt">* 세부내용 및 도줄결과(정량지표)는 성과목표에 부합한 범위내에서 상세하게 변경 및 추가 수정이 가능합니다. </p>
+                            <!-- e: border-rows-hgroup -->
+
+                            <div class="border-rows-content cont-1">
+                                <div class="grid grid-cols-2 gap-x-40">
+                                    <div class="input-group col">
+                                        <strong>세부내용</strong>
+                                        <input type="text" class="cs-input width100p">
+                                    </div>
+                                    <div class="input-group col">
+                                        <strong>도출결과(정량지표)</strong>
+                                        <input type="text" class="cs-input width100p">
+                                    </div>
+                                </div>
+
+                                <div class="table-wrapper">
+                                    <div class="table-hgroup">
+                                        <div><strong>성과증빙서류</strong><em>* 첨부가능 파일 : hwp, doc, docx, ppt, pptx, xls, xlsx, pdf, jpg, png</em></div>
+                                        <div class="utsil">
+                                            <button type="button" class="btn-add-row r0">+ 행 추가</button>
+                                        </div>
+                                    </div>
+                                    <div class="auiTable">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:120px">
+                                                <col style="width: auto">
+                                            </colgroup>
+                                            <thead>
+                                                
+                                                <tr>
+                                                    <th>구분</th>
+                                                    <th>파일선택</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">결과평가</td>
+                                                    <td>
+                                                        <label class="com-file-uploader-input">
+                                                            <input type="file">
+                                                            <span class="cs-input">파일을 추가해 주세요.</span>
+                                                            <span class="btn btn_default-outline btn_m">파일 첨부</span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">중간평가</td>
+                                                    <td>
+                                                        <ul class="com-files-list com-files-list-col1">
+                                                            <li><strong>첨부파일입니다첨부파일입니.</strong><button type="button">삭제</button></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- e: border-rows-content -->
+                        </div>
+                        <!-- e: border-rows -->
+
+                        <div class="create-buttons">
+                            <button type="button" class="btn btn_default-outline btn_l">취소</button>
+                            <a href="#" class="btn btn_primary btn_l"><i class="icon-send" aria-hidden="ture"></i>제출</a>
+                        </div>
+
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+</body>
+</html>

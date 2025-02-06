@@ -221,7 +221,7 @@
             </div>
         </div>
         <div class="popup-wrap">
-            <div class="popup-container" style="width:600px">
+            <div class="popup-container" style="width:800px">
                 <!-- header -->
                 <div class="popup-header">
                     <span class="popup-header-text">신청 정보</span>
@@ -232,31 +232,43 @@
                     <!-- popup-content-wrap -->
                     <div class="popup-content-wrap">
                         <div class="pop-inner-con" style="height:50dvh">
-                            <div class="boxing-cont in-list">
-                                <dl>
-                                    <dt>신청자 이름</dt>
-                                    <dd>장영실</dd>
-                                </dl>
-                                <dl>
-                                    <dt>이메일</dt>
-                                    <dd>test@test.com</dd>
-                                </dl>
-                                <dl class="not-flex">
-                                    <dt>교육신청서 양식
-                                        <button type="button" class="btn-sample">샘플보기</button>
-                                    </dt>
-                                    <dd>
-                                        <div class="upload-ui">
-                                            <div class="file-name">
-                                                <span class="file-name-item">dasjklfasjfklajklfsajklfdsajlfkdjaklfjsaklfdjaskldfjsaklfsjaklf.pdf</span>
-                                                <button class="ico-delete"></button>
-                                            </div>
-                                            <label for="exmfile2">파일선택</label>
-                                            <input type="file" class="hidden" id="exmfile2">
-                                            <div class="file-volume"><b>0</b>MB/5MB</div>
-                                        </div>
-                                    </dd>
-                                </dl>
+                            <div class="boxing-cont">
+                                <div class="cs-data-table">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 15%">
+                                            <col style="width: 35%">
+                                            <col style="width: 15%">
+                                            <col style="width: 35%">
+                                        </colgroup>
+                                        <tbody>
+                                           <tr>
+                                            <th>이름</th>
+                                            <td>장영실</td>
+                                            <th>이메일</th>
+                                            <td>ajdfklasjkl@naver.com</td>
+                                           </tr>
+                                           <tr>
+                                            <th>첨부자료</th>
+                                            <td colspan="3">
+                                                <div class="input-subject-group">
+                                                    <strong>교육신청서 양식</strong>
+                                                    <a href="#" class="view-sample">샘플보기</a>
+                                                </div>
+                                                <label class="com-file-uploader-input">
+                                                    <input type="file">
+                                                    <span class="cs-input">파일을 추가해 주세요.</span>
+                                                    <span class="btn btn_default-outline btn_m">파일 첨부</span>
+                                                </label>
+                                                <div class="text-gray-400 text-sm mt-10">
+                                                    * 구체적인 고충 사항의 제출이 필요하시면 파일로 첨부 자유롭게 첨부해주세요. (첨부가능 파일 : hwp, doc, docx, ppt, pptx, xls,
+                                                    xlsx, pdf, jpg, png)
+                                                </div>
+                                            </td>
+                                           </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <div class="popup-footer">

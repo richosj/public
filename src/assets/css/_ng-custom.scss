@@ -5,6 +5,11 @@ a:active,a:hover {
     text-decoration: none
 }
 
+.lay-container{
+    position: relative;
+    z-index: 1;
+}
+
 .btn{
     transition: all 0.15s;
     &-round{
@@ -31,6 +36,29 @@ a:active,a:hover {
     }
 }
 
+/* 게시판 */
+.board-stat::after{
+    background-color: var(--brand-color);
+}
+.board-stat b{
+    color: var(--brand-color);
+}
+.tab-nav .active button, .tab-nav .active a{
+    border-color: var(--brand-color);
+    color: var(--brand-color);
+}
+.board-viwer .board-viwer_header > strong span, .board-viwer .board-viwer_header > h3 span{
+    color: var(--brand-color);
+}
+.error-container .error-btns > *{
+    background: var(--brand-color);
+}
+.btn.btn_primary-outline, .popup-wrap .popup-footer .btn_primary-outline.confirm-btn, .popup-wrap .popup-footer .btn_primary-outline.cancle-btn, .popup-wrap .popup-footer .btn_primary-outline.oneday-btn{
+    color: var(--brand-color);
+}
+.com-files-list li > a, .com-files-list li > strong{
+    color: var(--brand-color);
+}
 
 .search-comm{
     background-color: #f2f2f2;
@@ -167,6 +195,8 @@ a:active,a:hover {
 .btn{
     font-size: var(--font-size-body);
     height: 40px;
+    vertical-align: top;
+    background-color: #fff;
     &_default-outline{
         color:var(--brand-color);
         border-color: var(--brand-color);
@@ -186,8 +216,21 @@ a:active,a:hover {
     &_dark-outline{
         color: #000;
         border: 1px solid #000;
+        background-color: #ffffff;
     }
     @media (max-width: map.get($media,lg)) {
         height: 34px;
+    }
+}
+
+.btn:has(.icon-send){
+    gap:0 8px;
+}
+
+.input-combie{
+    display: flex;
+    gap:0 8px;
+    .btn{
+        white-space: nowrap;
     }
 }

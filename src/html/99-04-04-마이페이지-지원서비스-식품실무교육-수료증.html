@@ -59,6 +59,9 @@
                         
                         <div class="mypage-title">
                             <h2>기업지원사업 신청 목록 <small>(총 <b>2</b>건)</small></h2>
+                            <div class="utils">
+                                <button type="button" class="btn btn_m btn_primary btn_add">장비신청</button>
+                            </div>
                         </div>
                         <div class="auiTable">
                             <table>
@@ -136,6 +139,73 @@
             </div>
         </div>
         @@include('./include/ng-footer.html')
+    </div>
+
+    <div class="popup-wrap">
+        <div class="popup-container" style="width:1420px">
+            <!-- header -->
+            <div class="popup-header">
+                <span class="popup-header-text">제24-현장실습-116호  교육수료증</span>
+                <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+            </div>
+            <!-- content -->
+            <div class="popup-content">
+                <!-- popup-content-wrap -->
+                <div class="popup-content-wrap">
+                    <div class="certificate-pop">
+                        <div class="certificate-pop-top">
+                            <h1 class="bi"></h1>
+                            <p>발급번호 : 제24-현장실습-116호</p>
+                        </div>
+                        <div class="certificate-pop-ti">
+                            <h2>수료증</h2>
+                            <p>CERTIFICATE OF COMPLETION</p>
+                        </div>
+                        <div class="certificate-pop-tbl">
+                            <div class="cs-table">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 20%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>소속</th>
+                                            <td>가톨릭대 생활과학계열 식품영양학과</td>
+                                        </tr>
+                                        <tr>
+                                            <th>성명</th>
+                                            <td>김성철</td>
+                                        </tr>
+                                        <tr>
+                                            <th>실습과정</th>
+                                            <td>진로탐색 체험실습<br>(2024년 청년창업농장장학생 영농기술현장교육 식품분야 실습교육)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>실습기간</th>
+                                            <td>2024-05-16 ~ 2024-05-17</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>위 사람은 한국식품산업클러스터진흥원에서 수행한 교육과정을 수료하였으므로 이 증서를 발급합니다.</p>
+                        </div>
+                        <div class="certificate-pop-bottom">
+                            <dl>
+                                <dt>2024년 5월 17일</dt>
+                                <dd>한국식품산업클러스터진흥원 이사장</dd>
+                            </dl>
+                            <div>
+                                <img src="/dfip/static/front/common/images/bss/mypage/certificate-stamp.png" alt="">
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="popup-footer text-end">
+                        <button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>
+                        <button class="confirm-btn btn btn_success" data-modal="closebtn">출력</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

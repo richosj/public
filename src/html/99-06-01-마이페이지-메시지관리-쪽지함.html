@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "메세지관리"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title">
+                            <h2>쪽지함</h2>
+                        </div>
+
+                        <div class="ui-btn-track full">
+                            <button type="button" class="btn-tab1 current" title="선택 됨">받은 쪽지함</button>
+                            <button type="button" class="btn-tab1">보낸 쪽지함</button>
+                        </div>
+
+                        <div class="board-search-filter">
+                            <div>
+                                <div class="rows">
+                                    <strong>받은날짜 <i class="cs-icon-req"></i></strong>
+                                    <div class="search-input">
+                                        <div class="cs-datepicker-set">
+                                            <input type="text" class="js__datepicker js__date-from cs-input-date" placeholder="시작날짜" title="시작날짜" autocomplete="off">
+                                            <span></span>
+                                            <input type="text" class="js__datepicker js__date-to cs-input-date" placeholder="종료날짜" title="종료날짜" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <strong>검색어</strong>
+                                    <div class="search-input">
+                                        <select name="" id="" class="cs-input">
+                                            <option value="">전체</option>
+                                        </select>
+                                        <input type="text" class="cs-input input-keyword" title="검색어 입력" placeholder="내용을 입력해주세요">
+                                    </div>
+                                </div>
+    
+                                <div class="serach-buttons">
+                                    <button type="button" title="초기화" class="btn-search-reset">초기화</button>
+                                    <button type="button" title="검색" class="btn btn_primary">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="board-section">
+                            <div class="board-utils-group">
+                                <div class="strong">
+                                    받은쪽지 목록 <b>10</b>건
+                                </div>
+                                <div class="board-link-group">
+                                    <button type="button" class="btn btn_m btn_dark-outline">선택삭제</button>
+                                    <button type="button" class="btn btn_m btn_success-outline">쪽지쓰기</button>
+                                </div>
+                            </div>
+                            <div class="auiTable">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="cm-num">선택</th>
+                                            <th class="cm-size">순번</th>
+                                            <th class="cm-subject">제목</th>
+                                            <th class="cm-file">첨부파일</th>
+                                            <th>기업명</th>
+                                            <th>보낸사람</th>
+                                            <th>수신일시</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="cs-checkbox"><input type="checkbox"><i></i><span></span></label>
+                                            </td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-left">외국인</td>
+                                            <td class="text-center"><i class="icon-file"></i></td>
+                                            <td class="text-center">금산식품㈜</td>
+                                            <td class="text-center">김인철</td>
+                                            <td class="text-center">2024.12.12 14:20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="board-section">
+                            <div class="board-utils-group">
+                                <div class="strong">
+                                    보낸쪽지 목록  <b>10</b>건
+                                </div>
+                                <div class="board-link-group">
+                                    <button type="button" class="btn btn_m btn_dark-outline">선택삭제</button>
+                                    <button type="button" class="btn btn_m btn_success-outline">쪽지쓰기</button>
+                                </div>
+                            </div>
+                            <div class="auiTable">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="cm-num">선택</th>
+                                            <th class="cm-size">순번</th>
+                                            <th class="cm-subject">제목</th>
+                                            <th class="cm-file">첨부파일</th>
+                                            <th>기업명</th>
+                                            <th>보낸사람</th>
+                                            <th>수신일시</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="cs-checkbox"><input type="checkbox"><i></i><span></span></label>
+                                            </td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-left">외국인</td>
+                                            <td class="text-center"><i class="icon-file"></i></td>
+                                            <td class="text-center">금산식품㈜</td>
+                                            <td class="text-center">김인철</td>
+                                            <td class="text-center">2024.12.12 14:20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        @@include('./include/ng-paging.html')
+
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+
+    
+
+    
+
+</body>
+
+</html>

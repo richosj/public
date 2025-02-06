@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+            "title" : "마이페이지",
+            "title2" : "지원서비스"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title">
+                            <h2>전문가 활동관리</h2>
+
+                            <div class="utils-area">
+                                <select name="" id="" class="cs-input" title="선택">
+                                    <option value="">2024년 고충처리 전문가</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="convention-list">
+                            <div class="item">
+                                <div class="info">
+                                    <div class="cate">농림수산식품 &gt; 식품과학 &gt; 식품가공학</div>
+                                    <div class="date">위촉일  :  2025.02.02 </div>
+                                </div>
+                                <div class="subject">2024년 고충처리 전문가</div>
+                            </div>
+                        </div>
+                        <!-- e: convention-list -->
+
+                        <div class="border-rows">
+                            <div class="border-rows-hgroup">
+                                <h4>매칭 – 익산식품㈜</h4>
+                                <button type="button" class="collapse-toggle" data-collapse-target="cont-1"></button>
+                            </div>
+                            <!-- e: border-rows-hgroup -->
+
+                            <div class="border-rows-content cont-1">
+                                <ul class="list-round list-round-grid">
+                                    <li><span>처리유형</span>기술고충</li>
+                                    <li><span>고충분야</span>법무, 기계/설비</li>
+                                    <li><span>담당자(신청자)</span>김석기</li>
+                                    <li><span>연락처</span>ezmetod@naver.com/02-2514-1234</li>
+                                </ul>
+                                <div class="table-wrapper">
+                                    <div class="table-hgroup">
+                                        <div><strong>활동 내역 목록</strong></div>
+                                        <div class="utsil">
+                                            <button type="button" class="btn btn_m btn_primary"> 활동 등록</button>
+                                        </div>
+                                    </div>
+                                    <div class="auiTable">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>활동기간</th>
+                                                    <th>활동방법</th>
+                                                    <th>활동내역</th>
+                                                    <th>첨부파일</th>
+                                                    <th>처리결과</th>
+                                                    <th>삭제</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">2025-01-10 ~ 2025-02-10</td>
+                                                    <td class="text-center">방문</td>
+                                                    <td>
+                                                        소비자 맞춤형 제품개선 사업 참여신청서 소비자 맞춤형 제품개선 사업 참여신청서 소비자 맞춤형 제품개선…
+                                                    </td>
+                                                    <td class="text-center"><i class="icon-file"></i></td>
+                                                    <td class="text-center">접수</td>
+                                                    <td class="text-center"><button type="button" title="삭제" class="btn-del"></button></td>
+                                                </tr>
+                                                <!-- <tr>
+                                                    <td class="text-center">결과평가</td>
+                                                    <td>
+                                                        <label class="com-file-uploader-input">
+                                                            <input type="file">
+                                                            <span class="cs-input">파일을 추가해 주세요.</span>
+                                                            <span class="btn btn_default-outline btn_m">파일 첨부</span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">중간평가</td>
+                                                    <td>
+                                                        <ul class="com-files-list com-files-list-col1">
+                                                            <li><strong>첨부파일입니다첨부파일입니.</strong><button type="button">삭제</button></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr> -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- e: border-rows-content -->
+                        </div>
+                        <!-- e: border-rows -->
+                        <div class="border-rows mt-30">
+                            <div class="border-rows-hgroup">
+                                <h4>매칭 – 김원기</h4>
+                                <button type="button" class="collapse-toggle" data-collapse-target="cont-2"></button>
+                            </div>
+                            <!-- e: border-rows-hgroup -->
+
+                            <div class="border-rows-content cont-2">
+                                <ul class="list-round list-round-grid">
+                                    <li><span>처리유형</span>기술고충</li>
+                                    <li><span>고충분야</span>법무, 기계/설비</li>
+                                    <li><span>담당자</span>김석기</li>
+                                    <li><span>연락처</span>ezmetod@naver.com/02-2514-1234</li>
+                                </ul>
+                                <div class="table-wrapper">
+                                    <div class="table-hgroup">
+                                        <div><strong>활동 내역 목록</strong></div>
+                                        <div class="utsil">
+                                            <button type="button" class="btn btn_m btn_primary"> 활동 등록</button>
+                                        </div>
+                                    </div>
+                                    <div class="auiTable">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>활동기간</th>
+                                                    <th>활동방법</th>
+                                                    <th>활동내역</th>
+                                                    <th>첨부파일</th>
+                                                    <th>처리결과</th>
+                                                    <th>삭제</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">2025-01-10 ~ 2025-02-10</td>
+                                                    <td class="text-center">방문</td>
+                                                    <td>
+                                                        소비자 맞춤형 제품개선 사업 참여신청서 소비자 맞춤형 제품개선 사업 참여신청서 소비자 맞춤형 제품개선…
+                                                    </td>
+                                                    <td class="text-center"><i class="icon-file"></i></td>
+                                                    <td class="text-center">접수</td>
+                                                    <td class="text-center"><button type="button" title="삭제" class="btn-del"></button></td>
+                                                </tr>
+                                                <!-- <tr>
+                                                    <td class="text-center">결과평가</td>
+                                                    <td>
+                                                        <label class="com-file-uploader-input">
+                                                            <input type="file">
+                                                            <span class="cs-input">파일을 추가해 주세요.</span>
+                                                            <span class="btn btn_default-outline btn_m">파일 첨부</span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">중간평가</td>
+                                                    <td>
+                                                        <ul class="com-files-list com-files-list-col1">
+                                                            <li><strong>첨부파일입니다첨부파일입니.</strong><button type="button">삭제</button></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr> -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- e: border-rows-content -->
+                        </div>
+                        <!-- e: border-rows -->
+
+                        <div class="create-buttons">
+                            <button type="button" class="btn btn_default-outline btn_l">취소</button>
+                            <a href="#" class="btn btn_primary btn_l"><i class="icon-send" aria-hidden="ture"></i>제출</a>
+                        </div>
+
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+
+    <div class="popup-wrap">
+        <div class="popup-container" style="width:600px">
+            <!-- header -->
+            <div class="popup-header">
+                <span class="popup-header-text">전문가 활동 등록</span>
+                <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+            </div>
+            <!-- content -->
+            <div class="popup-content">
+                <!-- popup-content-wrap -->
+                <div class="popup-content-wrap">
+                    <div class="pop-inner-con">
+                        <div class="cs-table">
+                            <table>
+                                <colgroup>
+                                    <col style="width:20%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>활동기간</th>
+                                        <td>
+                                            <div class="cs-datepicker-set width100p">
+                                                <input type="text" class="js__datepicker js__date-from cs-input-date" title="시작날짜" autocomplete="off" >
+                                                <span></span>
+                                                <input type="text" class="js__datepicker js__date-to cs-input-date" title="종료날짜" autocomplete="off">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>자문분야</th>
+                                        <td>전가/전자 &gt; 디스플레이 &gt; 제품 홍보 매체 관리 </td>
+                                    </tr>
+                                    <tr>
+                                        <th>활동방법</th>
+                                        <td>
+                                            <div class="lbl_group">
+                                                <label class="cs-checkbox"><input type="radio"><i></i><span>이메일</span></label>
+                                                <label class="cs-checkbox"><input type="radio"><i></i><span>전화</span></label>
+                                                <label class="cs-checkbox"><input type="radio"><i></i><span>방문</span></label>
+                                                <div>
+                                                    <label class="cs-checkbox"><input type="radio"><i></i><span>기타</span></label>
+                                                    <input type="text" class="cs-input" readonly>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>활동내용</th>
+                                        <td>
+                                            <textarea name="" id="" class="cs-input" cols="3"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>후속사업<br>판정의견</th>
+                                        <td><textarea name="" id="" class="cs-input" cols="3"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <th>파일 첨부</th>
+                                        <td>
+                                            <div class="com-file-uploader-input">
+                                                <input type="file">
+                                                <span class="cs-input">파일을 추가해 주세요.</span>
+                                                <span class="btn btn_default-outline btn_m">파일선택</span>
+                                            </div>
+                                            <div class="help-txt mt-5">* 활동 증빙 참고자료 첨부(hwp, doc, docx, ppt, pptx, xls, xlsx, pdf,jpg, png)</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- popup-content-wrap -->
+                <div class="popup-footer">
+                    <button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>
+                    <button class="confirm-btn btn btn_primary" data-modal="closebtn">확인</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body></html>

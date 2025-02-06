@@ -11,24 +11,10 @@
 @use "./ng-components";
 @use "./ng-list";
 @use "./ng-office";
+@use "./ng-bsn";
 @use "./ng-edu";
 @use "./ng-mentoring";
 @use "./ng-fusion";
 @use "./ng-customer";
 @use "./ng-mypage";
 @use "./ng-auigrid";
-
-.row{
-    margin-left: var(--gutter-width);
-    margin-right: var(--gutter-width);
-    @media (max-width: map.get($media,lg)) {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-.container{
-    max-width: var(--max-width);
-}
-.html, body{
-    font-weight: 400;
-}

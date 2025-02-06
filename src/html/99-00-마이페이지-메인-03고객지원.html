@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+            "title" : "마이페이지",
+            "title2" : "마이페이지",
+        })
+
+        <div class="main-content mypage-main">
+            <div class="row mypage-main-s1">
+                <div class="container"> 
+                    <div class="mypage-user-mng-felx">
+                        <div class="mypage-user-mng left">
+                            <strong class="title">나의 알람</strong>
+                            <div class="showing">
+                                <div>
+                                    <a href="#" class="badge badge-round badge-secondary badge-lg">쪽지</a>
+                                    <span class="count">2</span>
+                                </div>
+                                <div>
+                                    <a href="#" class="badge badge-round badge-secondary badge-lg">메세지</a>
+                                    <span class="count">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mypage-user-mng right">
+                            <strong class="title">나의 관리</strong>
+                            <div class="showing">
+                                <button class="badge badge-round badge-secondary badge-lg" type="button"><i></i>기관 소속 직원</button>
+                                <button class="badge badge-round badge-secondary badge-lg" type="button"><i></i>공동인증서</button>
+                                <button class="badge badge-round badge-secondary badge-lg" type="button"><i></i>즐겨찾기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-Tab" style="">
+                        <div class="main-Tab-head">
+                            <div class="main-Tab-head-button">
+                                <button>기업 지원 사업</button>
+                                <button>지원 서비스</button>
+                                <button class="active">고객지원</button>    
+                            </div>
+                            <div class="mypage-main-text"><i class="ico-folder"></i><b>금산식품㈜</b>님 환영합니다!</div>
+                        </div>
+                        <div class="border-rows">
+                            <ul class="suport-items">
+                                <li class="suport-item">
+                                    <div class="suport-item-left">
+                                        <div class="suport-item-left-type">
+                                            <i class="ico-bell"></i>
+                                            <strong class="suport-ca">시험분석</strong>
+                                        </div>
+                                        <span class="suport-date">2024-12-12</span>
+                                    </div>
+                                    <div class="suport-item-center">
+                                        <div class="suport-ti">
+                                            <p>경영영고충</p>
+                                            <p>2024년 한국식품산업클러스터진흥원 개방형 장비공동활용 지원사업</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="suport-item-right">
+                                        <span class="badge sucess">결과서</span>
+                                    </div>
+                                </li>
+                                <li class="suport-item">
+                                    <div class="suport-item-left">
+                                        <div class="suport-item-left-type">
+                                            <i class="ico-bell"></i>
+                                            <strong class="suport-ca">시설장비</strong>
+                                        </div>
+                                        <span class="suport-date">2024-12-12</span>
+                                    </div>
+                                    <div class="suport-item-center">
+                                        <div class="suport-ti">
+                                            <p>기술고충</p>
+                                            <p>2024년 한국식품산업클러스터진흥원 개방형 장비공동활용 지원사업</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="suport-item-right">
+                                        <span class="badge">결과서</span>
+                                    </div>
+                                </li>
+                                <li class="suport-item">
+                                    <div class="suport-item-left">
+                                        <div class="suport-item-left-type">
+                                            <i class="ico-bell"></i>
+                                            <strong class="suport-ca">공유시설</strong>
+                                        </div>
+                                        <span class="suport-date">2024-12-12</span>
+                                    </div>
+                                    <div class="suport-item-center">
+                                        <div class="suport-ti">
+                                            <p>재무</p>
+                                            <p>2024년 한국식품산업클러스터진흥원 개방형 장비공동활용 지원사업</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="suport-item-right">
+                                        <span class="badge orange">결과서</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mypage-main-s2">
+                <div class="container">
+                    <ul class="lv1">
+                        <li><a href="#">기업지원사업</a>
+                            <ul class="lv2">
+                                <li><a href="#">사업신청</a></li>
+                                <li><a href="#">사업평가</a></li>
+                                <li><a href="#">협약관리</a></li>
+                                <li><a href="#">사업수행</a>
+                                    <ul class="lv3">
+                                        <li><a href="#">- 진도관리</a></li>
+                                        <li><a href="#">- 계획서 변경</a></li>
+                                        <li><a href="#">- 예산집행</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">성과관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">지원서비스</a>
+                            <ul class="lv2">
+                                <li><a href="#">시험분석</a>
+                                    <ul class="lv3">
+                                        <li><a href="#">- 시험분석 목록</a></li>
+                                        <li><a href="#">- 시험분석 재발급 목록</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">시설장비</a></li>
+                                <li><a href="#">공유시설</a></li>
+                                <li><a href="#">식품실무교육</a></li>
+                                <li><a href="#">전문가활동이력</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객지원</a>
+                            <ul class="lv2">
+                                <li><a href="#">나의 민원</a>
+                                    <ul class="lv3">
+                                        <li><a href="#">- 나의 민원</a></li>
+                                        <li><a href="#">- 나의 QnA</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">나의 고충처리</a>
+                                    <ul class="lv3">
+                                        <li><a href="#">- 기술고충</a></li>
+                                        <li><a href="#">- 경영고충</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">나의 멘토링</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메세지관리</a>
+                            <ul class="lv2">
+                                <li><a href="#">받은 쪽지함</a></li>
+                                <li><a href="#">수신 메시지</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">융합데이터</a>
+                            <ul class="lv2">
+                                <li><a href="#">서비스요청</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">정보관리</a>
+                            <ul class="lv2">
+                                <li><a href="#">직인관리</a></li>
+                                <li><a href="#">기관소속직원 관리</a></li>
+                                <li><a href="#">공동인증서 관리</a></li>
+                                <li><a href="#">즐겨찾기 관리</a></li>
+                                <li><a href="#">회원 정보 수정</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        @@include('./include/ng-footer.html')
+    </div>
+    </body>
+</html>

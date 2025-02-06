@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "정보 관리"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title">
+                            <h2>공동인증서 관리</h2>
+                            <div>
+                                <button type="button" class="btn btn_m btn_success-outline w-full">인증서추가/갱신</button>
+                            </div>
+                        </div>
+
+                        <div class="certifi-li">
+                            <div class="certifi-li-item">
+                                <div class="certifi-li-left">
+                                    <i></i>
+                                    <h3>공동인증서 A</h3>
+                                </div>
+                                <dl class="certifi-li-right">
+                                    <dt>만료 :</dt>
+                                    <dd>2025,12,12</dd>
+                                </dl>
+                            </div>
+                            <div class="certifi-li-item">
+                                <div class="certifi-li-left">
+                                    <i></i>
+                                    <h3>공동인증서 A</h3>
+                                </div>
+                                <dl class="certifi-li-right">
+                                    <dt>만료 :</dt>
+                                    <dd>2025,12,12</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+</body>
+
+</html>

@@ -69,7 +69,7 @@ function html() {
 function styles() {
   return gulp.src(`${paths.scss}/**/*.scss`, { allowEmpty: true })
     .pipe(plumber())
-    .pipe(sassCompiler().on('error', sassCompiler.logError))
+    .pipe(sassCompiler({ outputStyle: 'expanded', sourceMap: true }).on('error', sassCompiler.logError))
     .pipe(postCss([autoprefixer()]))  // cssnano() 제거
     .pipe(gulp.dest(paths.distCss))
     .pipe(server.stream());
@@ -113,8 +113,6 @@ function images() {
       imageminOptipng({ optimizationLevel: 1 }),
     ]))
     .pipe(gulp.dest(paths.distImages))
-    //.pipe(webp())
-    .pipe(gulp.dest(paths.distImages));
 }
 
 // BrowserSync task

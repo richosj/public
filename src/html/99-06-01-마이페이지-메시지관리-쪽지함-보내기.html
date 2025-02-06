@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "메세지관리"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title">
+                            <h2>쪽지함</h2>
+                        </div>
+
+                        <div class="ui-btn-track full">
+                            <button type="button" class="btn-tab1 current" title="선택 됨">받은 쪽지함</button>
+                            <button type="button" class="btn-tab1">보낸 쪽지함</button>
+                        </div>
+
+                        <div class="board-search-filter">
+                            <div>
+                                <div class="rows">
+                                    <strong>받은날짜 <i class="cs-icon-req"></i></strong>
+                                    <div class="search-input">
+                                        <div class="cs-datepicker-set">
+                                            <input type="text" class="js__datepicker js__date-from cs-input-date"
+                                                placeholder="시작날짜" title="시작날짜" autocomplete="off">
+                                            <span></span>
+                                            <input type="text" class="js__datepicker js__date-to cs-input-date"
+                                                placeholder="종료날짜" title="종료날짜" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <strong>검색어</strong>
+                                    <div class="search-input">
+                                        <select name="" id="" class="cs-input">
+                                            <option value="">전체</option>
+                                        </select>
+                                        <input type="text" class="cs-input input-keyword" title="검색어 입력"
+                                            placeholder="내용을 입력해주세요">
+                                    </div>
+                                </div>
+
+                                <div class="serach-buttons">
+                                    <button type="button" title="초기화" class="btn-search-reset">초기화</button>
+                                    <button type="button" title="검색" class="btn btn_primary">검색</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="board-section">
+                            <div class="board-utils-group">
+                                <div class="strong">
+                                    받은쪽지 목록 <b>10</b>건
+                                </div>
+                                <div class="board-link-group">
+                                    <button type="button" class="btn btn_m btn_dark-outline">선택삭제</button>
+                                    <button type="button" class="btn btn_m btn_success-outline">쪽지쓰기</button>
+                                </div>
+                            </div>
+                            <div class="auiTable">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="cm-num">선택</th>
+                                            <th class="cm-size">순번</th>
+                                            <th class="cm-subject">제목</th>
+                                            <th class="cm-file">첨부파일</th>
+                                            <th>기업명</th>
+                                            <th>보낸사람</th>
+                                            <th>수신일시</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="cs-checkbox"><input
+                                                        type="checkbox"><i></i><span></span></label>
+                                            </td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-left">외국인</td>
+                                            <td class="text-center"><i class="icon-file"></i></td>
+                                            <td class="text-center">금산식품㈜</td>
+                                            <td class="text-center">김인철</td>
+                                            <td class="text-center">2024.12.12 14:20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="board-section">
+                            <div class="board-utils-group">
+                                <div class="strong">
+                                    보낸쪽지 목록 <b>10</b>건
+                                </div>
+                                <div class="board-link-group">
+                                    <button type="button" class="btn btn_m btn_dark-outline">선택삭제</button>
+                                    <button type="button" class="btn btn_m btn_success-outline">쪽지쓰기</button>
+                                </div>
+                            </div>
+                            <div class="auiTable">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="cm-num">선택</th>
+                                            <th class="cm-size">순번</th>
+                                            <th class="cm-subject">제목</th>
+                                            <th class="cm-file">첨부파일</th>
+                                            <th>기업명</th>
+                                            <th>보낸사람</th>
+                                            <th>수신일시</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="cs-checkbox"><input
+                                                        type="checkbox"><i></i><span></span></label>
+                                            </td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-left">외국인</td>
+                                            <td class="text-center"><i class="icon-file"></i></td>
+                                            <td class="text-center">금산식품㈜</td>
+                                            <td class="text-center">김인철</td>
+                                            <td class="text-center">2024.12.12 14:20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        @@include('./include/ng-paging.html')
+
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+
+
+
+    <div class="popup-wrap">
+        <div class="popup-container" style="width:600px">
+            <!-- header -->
+            <div class="popup-header">
+                <span class="popup-header-text">쪽지 보내기록</span>
+                <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+            </div>
+            <!-- content -->
+            <div class="popup-content">
+                <!-- popup-content-wrap -->
+                <div class="popup-content-wrap">
+                    <div class="pop-inner-con" style="height:50dvh">
+                        <div class="boxing-cont in-list">
+                            <dl>
+                                <dt>제목</dt>
+                                <dd><input type="text" class="cs-input width100p"></dd>
+                            </dl>
+                            <dl>
+                                <dt>수신자</dt>
+                                <dd>
+                                    <div class="to-list-wrap">
+                                        <ul class="user to-list" style="">
+                                            <li><b class="name">최종천/(주)올포랜드</b><em>jcchoi@naver.com</em><button type="button" title="삭제">삭제</button></li>
+                                            <li><b class="name">최종천/(주)올포랜드</b><em>jcchoi@naver.com</em><button type="button" title="삭제">삭제</button></li>
+                                            <li><b class="name">최종천/(주)올포랜드</b><em>jcchoi@naver.com</em><button type="button" title="삭제">삭제</button></li>
+                                            <li><b class="name">최종천/(주)올포랜드</b><em>jcchoi@naver.com</em><button type="button" title="삭제">삭제</button></li>
+                                        </ul>
+                                        <button type="button" class="btn btn_m btn_dark-outline">찾기</button>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="not-flex">
+                                <dt></dt>
+                                <dd>
+                                    <div class="input-group col">
+                                        <div class="input-group-head">
+                                            <strong>내용 </strong>
+                                            <p class="counting"><b>10</b>자/1,500자</p>
+                                        </div>
+                                        <textarea name="" id="" class="cs-input" rows="4"
+                                            placeholder="기술개발 과제의 수행 내용을 기재합니다."></textarea>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <div class="title">
+                                <div class="text">파일첨부<i class="cs-icon-req"></i></div>
+                            </div>
+
+                            <div class="cs-data-table">
+                                <table>
+                                    <tbody id="table-agt">
+                                        <tr id="row-item">
+                                            <td>
+                                                <div class="com-files" id="evlFile_frame"><label
+                                                        class="com-file-uploader-input"><input multiple=""
+                                                            type="file"><span class="cs-input">파일을 추가해 주세요.</span><span
+                                                            class="btn btn_default-outline btn_m">파일 첨부</span></label>
+                                                    <ul class="com-files-list  file_id" id="evlFile">
+                                                        <li class="file_item" id="evlFile_item_2"><strong>10-3-1. 기술지원과제
+                                                                선정평가서.hwpx</strong><button type="button">삭제</button>
+                                                            <div class="fileUploadData"><input
+                                                                    name="FileUpload[2].untyFileId" type="hidden"
+                                                                    value="uiU5UCLa0/0y4pmE/ftlmAFTQX0CV/Ztos/HuUlRK1k="><input
+                                                                    name="FileUpload[2].fileSe" type="hidden"
+                                                                    value="evlFile"><input name="FileUpload[2].status"
+                                                                    type="hidden" value="R"></div>
+                                                        </li>
+                                                        <li class="file_item" id="evlFile_item_3"><strong>10-4-1. 기술지원사업
+                                                                협약10-4-1. 기술지원사업
+                                                                협약서10-4-1. 기술지원사업
+                                                                협약서10-4-1. 기술지원사업
+                                                                협약서10-4-1. 기술지원사업
+                                                                협약서10-4-1. 기술지원사업
+                                                                협약서10-4-1. 기술지원사업
+                                                                협약서서10-4-1. 기술지원사업
+                                                                협약서10-4-1. 기술지원사업
+                                                                협약서10-4-1. 기술지원사업
+                                                                협약서.hwpx</strong><button type="button">삭제</button>
+                                                            <div class="fileUploadData"><input
+                                                                    name="FileUpload[3].untyFileId" type="hidden"
+                                                                    value="uiU5UCLa0/0y4pmE/ftlmIfHVz0uT98aCi9S9+/Q0mQ="><input
+                                                                    name="FileUpload[3].fileSe" type="hidden"
+                                                                    value="evlFile"><input name="FileUpload[3].status"
+                                                                    type="hidden" value="R"></div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="files-info">
+                                <p>* 첨부가능 파일 : jpg, jpeg, gif, png, txt, cvs, doc, docx, xls, xlsx, hwp, zip, pdf, ppt,
+                                    pptx</p>
+                                <p>* 첨부파일 최대크기: 100MB(최대 3개 파일 가능)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-footer">
+                        <button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>
+                        <button class="confirm-btn btn btn_primary" data-modal="closebtn">전송</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

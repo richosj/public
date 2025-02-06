@@ -32,11 +32,11 @@ $src : "#{$src}";
     --select-padding: 8px;
 
     /* Button Styles */
-    --button-background-color: #135784;
+    --button-background-color: #2da34f;
     --button-text-color: #fff;
     --button-border-radius: 4px;
     --button-padding: 10px 20px;
-    --button-hover-background-color: #0056b3;
+    --button-hover-background-color: #2da34f;
     --button-disabled-background-color: #2da34f;
     --button-disabled-text-color: #6c757d;
     --button-border-width: 1px;
@@ -47,12 +47,12 @@ $src : "#{$src}";
     --border-radius-sm: 4px;
     --border-color: #c6c6c6;
     --border-color2: #c6c6c6;
-    --border-color-active: #135784;
+    --border-color-active: #2da34f;
     --shadow-color: rgba(0, 0, 0, 0.1);
 
     /* Color Palette */
-    --brand-color: #135784;
-    --brand-color-300: #78a5eb;
+    --brand-color: #2da34f;
+    --brand-color-300: #b6dfc2;
     --primary-color: #1764dc;
     --secondary-color: #c6c6c6;
     --success-color: #2da34f;
@@ -180,6 +180,11 @@ a:active,a:hover {
 .text-orange-700{
     color: var(--orange-color) !important;
 }
+
+.text-warning-700{
+    color: var(--warning-color) !important;
+}
+
 .text-underline{
     text-decoration: underline;
 }
@@ -198,7 +203,6 @@ a:active,a:hover {
 .bg-gray-300{
     background-color: #f3f4f5;
 }
-
 
 /* 목록 */
 .consec-foot{
@@ -275,9 +279,10 @@ a:active,a:hover {
     align-items: center;
     border-radius: var(--input-border-radius);
     padding: 0 20px;
-    height: var(--input-height);
+    min-height: var(--input-height);
     border: 1px solid var(--input-border-color);
     background-color: #fff;
+    flex-wrap: wrap;
     &.disabled{
         background-color: #f3f4f5;
         border-color: #f0f0f0;
@@ -308,13 +313,30 @@ a:active,a:hover {
         padding-bottom: 25px;
         padding-right: 60px;
         &.bdb0{border: 0;padding-bottom: 0;}
+        &:not(:has(.collapse-toggle)){
+            padding-right: 0;
+        }
+        &:has(.btn){
+            padding-right: 0;
+        }
         h3{
             font-size: 25px;
+            color: #000;
+            display: inline-flex;
+            align-items: center;
+            gap:0 20px;
             em{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #f0f0f0;
+                background-color: #f7faf8;
+                border-radius: 17px;
                 font-style: normal;
                 color: #8e8e8e;
                 font-weight: 400;
                 font-size: 15px;
+                padding: 7px 15px;
             }
         }
         
@@ -334,7 +356,17 @@ a:active,a:hover {
             border-bottom: 0;
             padding-bottom: 0;
             h4{
+                color: #000;
                 font-size: 21px;
+                display: inline-flex;
+                align-items: center;
+                gap:0 10px;
+                button{
+                    line-height: 1;
+                    i{
+                        vertical-align: top;
+                    }
+                }
                 em{
                     color: var(--gray-color);
                     font-size: 15px;
@@ -441,4 +473,18 @@ root에서 변수만 변경하면 전체 적용 될 수 있게 하는 영역
 
 .flex-grow{
     flex-grow: 1;
+}
+.row{
+    margin-left: var(--gutter-width);
+    margin-right: var(--gutter-width);
+    @media (max-width: map.get($media,lg)) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.container{
+    max-width: var(--max-width);
+}
+.html, body{
+    font-weight: 400;
 }

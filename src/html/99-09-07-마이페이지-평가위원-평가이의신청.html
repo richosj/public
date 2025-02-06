@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "메세지관리"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title">
+                            <h2>사업신청</h2>
+                        </div>
+
+                        <div class="board-search-filter">
+                            <div>
+                                <div class="rows">
+                                    <strong>받은날짜 <i class="cs-icon-req"></i></strong>
+                                    <div class="search-input">
+                                        <div class="cs-datepicker-set">
+                                            <input type="text" class="js__datepicker js__date-from cs-input-date"
+                                                placeholder="시작날짜" title="시작날짜" autocomplete="off">
+                                            <span></span>
+                                            <input type="text" class="js__datepicker js__date-to cs-input-date"
+                                                placeholder="종료날짜" title="종료날짜" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <strong>검색어</strong>
+                                    <div class="search-input">
+                                        <select name="" id="" class="cs-input">
+                                            <option value="">전체</option>
+                                        </select>
+                                        <input type="text" class="cs-input input-keyword" title="검색어 입력"
+                                            placeholder="내용을 입력해주세요">
+                                    </div>
+                                </div>
+
+                                <div class="serach-buttons">
+                                    <button type="button" title="초기화" class="btn-search-reset">초기화</button>
+                                    <button type="button" title="검색" class="btn btn_primary">검색</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="board-section">
+                            <div class="board-utils-group">
+                                <div class="strong">
+                                    받은쪽지 목록 <b>10</b>건
+                                </div>
+                                <div class="board-link-group">
+                                    <button type="button" class="btn btn_m btn_dark-outline">선택삭제</button>
+                                    <button type="button" class="btn btn_m btn_success-outline">쪽지쓰기</button>
+                                </div>
+                            </div>
+                            <div class="auiTable">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="cm-num">선택</th>
+                                            <th class="cm-size">순번</th>
+                                            <th class="cm-subject">제목</th>
+                                            <th class="cm-file">첨부파일</th>
+                                            <th>기업명</th>
+                                            <th>보낸사람</th>
+                                            <th>수신일시</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="cs-checkbox"><input
+                                                        type="checkbox"><i></i><span></span></label>
+                                            </td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-left">외국인</td>
+                                            <td class="text-center"><i class="icon-file"></i></td>
+                                            <td class="text-center">금산식품㈜</td>
+                                            <td class="text-center">김인철</td>
+                                            <td class="text-center">2024.12.12 14:20</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="cs-checkbox"><input
+                                                        type="checkbox"><i></i><span></span></label>
+                                            </td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-left">외국인</td>
+                                            <td class="text-center"><i class="icon-file"></i></td>
+                                            <td class="text-center">금산식품㈜</td>
+                                            <td class="text-center">김인철</td>
+                                            <td class="text-center">2024.12.12 14:20</td>
+                                        </tr>
+                                        <tr class="tr-bg-gray">
+                                            <td class="text-center">
+                                                <label class="cs-checkbox"><input
+                                                        type="checkbox"><i></i><span></span></label>
+                                            </td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-left">외국인</td>
+                                            <td class="text-center"><i class="icon-file"></i></td>
+                                            <td class="text-center">금산식품㈜</td>
+                                            <td class="text-center">김인철</td>
+                                            <td class="text-center">2024.12.12 14:20</td>
+                                        </tr>
+                                        <tr class="tr-bg-gray">
+                                            <td class="text-center">
+                                                <label class="cs-checkbox"><input
+                                                        type="checkbox"><i></i><span></span></label>
+                                            </td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-left">외국인</td>
+                                            <td class="text-center"><i class="icon-file"></i></td>
+                                            <td class="text-center">금산식품㈜</td>
+                                            <td class="text-center">김인철</td>
+                                            <td class="text-center">2024.12.12 14:20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        @@include('./include/ng-paging.html')
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+
+
+
+    <div class="popup-wrap" style="display: none;">
+        <div class="popup-container" style="width:600px">
+            <!-- header -->
+            <div class="popup-header">
+                <span class="popup-header-text">평가 이의 신청</span>
+                <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+            </div>
+            <!-- content -->
+            <div class="popup-content">
+                <!-- popup-content-wrap -->
+                <div class="popup-content-wrap">
+                    <div class="pop-inner-con" style="height:50dvh">
+                        <div class="boxing-cont in-list">
+                            <dl class="not-flex">
+                                <dt>접수번호</dt>
+                                <dd><input type="text" class="cs-input width100p" value="접수번호" readonly></dd>
+                            </dl>
+                            <dl class="not-flex">
+                                <dt></dt>
+                                <dd>
+                                    <div class="input-group col">
+                                        <div class="input-group-head">
+                                            <strong>과제목표 <i class="cs-icon-req"></i></strong>
+                                            <p class="counting"><b>0</b>자/1,500자</p>
+                                        </div>
+                                        <textarea class="cs-input limited-textarea" rows="4" placeholder="기술개발 과제의 수행 내용을 기재합니다."></textarea>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="popup-footer">
+                        <button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>
+                        <button class="confirm-btn btn btn_primary" data-modal="closebtn">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-wrap">
+        <div class="popup-container" style="width:1200px">
+            <!-- header -->
+            <div class="popup-header">
+                <span class="popup-header-text">㈜올포랜드 - 사업신청 및 계획서</span>
+                <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+            </div>
+            <!-- content -->
+            <div class="popup-content">
+                <!-- popup-content-wrap -->
+                <div class="popup-content-wrap">
+                    <div class="pop-inner-con">
+                        <div class="boxing-alert warning">
+                            <div class="text-warning-700">
+                                2025년 4차 청년식품 사업(예비창업)에 평가결과 <span class="text-danger-700">미선정</span> 되었습니다.
+                            </div>
+                            <a href="#" class="btn btn_warning-outline btn_round btn-Appeal">이의신청</a>
+                        </div>
+                    </div>
+                    <div class="popup-footer">
+                        <button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>
+                        <button class="confirm-btn btn btn_primary" data-modal="closebtn">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -9,194 +9,82 @@
     <div id="wrap">
         @@include('./include/ng-header.html')
         @@include('./include/ng-mobile-header.html')
-
-        @@include('./include/ng-subtop.html',{
-        "title" : "지원서비스",
-        "title2" : "교육지원 서비스",
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "지원서비스"
         })
-        <div class="main-content">
-            <div class="row">
-                <div class="container">
-                    <div class="content-hgroup">
-                        <div><strong>공동기술개발 사업</strong></div>
-                        <div class="in-charge">
-                            <span class="team-name">담당부서 : <em>기업협력팀</em></span>
-                            <span class="team-info">문의(기업지원센터) : <em>063-720-0500</em></span>
-                        </div>
-                    </div>
 
-                    <div class="board-wrap">
-                        <div class="board-search">
-                            <form>
-                                <div class="board-search-item_full">
-                                    <strong>기간구분</strong>
-                                    <div class="flex gap-x-10">
-                                        <select class="cs-input" title="민원종류 선택">
-                                            <option>전체</option>
-                                            <option>전체</option>
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title">
+                            <h2>공유시설 신청내역</h2>
+                        </div>
+
+                        <div class="board-search-filter">
+                            <div>
+                                <div class="rows">
+                                    <strong>기간구분 <i class="cs-icon-req"></i></strong>
+                                    <div class="search-input">
+                                        <select name="" id="" class="cs-input">
+                                            <option value="">사용일</option>
                                         </select>
-                                        <div class="cs-datepicker-set width100p">
+                                        <div class="cs-datepicker-set">
                                             <input type="text" class="js__datepicker js__date-from cs-input-date" placeholder="시작날짜" title="시작날짜" autocomplete="off">
                                             <span></span>
                                             <input type="text" class="js__datepicker js__date-to cs-input-date" placeholder="종료날짜" title="종료날짜" autocomplete="off">
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <strong>교육방식</strong>
-                                    <div>
-                                        <div class="lbl_group">
-                                            <label class="cs-checkbox"><input type="radio" name="req"><i></i><span>전체</span></label>
-                                            <label class="cs-checkbox"><input type="radio" name="req"><i></i><span>환급</span></label>
-                                            <label class="cs-checkbox"><input type="radio" name="req"><i></i><span>미환급</span></label>
-                                        </div>
+                                <div class="rows">
+                                    <strong>교육내용</strong>
+                                    <div class="search-input">
+                                        <select name="" id="" class="cs-input">
+                                            <option value="">기숙사</option>
+                                        </select>
+                                        <select name="" id="" class="cs-input">
+                                            <option value="">3층 기숙사(남)</option>
+                                        </select>
                                     </div>
                                 </div>
-                                
-                                <div class="board-search_keyword">
-                                    <div class="board-search-item">
-                                        <strong>교육내용</strong>
-                                        <input type="text" class="cs-input mo-width100p" placeholder="검색어를 입력하세요." title="검색어를 입력하세요.">
-                                    </div>
-                                    <div class="board-search_btns">
-                                        <button type="button" class="btn btn_m btn btn_default-outline">초기화</button>
-                                        <button class="board-search_btn btn btn_m btn btn btn_primary">검색</button>
-                                    </div>
+    
+                                <div class="serach-buttons">
+                                    <button type="button" title="초기화" class="btn-search-reset">초기화</button>
+                                    <button type="button" title="검색" class="btn btn_primary">검색</button>
                                 </div>
-                            </form>
-                        </div>
-                        <!-- e: board-search -->
-
-                        <div class="board-list-header">
-                            <!-- 게시물 갯수 등 -->
-                            <div class="board-stat">
-                                총 게시물 <span>(<b>999</b>건/9999건)</span>
-                            </div>
-
-                            <!-- 선택옵션 등 -->
-                            <div class="board-extra">
-                                <a href="#" class="btn btn_primary-outline">캘린더 보기</a>
                             </div>
                         </div>
-                        <!-- e: board-list-header -->
-
-
-                        <ul class="card-list">
-                            <li class="card">
-                                <a href="#" class="boxin">
-                                    <div class="status">
-                                        <span class="badge badge-round badge-secondary">온라인</span>
-                                    </div>
-                                    <div class="subject line-clamp-2">[2차][식품실무교육] (예비취업자 대상) 식품분야 제품 디지털마케팅</div>
-                                    <div class="desc-list">
-                                        <dl>
-                                            <dt><span class="badge badge-sm badge-success none">접수기간</span></dt>
-                                            <dd>2024.08.26 ~ 2025.02.28</dd>
-                                        </dl>
-                                        <dl>
-                                            <dt><span class="badge badge-sm badge-gray none">교육기간</span></dt>
-                                            <dd>2024.08.26 ~ 2025.02.28</dd>
-                                        </dl>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="card">
-                                <a href="#" class="boxin">
-                                    <div class="status">
-                                        <span class="badge badge-round badge-secondary">온라인</span>
-                                    </div>
-                                    <div class="subject line-clamp-2">[2차][식품실무교육] (예비취업자 대상) 식품분야 제품 디지털마케팅</div>
-                                    <div class="desc-list">
-                                        <dl>
-                                            <dt><span class="badge badge-sm badge-success none">접수기간</span></dt>
-                                            <dd>2024.08.26 ~ 2025.02.28</dd>
-                                        </dl>
-                                        <dl>
-                                            <dt><span class="badge badge-sm badge-gray none">교육기간</span></dt>
-                                            <dd>2024.08.26 ~ 2025.02.28</dd>
-                                        </dl>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="card">
-                                <a href="#" class="boxin">
-                                    <div class="status">
-                                        <span class="badge badge-round badge-secondary">온라인</span>
-                                    </div>
-                                    <div class="subject line-clamp-2">[2차][식품실무교육] (예비취업자 대상) 식품분야 제품 디지털마케팅</div>
-                                    <div class="desc-list">
-                                        <dl>
-                                            <dt><span class="badge badge-sm badge-success none">접수기간</span></dt>
-                                            <dd>2024.08.26 ~ 2025.02.28</dd>
-                                        </dl>
-                                        <dl>
-                                            <dt><span class="badge badge-sm badge-gray none">교육기간</span></dt>
-                                            <dd>2024.08.26 ~ 2025.02.28</dd>
-                                        </dl>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="card">
-                                <a href="#" class="boxin">
-                                    <div class="status">
-                                        <span class="badge badge-round badge-secondary">온라인</span>
-                                    </div>
-                                    <div class="subject line-clamp-2">[2차][식품실무교육] (예비취업자 대상) 식품분야 제품 디지털마케팅</div>
-                                    <div class="desc-list">
-                                        <dl>
-                                            <dt><span class="badge badge-sm badge-secondary none">접수완료</span></dt>
-                                            <dd>2024.08.26 ~ 2025.02.28</dd>
-                                        </dl>
-                                        <dl>
-                                            <dt><span class="badge badge-sm badge-gray none">교육기간</span></dt>
-                                            <dd>2024.08.26 ~ 2025.02.28</dd>
-                                        </dl>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="card">
-                                <a href="#" class="boxin">
-                                    <div class="status">
-                                        <span class="badge badge-round badge-white">오프라인</span>
-                                    </div>
-                                    <div class="subject line-clamp-2">[2차][식품실무교육] (예비취업자 대상) 식품분야 제품 디지털마케팅</div>
-                                    <div class="desc-list">
-                                        <dl>
-                                            <dt><span class="badge badge-sm badge-warning none">접수예정</span></dt>
-                                            <dd>2024.08.26 ~ 2025.02.28</dd>
-                                        </dl>
-                                        <dl>
-                                            <dt><span class="badge badge-sm badge-gray none">교육기간</span></dt>
-                                            <dd>2024.08.26 ~ 2025.02.28</dd>
-                                        </dl>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- e: card-list -->
-
-                        <div class="pagination">
-                            <a href="#" class="prev page-move">이전</a>
-                            <a href="#">1</a>
-                            <span>...</span>
-                            <a href="#">6</a>
-                            <a href="#">7</a>
-                            <a href="#" class="active">8</a>
-                            <a href="#">9</a>
-                            <a href="#">10</a>
-                            <span>...</span>
-                            <a href="#">15</a>
-                            <a href="#" class="next page-move">다음</a>
+                        
+                        <div class="board-utils-group">
+                            <div class="strong">
+                                받은쪽지 목록 <b>10</b>건
+                            </div>
+                            <div class="board-search-group">
+                                <select name="" id="" class="cs-input">
+                                    <option value="">2025년</option>
+                                </select>
+                                <input type="text" class="cs-input" title="검색어 입력" placeholder="지원분야, 사업명 검색">
+                                <button type="button" class="btn btn_m btn-dark">검색</button>
+                            </div>
                         </div>
-                        <!-- e: pagination -->
+                        <div class="auiTable">
+                            테이블
+                        </div>
+
+                        @@include('./include/ng-paging.html')
+
                     </div>
-                    <!-- e: board-wrap -->
+                    <!-- // mypage-content -->
                 </div>
             </div>
         </div>
-
         @@include('./include/ng-footer.html')
     </div>
+
+    
+
 </body>
 
 </html>

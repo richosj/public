@@ -87,3 +87,20 @@ $icons: (
         background-image: url("#{$src}/fusion/#{$icon}-on.png");
     }
 }
+
+.icon-send{
+    vertical-align: top;
+    line-height: 1;
+    width: 20px;
+    height: 20px;
+    background: url(#{$src}/send.png) no-repeat 0 0;
+}
+
+.icon-file{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    width: 18px;
+    height: 18px;
+    background: url(#{$src}/file.png) no-repeat 50% 50%;
+}

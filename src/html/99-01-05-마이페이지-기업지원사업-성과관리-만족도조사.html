@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "기업 지원사업"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+
+                        <div class="board-search">
+                            <form>
+                                <div class="board-search-item_full">
+                                    <strong>조회기간 <i class="cs-icon-req"></i></strong>
+                                    
+                                    <div>
+                                        <div class="cs-datepicker-set width100p">
+                                            <input type="text" class="js__datepicker js__date-from cs-input-date" title="시작날짜" autocomplete="off" >
+                                            <span></span>
+                                            <input type="text" class="js__datepicker js__date-to cs-input-date" title="종료날짜" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="board-search-item_full">
+                                    <strong>공유장비 구분</strong>
+                                    <div>
+                                        <div class="cs-flex-grid">
+                                            <select class="cs-input" title="민원종류">
+                                                <option>전체</option>
+                                                <option>전체</option>
+                                            </select>
+                                            <select class="cs-input" title="민원종류">
+                                                <option>전체</option>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="board-search_btns">
+                                    <button type="button" class="btn btn_m btn_default-outline">초기화</button>
+                                    <button class="board-search_btn btn btn_m btn btn_primary">검색</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="mypage-title">
+                            <h2>기업지원사업 신청 목록 <small>(총 <b>2</b>건)</small></h2>
+                            <div class="utils">
+                                <button type="button" class="btn btn_m btn_primary btn_add">장비신청</button>
+                            </div>
+                        </div>
+                        <div class="auiTable">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="cm-num">순번</th>
+                                        <th>시설명</th>
+                                        <th>타입</th>
+                                        <th>신청일</th>
+                                        <th>(희망)사용일</th>
+                                        <th>이용료(원)</th>
+                                        <th>문의사항</th>
+                                        <th>선택옵션</th>
+                                        <th class="cm-size">취소</th>
+                                        <th class="cm-size">상태</th>
+                                        <th class="cm-size">결제</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">10</td>
+                                        <td>기숙사</td>
+                                        <td>3층 기숙사(남)</td>
+                                        <td class="text-center">2024.12.12</td>
+                                        <td class="text-center">2025.02.03 ~ 2025.02.06(3D)</td>
+                                        <td class="text-right">90,000</td>
+                                        <td><span class="cut">asjdklflkasjfklsajfklajklfajfkldjalkfjlskdfsajflkdsajl</span></td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td class="text-center"><span class="text-brand-400">승인</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn_m btn_warning-outline w-full">결제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">10</td>
+                                        <td>기숙사</td>
+                                        <td>3층 기숙사(남)</td>
+                                        <td class="text-center">2024.12.12</td>
+                                        <td class="text-center">2025.02.03 ~ 2025.02.06(3D)</td>
+                                        <td class="text-right">90,000</td>
+                                        <td><span class="cut">asjdklflkasjfklsajfklajklfajfkldjalkfjlskdfsajflkdsajl</span></td>
+                                        <td>-</td>
+                                        <td>
+                                            <button type="button" class="btn btn_m btn_danger-outline w-full">취소</button>
+                                        </td>
+                                        <td class="text-center">검토중</td>
+                                        <td>
+                                            <button type="button" class="btn btn_m btn_warning-outline w-full">결제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">10</td>
+                                        <td>기숙사</td>
+                                        <td>3층 기숙사(남)</td>
+                                        <td class="text-center">2024.12.12</td>
+                                        <td class="text-center">2025.02.03 ~ 2025.02.06(3D)</td>
+                                        <td class="text-right">90,000</td>
+                                        <td><span class="cut">asjdklflkasjfklsajfklajklfajfkldjalkfjlskdfsajflkdsajl</span></td>
+                                        <td>-</td>
+                                        <td>
+                                            <button type="button" class="btn btn_m btn_danger-outline w-full">취소</button>
+                                        </td>
+                                        <td class="text-center">검토중</td>
+                                        <td>
+                                            <button type="button" class="btn btn_m btn_warning-outline w-full">결제</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+
+    <div class="popup-wrap">
+        <div class="popup-container" style="width:1275px">
+            <!-- header -->
+            <div class="popup-header">
+                <span class="popup-header-text">올포랜드 - 만족도조사</span>
+                <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+            </div>
+            <!-- content -->
+            <div class="popup-content">
+                <!-- popup-content-wrap -->
+                <div class="popup-content-wrap">
+                    <div class="evaluation-agree-pop">
+                        <div class="border-rows hover:border-rows-color">
+                            <div class="border-rows-hgroup">
+                                <h4>진행하신 사업에 만족도</h4>
+                                <button type="button" class="collapse-toggle" data-collapse-target="cont-1"></button>
+                            </div>
+                            <div class="border-rows-content cont-1 evaluation-group">
+                                <div class="input-group col">
+                                    <strong>과제를 실행하면서 만족도</strong>
+                                    <div class="radio-line-group">
+                                        <div class="lbl_group">
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>10점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>9점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>8점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>7점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>6점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>5점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>4점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>3점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>2점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>1점</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group col">
+                                    <strong>진흥원 보조금 규모에 대한 만족도</strong>
+                                    <div class="radio-line-group">
+                                        <div class="lbl_group">
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>10점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>9점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>8점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>7점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>6점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>5점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>4점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>3점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>2점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>1점</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group col ">
+                                    <strong>사업주체간에 신뢰 만족도</strong>
+                                    <div class="radio-line-group">
+                                        <div class="lbl_group">
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>10점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>9점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>8점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>7점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>6점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>5점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>4점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>3점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>2점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>1점</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: border-rows -->
+                        <div class="border-rows hover:border-rows-color">
+                            <div class="border-rows-hgroup">
+                                <h4>진흥원 담당부서 지원 만족도</h4>
+                                <button type="button" class="collapse-toggle" data-collapse-target="cont-2"></button>
+                            </div>
+                            <div class="border-rows-content cont2 evaluation-group">
+                                <div class="input-group col">
+                                    <strong>담당자의 응대 만족도</strong>
+                                    <div class="radio-line-group">
+                                        <div class="lbl_group">
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>10점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>9점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>8점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>7점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>6점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>5점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>4점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>3점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>2점</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio" name="guide_radio">
+                                                <i></i>
+                                                <span>1점</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group col">
+                                    <div class="input-group-head">
+                                        <strong>기타 건의 사항</strong>
+                                        <p class="counting"><b>0</b>자/1,500자</p>
+                                    </div>
+                                    <textarea name="" id="" rows="4" class="cs-input limited-textarea" placeholder="평가에 참고 되실 사항을 입력해 주세요"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: border-rows -->
+                    </div>
+                    
+                    <div class="popup-footer text-end">
+                        <button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>
+                        <button class="confirm-btn btn btn_success" data-modal="closebtn">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

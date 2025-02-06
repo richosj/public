@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
     @@include('./include/meta.html')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +19,6 @@
         <div class="main-content mypage-main">
             <div class="row mypage-main-s1">
                 <div class="container"> 
-                    <div class="mypage-main-text"><b>금산식품㈜</b>님 환영합니다!</div>
                     <div class="mypage-user-mng-felx">
                         <div class="mypage-user-mng left">
                             <strong class="title">나의 알람</strong>
@@ -41,90 +42,74 @@
                             </div>
                         </div>
                     </div>
-                    <div class="main-grid">
-                        <div  class="left">
-                            <div class="mypage-user-state">
-                                <h3>기업지원사업 진행현황</h3>
-                                <h4>AR에 반응하는 가상현실 식품포장 설비 개발</h4>
-                                <div class="log-step-view-inner">
-                                    <div class="log-step-view current-2">
-                                        <div class="step-item">
-                                            <div class="words">제출완료<br>2024-10-05</div>
-                                            <div class="step-cont">
-                                                <h3>신청</h3>
-                                            </div>
-                                        </div>
-                                        <div class="step-item current">
-                                            <div class="words text-orange-700">보완요구<br>2024-12-31 까지</div>
-                                            <div class="step-cont">
-                                                <h3>접수/평가</h3>
-                                            </div>
-                                        </div>
-                                        <div class="step-item ">
-                                            <div class="step-cont">
-                                                <div class="words"></div>
-                                                <h3>협약</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="main-Tab" style="">
+                        <div class="main-Tab-head">
+                            <div class="main-Tab-head-button">
+                                <button>기업 지원 사업</button>
+                                <button class="active">지원 서비스</button>
+                                <button>고객지원</button>    
                             </div>
+                            <div class="mypage-main-text"><i class="ico-folder"></i><b>금산식품㈜</b>님 환영합니다!</div>
                         </div>
-                        <div class="right">
-                            <div class="mypage-user-state">
-                                <h3>공유시설 신청 현황</h3>
-                                <div class="mypage-user-state-body">
-                                    <p>“오픈키친”</p>
-                                    <span href="#" class="badge badge-round badge-info">02.17 오전 9시~  예약완료</span>
-                                </div>
-                            </div>
-                            <div class="mypage-user-state">
-                                <h3>식품첨가물 요청건</h3>
-                                <div class="mypage-user-state-body">
-                                    <p>“오픈키친”</p>
-                                    <span href="#" class="badge badge-round badge-secondary">분석중</span>
-                                </div>
-                            </div>
-                            <div class="mypage-user-state">
-                                <h3>고충처리 현황</h3>
-                                <div class="mypage-user-state-body">
-                                    <div class="flex ">
-                                        <div class="flex-grow">
-                                            <p>기술<b>1</b>건</p>
-                                            <span href="#" class="badge badge-round badge-secondary">처리중</span>
+                        <div class="border-rows">
+                            <ul class="suport-items">
+                                <li class="suport-item">
+                                    <div class="suport-item-left">
+                                        <div class="suport-item-left-type">
+                                            <i class="ico-bell"></i>
+                                            <strong class="suport-ca">시험분석</strong>
                                         </div>
-                                        <div class="flex-grow">
-                                            <p>경영<b>1</b>건</p>
-                                            <span href="#" class="badge badge-round badge-green">처리완료</span>
-                                        </div>
+                                        <span class="suport-date">2024-12-12</span>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="mypage-user-state">
-                                <h3>식품실무교육 현황</h3>
-                                <div class="mypage-user-state-body">
-                                    <p>“오픈키친”</p>
-                                    <span href="#" class="badge badge-round badge-info">02.17 오전 9시~  예약완료</span>
-                                </div>
-                            </div>
-                            <div class="mypage-user-state">
-                                <h3>시설장비 사용 현황</h3>
-                                <div class="mypage-user-state-body">
-                                    <p>“ONH2000 장치”</p>
-                                    <span href="#" class="badge badge-round badge-green">사용승인</span>
-                                </div>
-                            </div>
-                            <div class="mypage-user-state green-box">
-                                <h3>멘토링 현황</h3>
-                                <div class="mypage-user-state-body">
-                                    <p>
-                                        “멘티님이 8시간 전에<br>의견을 남겼습니다.”
-                                    </p>
-                                </div>
-                            </div>
+                                    <div class="suport-item-center">
+                                        <div class="suport-ti">
+                                            <p>2024년 한국식품산업클러스터진흥원 개방형 장비공동활용 지원사업</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="suport-item-right">
+                                        <span class="badge sucess">결과서</span>
+                                    </div>
+                                </li>
+                                <li class="suport-item">
+                                    <div class="suport-item-left">
+                                        <div class="suport-item-left-type">
+                                            <i class="ico-bell"></i>
+                                            <strong class="suport-ca">시설장비</strong>
+                                        </div>
+                                        <span class="suport-date">2024-12-12</span>
+                                    </div>
+                                    <div class="suport-item-center">
+                                        <div class="suport-ti">
+                                            <p>2024년 한국식품산업클러스터진흥원 개방형 장비공동활용 지원사업</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="suport-item-right">
+                                        <span class="badge">결과서</span>
+                                    </div>
+                                </li>
+                                <li class="suport-item">
+                                    <div class="suport-item-left">
+                                        <div class="suport-item-left-type">
+                                            <i class="ico-bell"></i>
+                                            <strong class="suport-ca">공유시설</strong>
+                                        </div>
+                                        <span class="suport-date">2024-12-12</span>
+                                    </div>
+                                    <div class="suport-item-center">
+                                        <div class="suport-ti">
+                                            <p>2024년 한국식품산업클러스터진흥원 개방형 장비공동활용 지원사업</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="suport-item-right">
+                                        <span class="badge">결과서</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <div class="row mypage-main-s2">

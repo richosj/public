@@ -58,6 +58,7 @@
 .service-view{
     .gate-info{
         display: flex;
+        //align-items: baseline;
         gap:0 2.8%;
         border-radius: var(--border-radius);
         border: 2px solid var(--brand-color);
@@ -88,6 +89,7 @@
         }
         .desc{
             position: relative;
+            flex-grow: 1;
             .btn{
                 position: absolute;
                 right: 0;

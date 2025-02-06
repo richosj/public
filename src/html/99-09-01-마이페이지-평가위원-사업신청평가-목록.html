@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "기업 지원사업"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+                        <div class="mypage-title"><h2>사업신청 평가</h2></div>
+                       
+                        <div class="board-utils-group">
+                            <div class="strong">
+                                총 <b>10</b>건
+                            </div>
+                            <div class="board-search-group">
+                                <select name="" id="" class="cs-input">
+                                    <option value="">2025</option>
+                                </select>
+                                <input type="text" class="cs-input">
+                                <button type="button" class="btn btn_m btn_primary">검색</button>
+                            </div>
+                        </div>
+
+                        <div class="auiTable">
+                            테이블
+                        </div>
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+</body>
+
+</html>
