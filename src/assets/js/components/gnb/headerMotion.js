@@ -16,6 +16,7 @@ export function renewalHeaderMotion() {
             duration: ANIMATION_DURATION,
             ease: 'power2.out'
         });
+        document.getElementById('overlay').classList.add('active')
     };
 
     const collapseHeight = () => {
@@ -29,6 +30,7 @@ export function renewalHeaderMotion() {
             duration: ANIMATION_DURATION,
             ease: 'power2.out'
         });
+        document.getElementById('overlay').classList.remove('active')
     };
 
     gnbClass?.addEventListener('mouseenter', expandHeight);

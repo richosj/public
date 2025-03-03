@@ -10,10 +10,10 @@ export function checkScreenSizeAndUpdate() {
     const isNowSmallScreen = isSmallScreen();
     if (isCurrentlySmallScreen === undefined || isNowSmallScreen !== isCurrentlySmallScreen) {
         if (isNowSmallScreen) {
-            console.log("현재 화면 너비는 1000 이하로 변경되었습니다.");
+            //console.log("현재 화면 너비는 1000 이하로 변경되었습니다.");
             updateBtnTopTitle('빠른 메뉴 열림');
         } else {
-            console.log("현재 화면 너비는 1000을 초과로 변경되었습니다.");
+            //console.log("현재 화면 너비는 1000을 초과로 변경되었습니다.");
             closeFloatMenu();
             updateBtnTopTitle('맨 위로 이동');
         }

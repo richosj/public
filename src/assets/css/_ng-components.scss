@@ -23,6 +23,84 @@
         .btn-tab1{width: auto;}
     }
 }
+
+.ng-tab{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(0,1fr));
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    .ng-tab-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eeeeee;
+        color: #555555;
+        height: 56px;
+        font-size: 19px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: all 0.25s;
+        &.selected{
+            background-color: #333333;
+            color: #fff;
+            border-radius: 5px;
+            &::after{
+                opacity: 0;
+            }
+        }
+        +.ng-tab-item{
+            position: relative;
+            &::after{
+                display: block;
+                content:"";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 1px;
+                height: 24px;
+                background-color: #c6c6c6;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    
+    @media (max-width:map.get($media,lg)) {
+        width: auto;
+        height: 45px;
+        font-size: 15px;
+        padding: 0 15px;
+    }
+    &-panel{
+        display: none;
+        &.show{
+            display: block;
+        }
+    }
+}
+
+.ng-tab2{
+    display: flex;
+    margin-bottom: 30px;
+    gap:0 8px;
+    &.mb-none{
+        margin-bottom: 0;
+    }
+    .ng-tab-item{
+        height: 48px;
+        color: #717171;
+        border-radius: 7px;
+        border: 1px solid #d8d8d8;
+        transition: all 0.25s;
+        padding: 0 20px;
+        &.selected{
+            font-weight: 500;
+            color: #2da34f;
+            border-color: #2da34f;
+        }
+    }
+}
+
 .btn-tab1{
     display: flex;
     align-items: center;

@@ -10,7 +10,8 @@
     flex-direction: column;
     gap: 8px 0;
     > a,
-    > button{
+    > button,
+    .chatbot_btn{
         display: flex;
         border-radius: 50%;
         width: 68px;
@@ -62,7 +63,10 @@
             background-size: 15px auto;
         }
     }
-    .chatbot{
+    .chatbot_container{
+        position: relative;
+    }
+    .chatbot_btn{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -86,16 +90,7 @@
         border: 0;
         @media (max-width: map.get($media,lg)) {
             background-size: 12px auto;
-            background-image: url(#{$src}/float-more.png);
+            // background-image: url(#{$src}/float-more.png);
         }
     }
 }
-
-.chatbot{
-    // position: absolute;
-    // border-radius: 10px;
-    // background-color: #fff;
-    // padding: 10px;
-    // z-index: 9;
-}
-

@@ -1,21 +1,11 @@
 @use "sass:map";
 @use 'utils' as *;
 
-.sr-only{
-    position: absolute;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    clip-path: inset(50%);
-}
 
 .dg-footer{
     background-color: #363636;
+    position:relative;
+    z-index: 9;
     .links{
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding: 20px;
@@ -179,6 +169,19 @@
             &:not(:first-child){
                 margin-top: 8px;
             }
+            @media (max-width: map.get($media,lg)) {
+                .mobile-fulline{
+                    flex-grow: 1;
+                    width: 100%;
+                    padding-left: 0 !important;
+                    margin-left: 0 !important;
+                    margin-top: 5px;
+                    &::after{
+                        display: none !important;
+                    }
+                }
+            }
+            
             span{
                 display: flex;
                 align-items: center;
@@ -281,12 +284,14 @@
         .logo1{
             aspect-ratio: 5 / 1;
             width: 109px;
-            background: url(#{$src}/logo1.png) no-repeat 50% 50% / cover;
+            background: url(#{$src}/logo1.png) no-repeat 50% 50%;
+            background-size: 100% auto;
         }
         .logo2{
             width: 55px;
             aspect-ratio: 11 / 5;
-            background: url(#{$src}/logo2.png)  no-repeat 50% 50% / cover;
+            background: url(#{$src}/logo2.png)  no-repeat 50% 50%;
+            background-size: 100% auto;
         }
     }
 }

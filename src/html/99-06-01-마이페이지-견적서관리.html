@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+        @@include('./include/ng-subtop.html', {
+        "title" : "마이페이지",
+        "title2" : "기업 지원사업"
+        })
+
+        <div class="lay-container" id="lay-container">
+            <div class="container">
+                <div class="mypage-wrap">
+                    @@include('./include/mypage-lnb.html')
+                    <div class="mypage-content">
+
+                        <div class="board-search">
+                            <form>
+                                <div class="board-search-item_full">
+                                    <strong>조회기간 <i class="cs-icon-req"></i></strong>
+                                    
+                                    <div>
+                                        <div class="cs-datepicker-set width100p">
+                                            <input type="text" class="js__datepicker js__date-from cs-input-date" title="시작날짜" autocomplete="off" >
+                                            <span></span>
+                                            <input type="text" class="js__datepicker js__date-to cs-input-date" title="종료날짜" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="board-search-item_full">
+                                    <strong>공유장비 구분</strong>
+                                    <div>
+                                        <div class="cs-flex-grid">
+                                            <select class="cs-input" title="민원종류">
+                                                <option>전체</option>
+                                                <option>전체</option>
+                                            </select>
+                                            <select class="cs-input" title="민원종류">
+                                                <option>전체</option>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="board-search_btns">
+                                    <button type="button" class="btn btn_m btn_default-outline">초기화</button>
+                                    <button class="board-search_btn btn btn_m btn btn_primary">검색</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="mypage-title">
+                            <h2>기업지원사업 신청 목록 <small>(총 <b>2</b>건)</small></h2>
+                            <div class="utils">
+                                <button type="button" class="btn btn_m btn_primary btn_add">장비신청</button>
+                            </div>
+                        </div>
+                        <div class="auiTable">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="cm-num">순번</th>
+                                        <th>시설명</th>
+                                        <th>타입</th>
+                                        <th>신청일</th>
+                                        <th>(희망)사용일</th>
+                                        <th>이용료(원)</th>
+                                        <th>문의사항</th>
+                                        <th>선택옵션</th>
+                                        <th class="cm-size">취소</th>
+                                        <th class="cm-size">상태</th>
+                                        <th class="cm-size">결제</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">10</td>
+                                        <td>기숙사</td>
+                                        <td>3층 기숙사(남)</td>
+                                        <td class="text-center">2024.12.12</td>
+                                        <td class="text-center">2025.02.03 ~ 2025.02.06(3D)</td>
+                                        <td class="text-right">90,000</td>
+                                        <td><span class="cut">asjdklflkasjfklsajfklajklfajfkldjalkfjlskdfsajflkdsajl</span></td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td class="text-center"><span class="text-brand-400">승인</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn_m btn_warning-outline w-full">결제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">10</td>
+                                        <td>기숙사</td>
+                                        <td>3층 기숙사(남)</td>
+                                        <td class="text-center">2024.12.12</td>
+                                        <td class="text-center">2025.02.03 ~ 2025.02.06(3D)</td>
+                                        <td class="text-right">90,000</td>
+                                        <td><span class="cut">asjdklflkasjfklsajfklajklfajfkldjalkfjlskdfsajflkdsajl</span></td>
+                                        <td>-</td>
+                                        <td>
+                                            <button type="button" class="btn btn_m btn_danger-outline w-full">취소</button>
+                                        </td>
+                                        <td class="text-center">검토중</td>
+                                        <td>
+                                            <button type="button" class="btn btn_m btn_warning-outline w-full">결제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">10</td>
+                                        <td>기숙사</td>
+                                        <td>3층 기숙사(남)</td>
+                                        <td class="text-center">2024.12.12</td>
+                                        <td class="text-center">2025.02.03 ~ 2025.02.06(3D)</td>
+                                        <td class="text-right">90,000</td>
+                                        <td><span class="cut">asjdklflkasjfklsajfklajklfajfkldjalkfjlskdfsajflkdsajl</span></td>
+                                        <td>-</td>
+                                        <td>
+                                            <button type="button" class="btn btn_m btn_danger-outline w-full">취소</button>
+                                        </td>
+                                        <td class="text-center">검토중</td>
+                                        <td>
+                                            <button type="button" class="btn btn_m btn_warning-outline w-full">결제</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- // mypage-content -->
+                </div>
+            </div>
+        </div>
+        @@include('./include/ng-footer.html')
+    </div>
+
+    <div class="popup-wrap">
+        <div class="popup-container" style="width:800px;height: 70dvh;">
+            <!-- header -->
+            <div class="popup-header">
+                <span class="popup-header-text">견적서</span>
+                <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+            </div>
+            <!-- content -->
+            <div class="popup-content">
+                <!-- popup-content-wrap -->
+                <div class="popup-content-wrap">
+                    
+                    <div class="estimate-template">
+                        <div class="estimate-template-header">
+                            <div class="requester-info">
+                                “ ㈜익산식품 ” 귀하 <br>아래와 같이 견적합니다.
+                            </div>
+                            <div class="issuer-info">
+                                <div class="cs-data-table3">
+                                    <table>
+                                        <tbody>
+                                          <tr>
+                                            <th rowspan="5">공급자</th>
+                                            <th>법인명</th>
+                                            <td colspan="3">한국식품산업클러스터진흥원</td>
+                                          </tr>
+                                          <tr>
+                                            <th>등록번호</th>
+                                            <td>138-82-05887</td>
+                                            <th>성명</th>
+                                            <td>김덕호</td>
+                                          </tr>
+                                          <tr>
+                                            <th>소재지</th>
+                                            <td colspan="3">전북특별자치도    익산시 왕궁면 국가식품로 100</td>
+                                          </tr>
+                                          <tr>
+                                            <th>업태</th>
+                                            <td></td>
+                                            <th>종목</th>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <th>전화번호</th>
+                                            <td colspan="3">063-720-0500</td>
+                                          </tr>
+                                        </tbody>
+                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="estimate-template-content mt-20">
+                            <div class="cs-data-table3">
+                                <table>
+                                    <caption>합계</caption>
+                                    <colgroup>
+                                        <col style="width:150px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>합계(부가세 포함)</th>
+                                            <td>5,054,500원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cs-data-table3 mt-10">
+                                <table>
+                                    <caption>견적서 목록</caption>
+                                    <colgroup>
+                                        <col style="width:16.666%">
+                                        <col style="width:16.666%">
+                                        <col style="width:16.666%">
+                                        <col style="width:16.666%">
+                                        <col style="width:16.666%">
+                                        <col style="width:16.666%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>순번</th>
+                                            <th>항목</th>
+                                            <th>단가(원)</th>
+                                            <th>건수</th>
+                                            <th>합계(원)</th>
+                                            <th>비고</th>
+                                          </tr>
+                                    </thead>
+                                    <tr class="text-center">
+                                      <td>2</td>
+                                      <td>2025년    제품 가공 공장 교육</td>
+                                      <td class="text-right">145,000</td>
+                                      <td>1</td>
+                                      <td class="text-right">145,000</td>
+                                      <td>-</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>1</td>
+                                        <td>2025년    제품 가공 공장 교육</td>
+                                        <td class="text-right">145,000</td>
+                                        <td>1</td>
+                                        <td class="text-right">145,000</td>
+                                        <td>-</td>
+                                      </tr>
+                                    <tfoot>
+                                        <tr>
+                                            <th colspan="2">합계</th>
+                                            <td class="text-right" colspan="3">4,595,000</td>
+                                            <td>-</td>
+                                          </tr>
+                                          <tr>
+                                            <th colspan="2">할인액</th>
+                                            <td class="text-right" colspan="3">-229,500</td>
+                                            <td>청년기업    5% 할인</td>
+                                          </tr>
+                                          <tr>
+                                            <th colspan="2">공급가액</th>
+                                            <td class="text-right" colspan="3">4,365,250</td>
+                                            <td>-</td>
+                                          </tr>
+                                          <tr>
+                                            <th colspan="2">부가세</th>
+                                            <td class="text-right" colspan="3">436,525</td>
+                                            <td>-</td>
+                                          </tr>
+                                          <tr>
+                                            <th colspan="2">총합계</th>
+                                            <td class="text-right" colspan="3">5,054,500</td>
+                                            <td></td>
+                                          </tr>
+                                    </tfoot>
+                                  </table>
+                                  
+                            </div>
+                        </div>
+                        <div class="estimate-template-footer">
+                            <dl>
+                                <dt>2024년 5월 17일</dt>
+                                <dd>한국식품산업클러스터진흥원 이사장</dd>
+                            </dl>
+                            <div><img src="/dfip/static/front/common/images/bss/mypage/certificate-stamp.png" alt=""></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <strong>수청 요청사항</strong>
+                        <div class="cs-data-table3 mt-10">
+                            <table>
+                                <colgroup>
+                                    <col style="width:70px">
+                                    <col style="width:70px">
+                                    <col style="width:auto">
+                                    <col style="width:150px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>순번</th>
+                                        <th>요청자</th>
+                                        <th>요청내용</th>
+                                        <th>요청일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="text-left" colspan="2"><input type="text" title="요청내용 입력" class="cs-input w-full"></td>
+                                        <td class="text-center"><button class="btn">수정요청 보내기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="text-center">길동이</td>
+                                        <td class="text-left">할인을 더 해 주세요</td>
+                                        <td class="text-center">2025-02-20 12:59:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pagination" id="paginate"></div>
+
+                    </div>
+
+                    <div class="popup-footer text-end">
+                        <button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>
+                        <button class="confirm-btn btn btn_success" data-modal="closebtn">출력</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

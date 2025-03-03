@@ -1,8 +1,11 @@
 @use "sass:map";
 @use 'utils' as *;
 /* 고객지원 */
-.main-content:has(.igd-desk){
-    padding-top: 0;
+.lay-container:has(.igd-desk){
+    padding-top: 0 !important;
+    > .container{
+        max-width : 100% !important;
+    }
 }
 .igd-desk{
     &-top{
@@ -16,6 +19,12 @@
             color: #fff;
             font-size: 25px;
             padding-bottom: 40px;
+            br{
+                display: none;
+                @media (max-width : map.get($media, md)) {
+                    display: block;
+                }
+            }
         }
     }
     @media (max-width : map.get($media, lg)) {
@@ -96,13 +105,117 @@
             height: 280px;
             margin-bottom: 25px;
         }
-        .btn{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    }
+
+    .complaint-content{
+        .icon{
+            background-color: #f3f3f3;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            width: 100px;height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+            @media (max-width : map.get($media, md)) {
+                width: 70px;
+                height: 70px;
+                background-color: #fff;
+            }
+        }
+        .txt1{
+            font-family: var(--font-size-conetnt);
+            color: #555555;
+            text-align: center;
+            margin-top: 18px;
+            @media (max-width : map.get($media, md)) {
+                margin-top: 5px;
+                font-size: 14px;
+            }
+        }
+        .txt2{
+            text-align: center;
+            font-weight: 700;
+            font-size: 21px;
+            @media (max-width : map.get($media, md)) {
+                font-size: 17px;
+            }
+            @media (max-width : map.get($media, sm)) {
+                font-size: 15px;
+            }
+        }
+        .txt-box{
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f6f6f6;
+            color: #1d1d1d;
+            border-radius: 5px;
+            font-size: var(--font-size-body);
+            dl{
+                display: flex;
+                text-align: left;
+                dt{
+                    flex-shrink: 0;
+                    color: #555;
+                }
+                dd{
+                    flex-grow: 1;
+                }
+            }
+            @media (max-width : map.get($media, md)) {
+                padding: 14px;
+                font-size: 14px;
+                dl{
+                    flex-direction: column;
+                    +dl{margin-top: 7px;}
+                }
+            }
+        }
+        &.t1{
+            .txt2{color: #f5b622;}
+            .icon{background-image: url(#{$src}/customer/icon1.png);}
+        }
+        &.t2{
+            .txt2{color: #5d6cd8;}
+            .icon{background-image: url(#{$src}/customer/icon2.png);}
+        }
+        &.t3{
+            .txt2{color: #34c2d3;}
+            .icon{background-image: url(#{$src}/customer/icon3.png);}
         }
     }
+    .link-zone{
+        margin: 40px 45px 0;
+        @media (max-width : map.get($media, md)) {
+            margin: 20px 25px 0;
+        }
+    }
+    .link-view{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--font-size-body);
+        color: #000;
+        border-radius: 35px;
+        border: 1px solid #000;
+        height: 40px;
+        transition: all 0.3s;
+        &:hover,
+        &:focus{
+            background-color: #000;
+            color: #fff;
+        }
+        &:focus{
+            outline:none;
+            -webkit-box-shadow:0 0 5px #9ed4ff;
+            -moz-box-shadow:0 0 5px #9ed4ff;
+            box-shadow:0 0 5px #9ed4ff;
+        }
+        @media (max-width : map.get($media, md)) {
+            font-size: 13px;
+            height: 37px;
+        }
+    }
+
     .grid{
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -234,4 +347,247 @@
         }
         
     }
+}
+
+.info-card-container{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 0 25px;
+    @media (max-width: map.get($media,lg)) {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        gap: 15px 0;
+    }
+    .info-card{
+        border-radius: 10px;
+        border: 1px solid #81c895;
+        background-color: #f0f8f2;
+        padding:25px 30px 0;
+        height: 100px;
+        line-height: 1;
+        position: relative;
+        @media (max-width: map.get($media,lg)) {
+            height: auto;
+            padding: 25px 30px;
+        }
+        &-title{
+            position: relative;
+            color: #2da34f;
+            padding-left: 10px;
+            font-size: 17px;
+            padding-bottom: 10px;
+            &::after{
+                content:"";
+                position: absolute;
+                left: 0;
+                top: 7px;
+                width: 2px;height: 2px;
+                background: #2da34f;
+            }
+            @media (max-width: map.get($media,lg)) {
+                font-size: 13px;
+            }
+        }
+        &-content{
+            color: #717171;
+            padding-left: 10px;
+            font-size: 15px;
+            @media (max-width: map.get($media,lg)) {
+                font-size: 12px;
+            }
+        }
+        .icon{
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-color: #fff;
+            border-radius: 50%;
+            right: 30px;
+            top: 18px;
+            width: 60px;
+            height: 60px;
+            &.type1{background-image: url(#{$src}/customer/icon-eq-1.png);}
+            &.type2{background-image: url(#{$src}/customer/icon-eq-2.png);}
+            &.type3{background-image: url(#{$src}/customer/icon-eq-3.png);}
+            @media (max-width: map.get($media,md)) {
+                display: none;
+            }
+        }
+    }
+    
+}
+
+
+.application {
+    &-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    &-steps {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        .step {
+            &-card {
+                flex: 1;
+                min-width: 300px;
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
+                overflow: hidden;
+                background-color: #fff;
+            }
+    
+            &-header {
+                display: flex;
+                align-items: center;
+                margin: 0 30px;
+                padding: 30px 0 10px;
+                border-bottom: 1px solid #f0f0f0;
+            }
+    
+            &-check {
+                color: #27ae60;
+                margin-right: 15px;
+            }
+    
+            &-number {
+                font-size: 0.9rem;
+                font-weight: 500;
+                margin-right: 15px;
+                color: #555;
+            }
+    
+            &-title {
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: #27ae60;
+            }
+    
+            &-content {
+                padding: 30px;
+            }
+    
+            &-item {
+                background-color: #f7faf8;
+                border: 1px solid #f0f0f0;
+                border-radius: 6px;
+                text-align: center;
+                color: #2d2d2d;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                &:last-child{margin-top: 10px;}
+                &.h-all{
+                    height: 100px;
+                    margin-top: 0;
+                    p{
+                        color: #717171;
+                        font-size: 15px;
+                        @media (max-width: map.get($media,lg)) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }    
+}
+
+.text-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 40px;
+    margin-top: 20px;
+    @media (max-width: map.get($media,lg)) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
+    }
+    .text-group{
+        &-header{
+            position: relative;
+            margin-bottom: 10px;
+            .btn-primary-outline{
+                position: absolute;
+                right: 0;
+                top: -8px;
+            }
+            strong{
+                color: #000;
+                font-weight: 400;
+                font-size: 17px;
+                display: block;
+                line-height: 1;
+                @media (max-width: map.get($media,lg)) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .text-area{
+            border: 1px solid #f0f0f0;
+            background-color: #f3f4f5;
+            color: #8e8e8e;
+            border-radius: 5px;
+            padding: 12px 20px;
+            @media (max-width: map.get($media,lg)) {
+                padding: 8px 11px;
+                font-size: 13px;
+            }
+        }
+        &.full{
+            grid-column: 1 / -1;
+        }
+    }
+}
+.space-block{
+    margin: 40px 0;
+    text-align: right;
+    @media (max-width: map.get($media,lg)) {
+        margin: 30px 0;
+    }
+}
+.btn-primary-outline{
+    display: inline-block;
+    color: var(--brand-color);
+    background: transparent;
+    transition: all 0.25s;
+    border:1px solid var(--brand-color);
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 5px 22px;
+    @media (max-width: map.get($media,lg)) {
+        font-size: 12px;
+        padding: 3px 15px;
+    }
+    &:hover,
+    &:focus{
+        color: #fff;
+        background: var(--brand-color);
+        border: 1px solid var(--brand-color);
+    }
+}
+.btn-primary-round{
+    display: inline-block;
+    color: #fff;
+    border-radius: 5px;
+    background: var(--brand-color);
+    transition: all 0.25s;
+    border:1px solid var(--brand-color);
+    font-size: 19px;
+    padding: 15px 30px;
+    @media (max-width: map.get($media,lg)) {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    &:hover,
+    &:focus{
+        background-color: #28a745; /* 기존 색상 유지 */
+        
+        opacity: 0.9; /* 투명도 약간 감소 */
+    }
+    
 }

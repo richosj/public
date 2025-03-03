@@ -276,9 +276,9 @@
                     gap:0 15px;
                     font-size: 17px;
                     line-height: 1;
-                    
                     dd{
                         color: #555555;
+                        line-height: 1.2;
                     }
                 }
             }
@@ -327,6 +327,13 @@
     &.column-5{
         grid-template-columns: repeat(5, minmax(0, 1fr));   
     }
+    @media (max-width: map.get($media,lg)) {
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (max-width: map.get($media,md)) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
     > div{
         display: flex;
         position: relative;
@@ -347,7 +354,7 @@
         &.active{
             .num{
                 background-color: var(--brand-color);
-                color: #eeeeee;
+                color: #fff;
             }
             .text{
                 color: var(--brand-color);
@@ -381,10 +388,16 @@
         font-size: 18px;
         width: 24px;
         height: 24px;
+        @media (max-width: map.get($media,lg)) {
+            font-size: 14px;
+        }
     }
     .text{
         color: #8e8e8e;
         font-size: 19px;
+        @media (max-width: map.get($media,lg)) {
+            font-size: 15px;
+        }
     }
 }
 /* 참여 */
@@ -566,6 +579,12 @@
         }
     }
 }
+
+.startup-intro-block{
+    margin: 50px 0;
+    height: 1px;
+    background-color: #ddd;
+}
 .bsn-support{
     .border-rows+.border-rows{
         margin-top: 20px;
@@ -670,7 +689,7 @@
         .cont{
             flex-grow: 1;
             min-width:0;
-            .datetime{color: #bbbbbb;font-size: 15px;}
+            .datetime{color: #707070;font-size: 15px;}
             .deliver-message{
                 color: #8e8e8e;
                 line-height: 1.45;
@@ -709,7 +728,7 @@
             border-color: #f6a523;
             background-color: #fff7ea;
             .detail-view{
-                color: #f19400;
+                color: #f15b00;
                 border-color: #f19400;
             }
         }
@@ -1019,6 +1038,9 @@
     border-bottom: 1px solid #c6c6c6;
     
     > li{
+        div{
+            white-space: initial;
+        }
         white-space: nowrap;
         display: flex;
         gap: 0 40px;
@@ -1048,7 +1070,8 @@
         line-height: 1;
         font-size: 17px;
         padding-left: 11px;
-        +li{margin-top: 4px;}
+        line-height: 1.34;
+        +li{margin-top: 7px;}
         &::after{
             content:"";
             display: block;
@@ -1058,6 +1081,10 @@
             background-color: #646464;
             width: 2px;
             height: 2px;
+        }
+        @media (max-width: map.get($media,lg)) {
+            font-size: 13px;
+
         }
     }
 }
@@ -1103,6 +1130,7 @@
     border-radius: 10px;
     padding: 30px 40px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 0px rgba(142, 142, 142, 0.1);
     .subject{
         display: flex;
         align-items: center;
@@ -1504,120 +1532,3 @@ body:has(.conver-guide){
     font-size: var(--font-size-body);
 }
 
-
-.mypage-lnb{
-    flex-basis: 310px;
-    border: 1px solid #c6c6c6;
-    border-radius: 10px;
-    padding: 20px 30px;
-    @media (max-width: map.get($media,lg)) {
-        display: none;
-    }
-}
-.lnb{
-    line-height: 1;
-    
-    &-submenu,
-    &-subsubmenu{
-        //display: none;
-    }
-    &-item{
-        &:has(.current){
-            .lnb-link{
-                &::after{
-                    transform: rotate(0deg) translateY(-50%);
-                }
-            }
-            ul:has(.current){
-                display: block;
-            }
-        }
-    }
-    &-link{
-        position: relative;
-        display: block;
-        background: url(#{$src}/mypage/lnb.png) no-repeat right 10px center;
-        font-weight: 700;
-        color: #000;
-        font-size: 19px;
-        padding: 10px 24px;
-        &::after{
-            content:"";
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: rotate(-90deg) translateX(25%);
-            width: 12px;
-            height: 6px;
-            background: url(#{$src}/mypage/down@12x6.png);
-            transition: all 0.15s;
-        }
-    }
-    &-submenu{
-        padding: 10px 0;
-    }
-    &-subitem{
-        background-color: #f6f6f6;
-        border-radius: 5px;
-        border: 1px solid #f6f6f6;
-        &:not(:first-child){margin-top: 4px;}
-        &:has(.current){
-            border-color: #2da34f;
-            ul:has(.current){
-                display: block;
-            }
-        }
-        &:has(ul.open){
-            border-color: #2da34f;
-        }
-    }
-    &-sublink{
-        display: flex;
-        align-items: center;
-        position: relative;
-        height: 40px;
-        padding-left: 48px;
-        color: #555555;
-        font-size: 17px;
-        &::after{
-            content:"";
-            display: inline-block;
-            position: absolute;
-            left: 27px;
-            top: 50%;
-            transform: rotate(0) translateY(-50%);
-            width: 12px;
-            height: 6px;
-            background: url(#{$src}/mypage/down@12x6.png);
-        }
-    }
-    &-subsubmenu{
-        padding-left: 55px;
-        padding-bottom: 15px;
-    }
-    &-subsubitem{
-        &:not(:first-child){
-            margin-top: 10px;
-        }
-    }
-    &-subsublink{
-        display: flex;
-        align-items: center;
-        color: #555;
-        font-size: 15px;
-        gap: 0 4px;
-        &.current,
-        &:hover,
-        &:focus{
-            color: var(--brand-color);
-        }
-        &::before{
-            content:"-";
-        }
-    }
-
-    .open{
-        display: block;
-    }
-}

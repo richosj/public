@@ -30,6 +30,7 @@ body:has(.office-share){
         }
     }
 }
+
 .office-share{
     &-top{
         background: url(#{$src}/support/bg.png) no-repeat 50% 50% / cover;
@@ -45,40 +46,6 @@ body:has(.office-share){
     
 }
 
-.office-share-block{
-    background-color: rgba(247,250,248,0.9);
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 30px;
-    display: grid;
-    grid-gap:30px;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    +.office-share-block{
-        margin-top: 45px;
-    }
-    @media (max-width: map.get($media, lg)) {
-        height: auto;
-        padding: 15px;
-        grid-gap:15px;
-        grid-template-columns: repeat(2,minmax(0,1fr));
-    }
-    @media (max-width: map.get($media, lg)) {
-        grid-template-columns: repeat(1,minmax(0,1fr));
-    }
-    // h4{
-    //     text-align: center;
-    //     font-weight: 700;
-    //     margin-bottom: 20px;
-    //     span{
-    //         display: inline-block;
-    //         white-space: nowrap;
-    //         vertical-align: top;
-    //         font-size: 21px;
-    //         background: url(#{$src}/support/check.png) no-repeat 0 50%;
-    //         padding-left: 23px;
-    //     }
-    // }
-}
 
 .btn-load-view{}
 
@@ -326,7 +293,7 @@ body:has(.office-share){
             color: #555;
             border: 1px solid #d9d9d9;
             border-radius: 4px;
-            font-size: 15px;
+            font-size: var(--font-size-body);
             padding: 8px 15px;
             line-height: 1;
             @media (max-width:map.get($media,lg)) {
@@ -589,16 +556,226 @@ body:has(.office-share){
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(0,1fr));
     grid-gap: 10px;
+    @media (max-width: map.get($media,lg)) {
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+    @media (max-width: map.get($media,md)) {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
     button{
         border: 1px solid #d8d8d8;
         border-radius: 4px;
-        font-size: 15px;
-        height: 40px; 
+        font-size: var(--font-size-body);
+        height: 40px;
         &.selected{
             border-color: var(--brand-color);
             color: var(--brand-color);
         }
     }
+    
 }
 
 
+/* office lsit */
+.office-list-container{
+    background-color: #f8faf9;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+    gap:0 40px;
+    @media (max-width: map.get($media,lg)) {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+    }
+    .main-item{
+        flex-shrink: 0;
+        flex-basis: 320px;
+        @media (max-width: map.get($media,lg)) {
+            flex-basis: 100%;
+            width: 100%;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 16px;
+        }
+        h3{
+            color: #000;
+            font-size: 21px;
+            background: url(#{$src}/support/check-black.png) no-repeat 0 50%;
+            padding-left: 23px;
+            margin-bottom: 15px;
+        }
+        .img{
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #ddd;
+            position: relative;
+            img{
+                object-fit: cover;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        p{
+            font-size: var(--font-size-body);
+            color: #555;
+            margin-top: 15px;
+            @media (max-width: map.get($media,lg)) {
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+    }
+    .sub-item{
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        gap: 20px;
+        @media (max-width: map.get($media,lg)) {
+            width: 100%;
+        }
+        @media (max-width: map.get($media,xl)) {
+            grid-template-columns: repeat(2,minmax(0,1fr));
+        }
+        @media (max-width: map.get($media,md)) {
+            grid-template-columns: repeat(1,minmax(0,1fr));
+        }
+    }
+    .paging-area{
+        grid-column: -1 / 1;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .office-list-item{
+        > a{
+            display: block;
+            border: 1px solid #d8d8d8;
+            background-color: #fff;
+            transition: all 0.25s ease-in-out;
+            border-radius: 15px;
+            padding: 7px;
+            
+            .office-list-img{
+                width: 100%;
+                height: 140px;
+                overflow: hidden;
+                border-radius: 15px;
+                background: #ddd;
+                position: relative;
+                img{
+                    object-fit: cover;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%) scale(1);
+                    width: 100%;
+                    height: 100%;
+                    transition: all 5s ease-in-out;
+                }
+            }
+            .office-list-info{
+                padding: 20px 10px;
+                h3{
+                    font-weight: 400;
+                    color: #000;
+                    font-size: 19px;
+                    margin-bottom: 20px;
+                }
+            }
+            &:hover,
+            &:focus{
+                border-color: var(--brand-color);
+                box-shadow: 0 0 11px rgba(33,33,33,.2);
+                outline: none;
+                .office-list-img{
+                    img{
+                        transform: translate(-50%,-50%) scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+.text-check{
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    font-size: var(--font-size-body);
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    transition: all 0.25s ease-in-out;
+    input{
+        position: absolute;
+        width: 1px;height: 1px;
+        overflow: hidden;
+    }
+    &:has(input:checked){
+        border-color: var(--brand-color);
+        background-color: var(--brand-color);
+        color: #fff;
+    }
+    &:has(input:disabled){
+        pointer-events : none;
+        background-color: #f9f9fa;
+        color: #888;
+    }
+}
+.time-list{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5,minmax(0,1fr));
+    @media (max-width: map.get($media,lg)) {
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+    @media (max-width: map.get($media,md)) {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+.selected-day-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    b{
+        color: #000;
+    }
+    > div{
+        display: flex;
+        gap:0 5px;
+        align-items: center;
+    }
+    .btn-del{
+        border: 0;
+        background-color: var(--brand-color);
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+        &::before{
+            background-image: url(#{$src}/icon-del-white.png);
+        }
+    }
+}
+
+.office-share-app{
+    .border-areement{
+        .areement-select{
+            display: block;
+            margin-top: 15px;
+            p{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

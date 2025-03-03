@@ -10,6 +10,7 @@ import postCss from 'gulp-postcss';
 
 import gulpSass from 'gulp-sass';
 import sassModern from 'sass'; // 최신 Sass 모듈을 sass-modern으로 설정
+import sourcemaps from 'gulp-sourcemaps';
 
 import imagemin from 'gulp-imagemin';
 import imageminMozjpeg from 'imagemin-mozjpeg';
@@ -69,8 +70,10 @@ function html() {
 function styles() {
   return gulp.src(`${paths.scss}/**/*.scss`, { allowEmpty: true })
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sassCompiler({ outputStyle: 'expanded', sourceMap: true }).on('error', sassCompiler.logError))
     .pipe(postCss([autoprefixer()]))  // cssnano() 제거
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.distCss))
     .pipe(server.stream());
 }

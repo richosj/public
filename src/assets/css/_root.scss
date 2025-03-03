@@ -56,7 +56,7 @@ $src : "#{$src}";
     --primary-color: #1764dc;
     --secondary-color: #c6c6c6;
     --success-color: #2da34f;
-    --warning-color: #ffa81f;
+    --warning-color: #ff5f1f;
     --danger-color: #d22c2c;
     --info-color: #703ad2;
     --light-color: #f8f9fa;
@@ -148,6 +148,20 @@ body, th, td, input, select, textarea, button{
 a:active,a:hover {
     text-decoration: none
 }
+
+.sr-only{
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    //clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+}
+
 
 .transition-ease{
     transition: all 0.15s ease;
@@ -249,8 +263,8 @@ a:active,a:hover {
     align-items: center;
     border: 1px solid #c6c6c6;
     border-radius: var(--input-border-radius);
-    padding: 0 20px;
-    height: var(--input-height);
+    padding: 4px 20px;
+    min-height: var(--input-height);
     strong{
         position: relative;
         display: inline-block;
@@ -304,6 +318,9 @@ a:active,a:hover {
     border-radius: 10px;
     transition: all 0.25s;
     padding: 30px 38px;
+    @media (max-width: map.get($media,lg)) {
+        padding: 15px 18px;
+    }
     &-hgroup{
         position: relative;
         border-bottom: 1px solid #dedede;
@@ -441,32 +458,6 @@ a:active,a:hover {
     th,
     td{border: 0;padding:6px;}
 }
-
-
-/* 1차 사업  추 후 커스텀
-root에서 변수만 변경하면 전체 적용 될 수 있게 하는 영역
-*/
-
-.btn-light{
-    background-color: #fbfbfb;
-    border: 1px solid #c6c6c6;
-    color: #555555;
-}
-.btn-dark{
-    background-color: #333333;
-    color: #fff;
-}
-.active\:btn-dark{
-    background-color: #333333;
-    color: #fff;
-    background-color: #333333;
-}
-.hover\:btn-light{
-    background-color: #fbfbfb;
-    color: #555555;
-    border: 1px solid #c6c6c6;
-}
-
 .flex-basis-410{
     flex-basis: 410px;
 }
@@ -487,4 +478,74 @@ root에서 변수만 변경하면 전체 적용 될 수 있게 하는 영역
 }
 .html, body{
     font-weight: 400;
+}
+
+.content-wrapper{
+    padding: 30px 40px;
+    border: 1px solid #c6c6c6;
+    border-radius: 10px;
+    +.content-wrapper{margin-top: 20px;}
+    @media (max-width: map.get($media,lg)) {
+        padding: 20px 16px;
+    }
+}
+
+.program{
+    &-header{
+        padding-bottom: 30px;
+        &.pb-none{
+            padding-bottom: 0;
+        }
+        &:has(button){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: map.get($media,lg)) {
+            padding-bottom: 20px;
+        }
+    }
+    &-title{
+        color: #000;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 1;
+        @media (max-width: map.get($media,lg)) {
+            font-size: 16px;
+        }
+    }
+    &-desc{
+        color: #1d1d1d;
+        font-size: 15px;
+        margin-top: 15px;
+        @media (max-width: map.get($media,lg)) {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    }
+    &-content{
+        &-title{
+            line-height: 1;
+            color: #000;
+            font-size: 17px;
+            font-weight: 700;
+            padding-bottom: 15px;
+            @media (max-width: map.get($media,lg)) {
+                font-size: 13px;
+                padding-bottom: 10px;
+            }
+            &:has(.side-utils){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            em{
+                font-style: normal;
+                font-family: var(--font-size-body);
+                color: #8e8e8e;
+                font-weight: 500;
+                margin-left: 10px;
+            }
+        }
+    }
 }

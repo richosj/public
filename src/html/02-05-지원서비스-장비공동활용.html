@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./include/ng-header.html')
+        @@include('./include/ng-mobile-header.html')
+
+        @@include('./include/ng-subtop.html',{
+        "title" : "지원서비스",
+        "title2" : "장비 공동활용",
+        })
+        <div class="main-content">
+            <div class="row">
+                <div class="container">
+                    <div class="startup-intro">
+                        <div class="content-hgroup">
+                            <div><strong>장비 공동활용</strong></div>
+                            <div class="in-charge">
+                                <!-- <span class="team-name">담당부서 : <em>기업협력팀</em></span> -->
+                                <span class="team-info">문의(기업지원센터) : <em>063-720-0500</em></span>
+                                <!-- <button type="button">담당자정보</button> -->
+                            </div>
+                        </div>
+
+                        <div class="ng-tab" role="tablist">
+                            <button type="button" class="ng-tab-item selected" data-tab="overview" role="tab" aria-selected="true" tabindex="0">사업개요</button>
+                            <button type="button" class="ng-tab-item" role="tab" data-tab="analysis" aria-selected="false" tabindex="-1">시험분석</button>
+                            <button type="button" class="ng-tab-item" role="tab" data-tab="equipment" aria-selected="false" tabindex="-1">시설/장비사용</button>
+                        </div>
+
+                        <div class="ng-tab-content">
+                            <div class="ng-tab-panel show" role="tabpanel" data-id="overview">
+                                <div class="content-wrapper">
+                                    <div class="program-container">
+                                        <div class="program-header">
+                                            <div class="program-title">사업개요</div>
+                                            <div class="program-desc">국내 식품산업의 기술경쟁력 향상을 위한 입주기업 및 유관기관 등에 식품진흥원의 기술 및
+                                                생산 시설·장비를
+                                                공동활용 지원</div>
+                                        </div>
+                                        <div class="program-content">
+                                            <div class="info-card-container">
+                                                <div class="info-card">
+                                                    <div class="info-card-title">지원대상</div>
+                                                    <div class="info-card-content">전국 식품 또는 식품연관 기업 · 기관</div>
+                                                    <div class="icon type1"></div>
+                                                </div>
+                                                <div class="info-card">
+                                                    <div class="info-card-title">사업기간</div>
+                                                    <div class="info-card-content">'24. 1. 22.(월) ~ 지원금 소진시까지</div>
+                                                    <div class="icon type2"></div>
+                                                </div>
+                                                <div class="info-card">
+                                                    <div class="info-card-title">신청방법</div>
+                                                    <div class="info-card-content">(대표번호) 063-720-0500</div>
+                                                    <div class="icon type3"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="program-content-title mt-40 mobile:mt-20">
+                                                <b>지원규모</b> <em>최대 2천만원</em>
+                                            </div>
+
+                                            <div>
+
+                                                <div class="cs-table-scroll_info ">좌우로 스크롤하시면 내용이 보입니다.</div>
+                                                <div class="gs-scrolly">
+                                                    <div class="gs-scroll-inner" style="min-width:700px;">
+                                                        <div class="cs-table cs-table-fullline">
+                                                            <table>
+                                                                <caption>지원규모</caption>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col" rowspan="2">구분</th>
+                                                                        <th scope="col" colspan="2">기업 최대지원금 * (천원)</th>
+                                                                        <th scope="col" colspan="3">기업 지원비율(%)</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="col">입주 및 청년기업</th>
+                                                                        <th scope="col">입주 외 중소기업 및 기타(일반)기업</th>
+                                                                        <th scope="col">입주 및 청년기업 *</th>
+                                                                        <th scope="col">입주 외 중소기업 **</th>
+                                                                        <th scope="col">기타(일반) ***</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="tac"><strong>개방형장비<br>공동활용</strong>
+                                                                        </td>
+                                                                        <td class="tac">20,000</td>
+                                                                        <td class="tac">10,000</td>
+                                                                        <td class="tac">70</td>
+                                                                        <td class="tac">40</td>
+                                                                        <td class="tac">20</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <ul class="cs-list-icon mt10 fz-small">
+                                                        <li>국가식품클러스터 입주기업(식품벤처센터, 청년식품창업센터 포함) 및
+                                                            청년기업(만19∼만39세)</li>
+                                                        <li><i class="list-icon">**</i>&nbsp;식품산업 연관 중소기업 및 예비창업자(창업지원사업
+                                                            등 증빙서류)
+                                                        </li>
+                                                        <li><i class="list-icon">***</i>&nbsp; &nbsp;식품산업 연관 중견기업(대기업
+                                                            제외), 대학,
+                                                            연구소 및 관계기관 등</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- e: 사업개용 끝 -->
+                                <div class="content-wrapper">
+                                    <div class="program-container">
+                                        <div class="program-header pb-none">
+                                            <div class="program-title pb-none">지원내용</div>
+                                        </div>
+                                        <div class="program-content">
+                                            <div class="program-content-title mt-40 mobile:mt-20"><b>지원절차</b></div>
+                                            <div class="application-steps">
+                                                <div class="step-card">
+                                                    <div class="step-header">
+                                                        <span class="step-check">✓</span>
+                                                        <span class="step-number">STEP 1</span>
+                                                        <span class="step-title">문의 및 신청</span>
+                                                    </div>
+                                                    <div class="step-content">
+                                                        <div class="step-item">Q&A 문의 or 대표번호</div>
+                                                        <div class="step-item">온라인 신청서 작성</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="step-card">
+                                                    <div class="step-header">
+                                                        <span class="step-check">✓</span>
+                                                        <span class="step-number">STEP 2</span>
+                                                        <span class="step-title">담당자 확인</span>
+                                                    </div>
+                                                    <div class="step-content">
+                                                        <div class="step-item h-all">담당자 안내
+                                                            <p>신청/의뢰 내용 협의 및 견적서 발급 등</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="step-card">
+                                                    <div class="step-header">
+                                                        <span class="step-check">✓</span>
+                                                        <span class="step-number">STEP 3</span>
+                                                        <span class="step-title">접수</span>
+                                                    </div>
+                                                    <div class="step-content">
+                                                        <div class="step-item h-all">신청/의뢰 접수</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="program-content-title mt-40 mobile:mt-20"><b>지원항목</b></div>
+                                            <div class="cs-table cs-table-fullline">
+                                                <table>
+                                                    <caption>지원항목</caption>
+                                                    <colgroup>
+                                                        <col class="width230 mo-width90">
+                                                        <col class="width230 mo-width90">
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" colspan="2">구분</th>
+                                                            <th scope="col">지원 내용</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="tac" rowspan="3">장비활용</td>
+                                                            <td class="tac">생산장비 공동활용</td>
+                                                            <td rowspan="2">
+                                                                제품(식품) 개발, 시험 생산 및 연구 등을 위한 식품진흥원 장비활용 지원<br>
+                                                                - (생산) 기업이 식품진흥원 내 생산장비를 직접 사용하여 시제품 제작<br>
+                                                                - (연구) 기업이 식품진흥원 내 연구장비를 직접 사용하여 시험·분석<br>
+                                                                (담당자 안내에 따라 안전교육 및 장비운영 방법 지도 후 장비 활용)
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tac">연구장비 공동활용</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tac">공유주방 실증지원</td>
+                                                            <td>
+                                                                공유주방 시행 전 기업의 시제품 생산 및 시험분석 실증 지원<br>
+                                                                - 공유주방 제조 환경 적합성 검증 및 시제품 시험분석을 통한 품질 테스트
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tac" colspan="2">시험․분석</td>
+                                                            <td>
+                                                                식품진흥원 직원이 연구장비를 사용하여 시험분석 결과 제공<br>
+                                                                - 포장, 품질안전, 동물시험 및 제품평가 등의 시험분석 수행<br>
+                                                                (자가품질검사의 경우 식품·의약품분야 시험·검사 등에 관한 법률 시행규칙[별표6]에 의거하여 지원이
+                                                                불가할 수
+                                                                있음)
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="program-content-title mt-40 mobile:mt-20"><b>지원대상</b></div>
+
+                                            <div class="cs-table-scroll_info ">좌우로 스크롤하시면 내용이 보입니다.</div>
+                                            <div class="gs-scrolly">
+                                                <div class="gs-scroll-inner" style="min-width:700px;">
+                                                    <div class="cs-table cs-table-fullline tac">
+                                                        <table>
+                                                            <caption>지원대상</caption>
+                                                            <colgroup>
+                                                                <col class="width230 mo-width150">
+                                                                <col>
+                                                                <col>
+                                                                <col class="width230 mo-width150">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" rowspan="2">구분</th>
+                                                                    <th scope="col" rowspan="2">대상 기업 및 기관</th>
+                                                                    <th scope="col" class="text-brand" colspan="2">
+                                                                        (필수)제출서류
+                                                                    </th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="text-brand" scope="col">기업별</th>
+                                                                    <th class="text-brand" scope="col">공통</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td rowspan="2">입주 및 청년기업</td>
+                                                                    <td>국가식품클러스터 분양·벤처기업</td>
+                                                                    <td class="text-brand">-</td>
+                                                                    <td class="text-brand" rowspan="5">사업자등록증</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>대표자의 연령이 만19세~39세 이하 중소기업</td>
+                                                                    <td class="text-brand">대표자의 연령을 증빙할 수 있는공적서류 (주민등록초본
+                                                                        등)
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="2">입주 외 중소기업</td>
+                                                                    <td>중소기업</td>
+                                                                    <td class="text-brand">중소기업확인서</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>예비창업자</td>
+                                                                    <td class="text-brand">사실증명원 또는 창업지원사업수료증</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>기타(일반)</td>
+                                                                    <td>중견기업(대기업 제외), 대학, 연구소, 및 관계기관 등</td>
+                                                                    <td class="text-brand">-</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="list-round mt-20">
+                                                <li>기업의 필수 제출서류 미제출 시 ‘기타(일반) 기업’ 지원비율(할인율) 적용</li>
+                                                <li>타 국가지원금 지원 사업과 중복지원 불가</li>
+                                            </ul>
+
+                                            <div class="program-content-title mt-40 mobile:mt-20">
+                                                <b>센터별 담당자 연락처(이메일)</b>
+                                                <div class="side-utils">*(대표번호) 063-720-0500</div>
+                                            </div>
+                                            <div class="cs-table cs-table-fullline tac">
+                                                <table>
+                                                    <caption>담당자 연락처</caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col class="width230 mo-width150">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">팀명</th>
+                                                            <th scope="col">담당자 이메일</th>
+                                                            <th scope="col">비고</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>식품패키징센터</td>
+                                                            <td>packaging@foodpolis.kr</td>
+                                                            <td rowspan="7">-</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>식품품질안전센터</td>
+                                                            <td>safety@foodpolis.kr</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>식품기능성평가지원센터</td>
+                                                            <td>function@foodpolis.kr</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>기능성원료은행</td>
+                                                            <td>standard@foodpolis.kr</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>파일럿플랜트</td>
+                                                            <td>pilot@foodpolis.kr</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>기능성식품제형센터</td>
+                                                            <td>style@foodpolis.kr</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>HMR산업화센터</td>
+                                                            <td>hmr@foodpolis.kr</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="list-round mt-20">
+                                                <li> 식품·연관산업 입주 외 중소기업 등 : [입주 외 중소기업 등]이 제출서류 미제출 시 기업부담률 기타 기업에 해당됨
+                                                </li>
+                                                <li> 사실증명원 : 전국 세무서 및 국세청홈페이지(홈텍스)에서 발급 가능</li>
+                                                <li> 국가연구개발사업비로 접수 시 국가보조금 중복지원 불가(기업부담률 100%)</li>
+                                            </ul>
+                                            <div class="cont-req-result-cus mt-40">
+                                                <h4>접수 및 결과문의</h4>
+                                                <div class="t_cont">
+                                                    <div class="t_item">
+                                                        <strong>식품패키징</strong>
+                                                        <span>packaging@foodpolis.kr</span>
+                                                    </div>
+                                                    <div class="t_item">
+                                                        <strong>식품품질안전</strong>
+                                                        <span>safety@foodpolis.kr</span>
+                                                    </div>
+                                                    <div class="t_item">
+                                                        <strong>기능성평가지원</strong>
+                                                        <span>function@foodpolis.kr</span>
+                                                    </div>
+                                                    <div class="t_item">
+                                                        <strong>기능성원료은행</strong>
+                                                        <span>standard@foodpolis.kr</span>
+                                                    </div>
+                                                    <div class="t_item">
+                                                        <strong>파일럿플랜트</strong>
+                                                        <span>pilot@foodpolis.kr</span>
+                                                    </div>
+                                                    <div class="t_item">
+                                                        <strong>기능성식품제형</strong>
+                                                        <span>style@foodpolis.kr</span>
+                                                    </div>
+                                                    <div class="t_item">
+                                                        <strong>HMR산업화</strong>
+                                                        <span>hmr@foodpolis.kr</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- e: 지워내용 끝 -->
+                            </div>
+                            <!-- e: 사업개요 끝 -->
+                            <div class="ng-tab-panel" role="tabpanel" data-id="analysis">
+                                <!-- 이 부분 개발인거 같아서 스크립트 미작성 -->
+                                <div class="ng-tab2" role="tablist">
+                                    <button type="button" class="ng-tab-item selected" role="tab"
+                                        aria-selected="true">개방형 장비지원사업</button>
+                                    <button type="button" class="ng-tab-item" role="tab"
+                                        aria-selected="flase">KOLAS시험</button>
+                                    <button type="button" class="ng-tab-item" role="tab"
+                                        aria-selected="flase">ISTA시험</button>
+                                    <button type="button" class="ng-tab-item" role="tab"
+                                        aria-selected="flase">GLP시험</button>
+                                    <button type="button" class="ng-tab-item" role="tab"
+                                        aria-selected="flase">식약처LIMS시험</button>
+                                </div>
+
+                                <div class="content-wrapper">
+                                    <div class="program-container">
+                                        <div class="program-header">
+                                            <div class="program-title">시험ㆍ분석 의뢰 이용안내</div>
+                                            <button class="btn-primary-outline">메뉴얼 다운로드</button>
+                                        </div>
+                                        <!-- 교체 되는 내용 -->
+                                        <div class="text-grid">
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>신청방법</strong>
+                                                </div>
+                                                <div class="text-area">
+                                                    인터넷
+                                                </div>
+                                            </div>
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>신청자격</strong>
+                                                </div>
+                                                <div class="text-area">
+                                                    누구나 신청가능
+                                                </div>
+                                            </div>
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>처리기간</strong>
+                                                </div>
+                                                <div class="text-area">
+                                                    시험·분석 별 상이
+                                                </div>
+                                            </div>
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>신청서</strong>
+                                                </div>
+                                                <div class="text-area">신청인·세금계산서발급 정보입력, 지원대상 확인, 시험·분석항목 및 시료정보 입력
+                                                </div>
+                                            </div>
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>구비서류</strong>
+                                                </div>
+                                                <div class="text-area">지원 대상 필수증빙자료(중소기업확인서 등)를 함께 제출
+                                                </div>
+                                            </div>
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>수수료</strong>
+                                                    <button class="btn-primary-outline">이용료 안내</button>
+                                                </div>
+                                                <div class="text-area">한국식품산업클러스터진흥원 수수료 산정기준을 따름
+                                                </div>
+                                            </div>
+                                            <div class="text-group full">
+                                                <div class="text-group-header">
+                                                    <strong>준수사항</strong>
+                                                </div>
+                                                <div class="text-area">
+                                                    <ol id="reqRule" class="cs-list-number">
+                                                        <li>시험ᆞ분석 결과는 신청인의 내부참고용으로 홍보, 선전, 광고 및 법적 증빙용으로 사용을 금합니다.</li>
+                                                        <li>수수료 입금 및 시료접수 확인 후 착수되어, 지연시 발급 예정일 또한 지연될 수 있습니다.</li>
+                                                        <li>의뢰취소는 시험 착수 이전에 [별지 제10호] 서식의 취소 신청서를 제출하셔야 합니다.</li>
+                                                        <li>식품진흥원 예산 및 접수현황 등에 따라 지원이 조기 마감될 수 있습니다.</li>
+                                                        <li>신청인이 동일 또는 유사한 내용으로 타 보조금 사업과 중복 수행을 하는 경우, 식품진흥원은 해당 접수 건을
+                                                            취소 및 지원금액(보조금) 전부를 환수할 수 있습니다.</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 교체 되는 내용 -->
+                                    </div>
+                                </div>
+
+                                <div class="space-block">
+                                    <a href="#" class="btn-primary-round">시험분석 의뢰 신청</a>
+                                </div>
+
+                                <div class="content-wrapper">
+                                    <div class="program-container">
+                                        <div class="program-header">
+                                            <div class="program-title">지원절차 안내</div>
+                                        </div>
+                                        <div class="program-content">
+                                            <div class="process-flow-container">
+                                                <!-- 시험분석의뢰절차 //-->
+
+                                                <div class="flow-user-role">
+                                                    <div class="m"></div>
+                                                    <div class="avatar">
+                                                        <span><img
+                                                                src="/dfip/static/front/common/images/platform/user-avatar.png"
+                                                                alt=""></span>
+                                                        <p class="user-color">의뢰인</p>
+                                                    </div>
+                                                    <div class="avatar">
+                                                        <span><img
+                                                                src="/dfip/static/front/common/images/platform/agent-avatar.png"
+                                                                alt=""></span>
+                                                        <p class="agent-color">진흥원</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="flow-column">
+                                                    <div class="flow-title">
+                                                        <p class="num">01</p>
+                                                        <strong>의뢰 및 시료접수</strong>
+                                                    </div>
+                                                    <div class="flow-detail">
+                                                        <!-- <div class="avatar-sm-box"><div class="avatar-sm"></div></div> -->
+                                                        <div>
+                                                            <strong>의뢰 신청서 제출</strong>
+                                                            <p>* 디지털식품정보플랫폼→시험분석의뢰</p>
+                                                            <strong>시료발송</strong>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flow-detail">
+                                                        <div>
+                                                            <strong>의뢰서 확인 후 시료요청</strong>
+                                                            <p>* 시험일정 및 시료양 확인</p>
+                                                            <strong>시료접수</strong>
+                                                            <p>* 취소 희망 시 시작일로부터 2일 전까지 &lt;붙임 4&gt; 제출</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flow-column">
+                                                    <div class="flow-title">
+                                                        <p class="num">02</p>
+                                                        <strong>견적서 확정</strong>
+                                                    </div>
+                                                    <div class="flow-detail">
+                                                        <div>
+                                                            <strong>견적서 수정요청/확정</strong>
+                                                            <p><u>* 견적서 확정 후 시험착수</u></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flow-detail">
+                                                        <div>
+                                                            <strong class="center">견적서 발행</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flow-column">
+                                                    <div class="flow-title">
+                                                        <p class="num">03</p>
+                                                        <strong>수수료 결제</strong>
+                                                    </div>
+                                                    <div class="flow-detail">
+                                                        <div>
+                                                            <strong>수수료 결제</strong>
+                                                            <p>* (시기) 선불 /후불, (방법) 카드/현금</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flow-detail">
+                                                        <div>
+                                                            <strong>수수료 입금 안내</strong>
+                                                            <p>ㆍ(카드) 플랫폼으로 결제</p>
+                                                            <p>ㆍ(현금) 메일로 세금계산서발행</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flow-column">
+                                                    <div class="flow-title">
+                                                        <p class="num">04</p>
+                                                        <strong>성적서(보고서) 발행</strong>
+                                                    </div>
+                                                    <div class="flow-detail">
+                                                        <div>
+                                                            <strong>성적서 확인</strong>
+                                                            <p>* 만족도 조사 후 다운로드 가능</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flow-detail">
+                                                        <div>
+                                                            <strong class="center">입금 확인 후 성적서 발행</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- e: 시험분석 끝 -->
+                            <div class="ng-tab-panel" role="tabpanel" data-id="equipment">
+                                <!-- 이 부분 개발인거 같아서 스크립트 미작성 -->
+                                <div class="ng-tab2" role="tablist">
+                                    <button type="button" class="ng-tab-item selected" role="tab" aria-selected="true">개방형 장비 지원사업</button>
+                                    <button type="button" class="ng-tab-item" role="tab" aria-selected="false">청년식품창업센터</button>
+                                </div>
+
+                                <div class="content-wrapper">
+                                    <div class="program-container">
+                                        <div class="program-header">
+                                            <div class="program-title">시설 장비 신청 구분</div>
+                                            <button class="btn-primary-outline">메뉴얼 다운로드</button>
+                                        </div>
+                                        <!-- 교체 되는 내용 -->
+                                        <div class="text-grid">
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>신청방법</strong>
+                                                </div>
+                                                <div class="text-area">
+                                                    인터넷
+                                                </div>
+                                            </div>
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>신청자격</strong>
+                                                </div>
+                                                <div class="text-area">
+                                                    누구나 신청가능
+                                                </div>
+                                            </div>
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>처리기간</strong>
+                                                </div>
+                                                <div class="text-area">
+                                                    시험·분석 별 상이
+                                                </div>
+                                            </div>
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>신청서</strong>
+                                                </div>
+                                                <div class="text-area">신청인·세금계산서발급 정보입력, 지원대상 확인, 시험·분석항목 및 시료정보 입력
+                                                </div>
+                                            </div>
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>구비서류</strong>
+                                                </div>
+                                                <div class="text-area">지원 대상 필수증빙자료(중소기업확인서 등)를 함께 제출
+                                                </div>
+                                            </div>
+                                            <div class="text-group">
+                                                <div class="text-group-header">
+                                                    <strong>수수료</strong>
+                                                    <button class="btn-primary-outline">이용료 안내</button>
+                                                </div>
+                                                <div class="text-area">한국식품산업클러스터진흥원 수수료 산정기준을 따름
+                                                </div>
+                                            </div>
+                                            <div class="text-group full">
+                                                <div class="text-group-header">
+                                                    <strong>준수사항</strong>
+                                                </div>
+                                                <div class="text-area">
+                                                    <ol id="reqRule" class="cs-list-number">
+                                                        <li>시험ᆞ분석 결과는 신청인의 내부참고용으로 홍보, 선전, 광고 및 법적 증빙용으로 사용을 금합니다.</li>
+                                                        <li>수수료 입금 및 시료접수 확인 후 착수되어, 지연시 발급 예정일 또한 지연될 수 있습니다.</li>
+                                                        <li>의뢰취소는 시험 착수 이전에 [별지 제10호] 서식의 취소 신청서를 제출하셔야 합니다.</li>
+                                                        <li>식품진흥원 예산 및 접수현황 등에 따라 지원이 조기 마감될 수 있습니다.</li>
+                                                        <li>신청인이 동일 또는 유사한 내용으로 타 보조금 사업과 중복 수행을 하는 경우, 식품진흥원은 해당 접수 건을
+                                                            취소 및 지원금액(보조금) 전부를 환수할 수 있습니다.</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <div class="text-group full">
+                                                <div class="text-group-header">
+                                                    <strong>안전교육 이수 방법</strong>
+                                                </div>
+                                                <div class="text-area">
+                                                    <ol id="reqRule" class="cs-list-number">
+                                                        <li>교육시간: 2시간 이상</li>
+                                                        <li>교육방법: 온라인 교육
+                                                            <div>
+                                                                - 연구실 안전관리시스템: http://edu.labs.go.kr (국가연구안전정보시스템에서 접속하셔도 됩니다.)접속후 => 로그인 => 수강신청<br>
+                                                                - 국가과학기술인력개발원: https://cyber.kird.re.kr/main.do 접속후 => 로그인 => 수강신청 => 과정명 "안전" 검색 후 선택
+                                                            </div>
+                                                        </li>
+                                                        <li>이수과목 선택</li>
+                                                        <li>수료증(2시간 이상) 제출</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 교체 되는 내용 -->
+                                    </div>
+                                </div>
+
+                                <div class="space-block">
+                                    <a href="#" class="btn-primary-round">시험장비 의뢰 신청</a>
+                                </div>
+
+                                <div class="content-wrapper">
+                                    <div class="program-container">
+                                        <div class="program-header">
+                                            <div class="program-title">지원절차 안내</div>
+                                        </div>
+                                        <div class="program-content">
+                                            <div class="process-flow-container">
+                                                <div class="flow-user-role">
+                                                  <div class="m"></div>
+                                                  <div class="avatar">
+                                                    <span><img src="/dfip/static/front/common/images/platform/user-avatar.png" alt=""></span>
+                                                    <p class="user-color">의뢰인</p>
+                                                  </div>
+                                                  <div class="avatar">
+                                                    <span><img src="/dfip/static/front/common/images/platform/agent-avatar.png" alt=""></span>
+                                                    <p class="agent-color">진흥원</p>
+                                                  </div>
+                                                </div>
+                                                <!-- 시설장비신청절차 //-->
+                                                <div class="flow-column">
+                                                  <div class="flow-title">
+                                                    <p class="num">01</p>
+                                                    <strong>시설∙장비 사용신청</strong>
+                                                  </div>
+                                                  <div class="flow-detail">
+                                                    <!-- <div class="avatar-sm-box"><div class="avatar-sm"></div></div> -->
+                                                    <div>
+                                                      <strong>시설장비 사용신청</strong>
+                                                      <p>* 디지털식품정보플랫폼→시설장비신청</p>
+                                                      <p>* 사용일로부터 최소 2일전</p>
+                                                    </div>
+                                                  </div>
+                                          
+                                                  <div class="flow-detail">
+                                                    <div>
+                                                      <strong>신청 확인</strong>
+                                                      <p>* 서약서, 안전교육 수료증 확인</p>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                          
+                                                <div class="flow-column">
+                                                  <div class="flow-title">
+                                                    <p class="num">02</p>
+                                                    <strong>견적서 확정</strong>
+                                                  </div>
+                                                  <div class="flow-detail">
+                                                    <div>
+                                                      <strong>견적서 수정요청/확정</strong>
+                                                      <p><u>* 견적서 확정 후 결제가능</u></p>
+                                                    </div>
+                                                  </div>
+                                          
+                                                  <div class="flow-detail">
+                                                    <div>
+                                                      <strong>견적서 발행</strong>
+                                                      <p>* 실제 사용시간 기준 발행(최소 2시간)</p>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                          
+                                                <div class="flow-column">
+                                                  <div class="flow-title">
+                                                    <p class="num">03</p>
+                                                    <strong>수수료 결제</strong>
+                                                  </div>
+                                                  <div class="flow-detail">
+                                                    <div>
+                                                      <strong>수수료 결제</strong>
+                                                      <p><u>* (시기) 선불 /후불, (방법) 카드/현금</u></p>
+                                                    </div>
+                                                  </div>
+                                          
+                                                  <div class="flow-detail">
+                                                    <div>
+                                                      <strong>수수료 입금 안내</strong>
+                                                      <p>* (카드) 플랫폼으로 결제</p>
+                                                      <p>* (현금) 메일로 세금계산서발행</p>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                          
+                                                <div class="flow-column">
+                                                  <div class="flow-title">
+                                                    <p class="num">04</p>
+                                                    <strong>시설∙장비 사용</strong>
+                                                  </div>
+                                                  <div class="flow-detail">
+                                                    <div>
+                                                      <strong class="center">진흥원 방문 및 사용</strong>
+                                                    </div>
+                                                  </div>
+                                          
+                                                  <div class="flow-detail">
+                                                    <div>
+                                                      <strong class="center">안전교육 실시</strong>
+                                                      <strong class="center">시설·장비 안내</strong>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                          
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- e: 시설/장비사용 끝 -->
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('./include/ng-footer.html')
+
+    <div class="popup-wrap" style="display: none;">
+        <div class="popup-container" style="width:700px">
+            <!-- header -->
+            <div class="popup-header">
+                <span class="popup-header-text">시험분석 이용료</span>
+                <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+            </div>
+            <!-- content -->
+            <div class="popup-content">
+                <!-- popup-content-wrap -->
+                <div class="popup-content-wrap">
+                    <div class="pop-inner-con">
+                        
+                    </div>
+                    <div class="popup-footer">
+                        <button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>
+                        <button class="confirm-btn btn btn_primary" data-modal="closebtn">확인</button>
+                    </div>
+                </div>
+                <!-- popup-content-wrap -->
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll(".ng-tab .ng-tab-item");
+            const panels = document.querySelectorAll(".ng-tab-panel");
+
+            // 초기 상태: 첫 번째 탭만 표시, 나머지는 `display: none`
+            panels.forEach((panel, index) => {
+                if (!panel.classList.contains("show")) {
+                    gsap.set(panel, { display: "none", opacity: 0 });
+                }
+            });
+
+            tabs.forEach((tab, index) => {
+                tab.setAttribute("tabindex", index === 0 ? "0" : "-1");
+
+                tab.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    activateTab(index);
+                });
+
+                tab.addEventListener("keydown", (event) => {
+                    if (event.key === "ArrowRight") {
+                        activateTab((index + 1) % tabs.length);
+                    } else if (event.key === "ArrowLeft") {
+                        activateTab((index - 1 + tabs.length) % tabs.length);
+                    }
+                });
+            });
+
+            function activateTab(index) {
+                const selectedTab = tabs[index];
+                const selectedPanelId = selectedTab.getAttribute("data-tab");
+
+                tabs.forEach((tab, i) => {
+                    const isActive = i === index;
+                    tab.classList.toggle("selected", isActive);
+                    tab.setAttribute("aria-selected", isActive ? "true" : "false");
+                    tab.setAttribute("tabindex", isActive ? "0" : "-1");
+                });
+
+                panels.forEach((panel) => {
+                    const isTarget = panel.getAttribute("data-id") === selectedPanelId;
+
+                    if (isTarget) {
+                        gsap.to(panel, {
+                            display: "block",
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.5,
+                            ease: "power2.out",
+                            onStart: () => (panel.style.display = "block")
+                        });
+                    } else {
+                        gsap.to(panel, {
+                            opacity: 0,
+                            y: 20,
+                            duration: 0.3,
+                            ease: "power2.in",
+                            onComplete: () => (panel.style.display = "none")
+                        });
+                    }
+                });
+
+                selectedTab.focus();
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

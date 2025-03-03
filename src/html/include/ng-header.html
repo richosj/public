@@ -1,8 +1,74 @@
+
+<link rel="stylesheet" href="./assets/js/vendor/splide.min.css">
+<script src="./assets/js/vendor/splide.min.js"></script>
+
+
 <header id="digital-header" class="dg-header">
+    <div class="topfix-notice">
+        <div class="topfix-container">
+            <div class="splide">
+                <div class="splide__slider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="slide__cont">
+                                    <span class="txt">디지털 식품정보플랫폼이 새롭게 개편하였습니다디지털 식품정보플랫폼이 새롭게 개편하였습니다디지털 식품정보플랫폼이 새롭게 개편하였습니다디지털 식품정보플랫폼이 새롭게 개편하였습니다디지털 식품정보플랫폼이 새롭게 개편하였습니다.</span>
+                                    <a href="#" class="link-view">자세히보기</a>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide__cont">
+                                    <span class="txt">디지털 식품정보플</span>
+                                    <a href="#" class="link-view">자세히보기</a>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide__cont">
+                                    <span class="txt">디지털 식품정보플랫폼이 새롭게 개편하였습니다디지털 식품정보플랫폼이 새롭게 개편하였습니다디지털 식품정보플랫폼이 새롭게 개편하였습니다디지털 식품정보플랫폼이 새롭게 개편하였습니다디지털 식품정보플랫폼이 새롭게 개편하였습니다.</span>
+                                    <a href="#" class="link-view">자세히보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="splide__ind">
+                    <div class="splide-fraction">
+                        <b id="current-slide"></b>
+                        <span>&#47;</span>
+                        <span id="total-slides"></span>
+                    </div>
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide"aria-controls="splide01-track">이전</button>
+                        <button class="splide__toggle" type="button">일시정지</button>
+                        <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide" aria-controls="splide01-track">다음</button>
+                    </div>
+                    
+                    <div class="ribbon-today">
+                        <label class="cs-checkbox">
+                            <input type="checkbox" id="todayClose">
+                            <i></i>
+                            <span>오늘 하루 열지 않기</span>
+                        </label>
+                    </div>
+                    <div class="topfix-close">
+                        <button type="button" id="topfixClose" title="배너 닫기"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="header-top">
         <div class="row">
             <div class="container">
-                <h1 class="brand"><a href="/" title="홈 바로가기"><span class="sr-only">디지털 식품정보플랫폼</span></a></h1>
+                <div class="header-brand-wrap">
+                    <h1 class="brand"><a href="/" title="홈 바로가기"><span class="sr-only">디지털 식품정보플랫폼</span></a></h1>
+                    <div class="subsidiary">
+                        <a href="/" target="_blank" title="새창 열림" class="logo1"><span class="sr-only">FOODPOLIS 한국식품산업클러스터진흥원</span></a>
+                        <a href="/fbip" target="_blank" title="새창 열림" class="logo2"><span class="sr-only">푸드e음</span></a>
+                    </div>
+                </div>
+                
                 <div class="user-util">
                     <a href="/">로그인</a>
                     <span class="bar"></span>
@@ -80,3 +146,77 @@
         <div class="nav-bg"></div>
     </div>
 </header>
+
+<script>
+    const slideFixBanner = document.querySelector('.topfix-notice');
+    const todayClose = document.querySelector('#todayClose'); 
+
+    document.getElementById("topfixClose").addEventListener("click" , () => {
+        gsap.to(slideFixBanner, {
+            marginTop: '-80px',
+            duration: 0.5,
+            ease: 'power2.out',
+            onComplete: () => {
+                slideFixBanner.style.display = 'none';
+                if (todayClose.checked) {
+                    document.cookie = 'hideTopBanner=true; path=/; max-age=' + (60 * 60 * 24); // 1일 유지
+                }
+            }
+        });
+    })
+    if (document.cookie.includes('hideTopBanner=true')) {
+        slideFixBanner.style.display = 'none';
+    } else {
+        if(slideFixBanner){
+            var topSlide = new Splide(".topfix-notice .splide", {
+                i18n: {
+                    prev: "이전 슬라이드",
+                    next: "다음 슬라이드",
+                    first: "첫 번째 슬라이드로 이동",
+                    last: "마지막 슬라이드로 이동",
+                    slideX: "%s번 슬라이드로 이동",
+                    pageX: "%s번 페이지로 이동",
+                    play: "자동 재생 시작",
+                    pause: "자동 재생 일시정지",
+                },
+                padding: 0,
+                gap: "0px",
+                type: "slide",
+                autoplay: true,
+                pagination: false,
+                arrows: true,
+                slideFocus: true, // 비활성 슬라이드에 있는 링크도 포커스 가능하게 만듦
+                focusableNodes: "a, button", // 포커스 가능한 노드를 a, button으로 제한
+                pauseOnHover: false,
+                pauseOnFocus: false,
+            });
+
+            const totalSlidesElement = document.getElementById("total-slides");
+            const currentSlideElement = document.getElementById("current-slide");
+            topSlide.on("mounted", function () {
+                const totalSlides = topSlide.length; // mounted 이후에 슬라이드 개수 가져오기
+                totalSlidesElement.textContent = totalSlides; // 총 슬라이드 개수 표시
+                currentSlideElement.textContent = topSlide.index + 1; // 초기 슬라이드 인덱스
+            });
+
+            topSlide.on("move", function (newIndex) {
+                currentSlideElement.textContent = newIndex + 1; // 슬라이드 변경 시 인덱스 업데이트
+            });
+
+            const playPauseButton = document.querySelector(".splide__toggle");
+            let isPlaying = true;
+
+            playPauseButton.addEventListener("click", () => {
+            if (isPlaying) {
+                topSlide.Components.Autoplay.pause();
+                playPauseButton.textContent = "재생";
+            } else {
+                topSlide.Components.Autoplay.play();
+                playPauseButton.textContent = "일시정지";
+            }
+            isPlaying = !isPlaying;
+            });
+            topSlide.mount();
+        }
+    }
+</script>

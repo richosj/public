@@ -57,7 +57,11 @@ a:active,a:hover {
     color: var(--brand-color);
 }
 .com-files-list li > a, .com-files-list li > strong{
-    color: var(--brand-color);
+    //color: var(--brand-color);
+    color: #21793b;
+}
+.com-files-list li+li{
+    margin-top: 3px;
 }
 
 .search-comm{
@@ -75,8 +79,6 @@ a:active,a:hover {
     @media (max-width: map.get($media,lg)) {
         padding: 20px 12px;
     }
-    
-
     .search-comm-submit{
         @media (max-width: map.get($media,xl)) {
             flex: 1 1 100%; /* grow, shrink, basis */
@@ -227,10 +229,49 @@ a:active,a:hover {
     gap:0 8px;
 }
 
+.btn{
+    transition: all 0.25s;
+}
+
+.btn-light{
+    background-color: #fbfbfb;
+    border: 1px solid #c6c6c6;
+    color: #555555;
+}
+.btn-dark{
+    background-color: #333333;
+    color: #fff;
+    &:focus-visible{
+        outline:none;
+        background-color: #555555; /* 포커스 시 배경색 변경 */
+        border-color: #ffffff; /* 테두리 강조 */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.9); /* 더 강한 포커스 효과 */
+    }
+}
+.active\:btn-dark{
+    color: #fff;
+    background-color: #333333;
+    &:focus-visible{
+        outline:none;
+        background-color: #555555; /* 포커스 시 배경색 변경 */
+        border-color: #ffffff; /* 테두리 강조 */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.9); /* 더 강한 포커스 효과 */
+    }
+}
+.hover\:btn-light{
+    background-color: #fbfbfb;
+    color: #555555;
+    border: 1px solid #c6c6c6;
+}
+
+
 .input-combie{
     display: flex;
     gap:0 8px;
     .btn{
         white-space: nowrap;
     }
+}
+.tab-nav .active button, .tab-nav .active a{
+    color: var(--brand-color);
 }

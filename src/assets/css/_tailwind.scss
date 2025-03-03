@@ -106,16 +106,16 @@ $max-line-clamp: 6;
   .line-clamp-#{$i} {
     overflow: hidden;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: $i;
+    //-webkit-box-orient: vertical;
+    //-webkit-line-clamp: $i;
   }
 }
 
 .line-clamp-none {
   overflow: visible;
   display: block;
-  -webkit-box-orient: horizontal;
-  -webkit-line-clamp: none;
+  //-webkit-box-orient: horizontal;
+  //-webkit-line-clamp: none;
 }
 
 // Text Alignment Classes
@@ -196,7 +196,7 @@ $box-shadow-options: (
 }
 
 .shadow {
-  box-shadow: map.get($box-shadow-options, "default");
+  //box-shadow: map.get($box-shadow-options, "default");
 }
 
 // Opacity Classes

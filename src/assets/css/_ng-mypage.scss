@@ -2,8 +2,6 @@
 @use 'utils' as *;
 
 .board-search + .mypage-title{margin-top: 50px;}
-
-
 .help-txt{
     color: #666;
     font-size: 14px;
@@ -13,6 +11,123 @@
     gap:0 10px;
     justify-content: flex-end;
     margin-top: 30px;
+}
+
+
+.mypage-lnb{
+    flex-basis: 310px;
+    border: 1px solid #c6c6c6;
+    border-radius: 10px;
+    padding: 20px 30px;
+    @media (max-width: map.get($media,lg)) {
+        display: none;
+    }
+}
+.lnb{
+    line-height: 1;
+    
+    &-submenu,
+    &-subsubmenu{
+        display: none;
+    }
+    &-item{
+        &:has(.current){
+            .lnb-link{
+                &::after{
+                    transform: rotate(0deg) translateY(-50%);
+                }
+            }
+            ul:has(.current){
+                display: block;
+            }
+        }
+    }
+    &-link{
+        position: relative;
+        display: block;
+        background: url(#{$src}/mypage/lnb.png) no-repeat right 10px center;
+        font-weight: 700;
+        color: #000;
+        font-size: 19px;
+        padding: 10px 24px;
+        &::after{
+            content:"";
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: rotate(-90deg) translateX(25%);
+            width: 12px;
+            height: 6px;
+            background: url(#{$src}/mypage/down@12x6.png);
+            transition: all 0.15s;
+        }
+    }
+    &-submenu{
+        padding: 10px 0;
+    }
+    &-subitem{
+        background-color: #f6f6f6;
+        border-radius: 5px;
+        border: 1px solid #f6f6f6;
+        &:not(:first-child){margin-top: 4px;}
+        &:has(.current){
+            border-color: #2da34f;
+            ul:has(.current){
+                display: block;
+            }
+        }
+        &:has(ul.open){
+            border-color: #2da34f;
+        }
+    }
+    &-sublink{
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 40px;
+        padding-left: 48px;
+        color: #555555;
+        font-size: 17px;
+        &::after{
+            content:"";
+            display: inline-block;
+            position: absolute;
+            left: 27px;
+            top: 50%;
+            transform: rotate(0) translateY(-50%);
+            width: 12px;
+            height: 6px;
+            background: url(#{$src}/mypage/down@12x6.png);
+        }
+    }
+    &-subsubmenu{
+        padding-left: 55px;
+        padding-bottom: 15px;
+    }
+    &-subsubitem{
+        &:not(:first-child){
+            margin-top: 10px;
+        }
+    }
+    &-subsublink{
+        display: flex;
+        align-items: center;
+        color: #555;
+        font-size: 15px;
+        gap: 0 4px;
+        &.current,
+        &:hover,
+        &:focus{
+            color: var(--brand-color);
+        }
+        &::before{
+            content:"-";
+        }
+    }
+    .open{
+        display: block;
+    }
 }
 
 .table-wrapper{
@@ -57,9 +172,11 @@
         position: relative;
         vertical-align: middle;
         color: #1d1d1d;
+        white-space: nowrap;
         font-weight: 400;
         padding-left: 10px;
         flex-basis: 140px;
+        flex-shrink: 0;
         @media (max-width: map.get($media,lg)) {
             flex-basis: auto;
         }
@@ -90,16 +207,21 @@
         }
     }
     .search-input{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(0,1fr));
         flex-grow: 1;
         gap:0 10px;
         select.cs-input{
-            width: 170px;
+            width: 100%;
         }
         .input-keyword{
             flex-grow: 1;
+            @media (max-width: map.get($media,lg)) {
+                width: 100%;
+            }
         }
-        @media (max-width: map.get($media,md)) {
+        @media (max-width: map.get($media,lg)) {
+            display: flex;
             flex-direction: column;
             align-items: baseline;
             width: 100%;
@@ -252,8 +374,8 @@
         }
     }
     b{
-        font-weight: bold;
-        color:#2da34f
+        font-weight: 700;
+        color:#2b9d4c;
     }
     @media (max-width: map.get($media,lg)) {
         font-size: 14px;
@@ -544,7 +666,7 @@
         padding: 40px;
         margin-top: 40px;
         display: grid;
-        grid-template-columns: repeat(6,minmax(0,1fr));
+        grid-template-columns: repeat(7,minmax(0,1fr));
         @media (max-width: map.get($media,lg)) {
             padding: 20px;
             grid-template-columns: repeat(3,minmax(0,2fr));
@@ -831,17 +953,12 @@
                 color:#1d1d1d;
                 font-size: 21px;
                 @media (max-width: map.get($media,md)) {
-                    font-size: 1;
+                    font-size: 13px;
                 }
             }
         }
     }
 }
-
-
-/*
-    lnb
-*/
 
 .convention-list{
     padding-bottom: 30px;
@@ -1351,7 +1468,7 @@
             align-items: center;
             justify-content: center;
         }
-        &.success{;
+        &.success{
             border:1px solid #2da34f;
             background-color: #edfaf1;
             display: flex;
@@ -1363,6 +1480,36 @@
             right: 30px;
             top: 50%;
             transform: translateY(-50%);
+        }
+    }
+}
+
+.estimate-template{
+    &-header{
+        display: flex;
+        
+        gap:0 20px;
+        .requester-info{
+            width: 30%;
+            background-color: #f6f6f6;
+            font-weight: 700;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            border: 1px solid #ddd;
+        }
+        .issuer-info{
+            width: 70%;
+        }
+    }
+    &-footer{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap:0 20px;
+        padding-top: 30px;
+        dl{
+            text-align: right;
         }
     }
 }

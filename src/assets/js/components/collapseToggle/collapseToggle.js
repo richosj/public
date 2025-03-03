@@ -15,7 +15,7 @@ export function initCollapse() {
             const content = document.querySelector(`.${targetId}`);
             
             if (!content) {
-                console.error(`대상 컨텐츠를 찾을 수 없습니다: .${targetId}`);
+                //console.error(`대상 컨텐츠를 찾을 수 없습니다: .${targetId}`);
                 return;
             }
             

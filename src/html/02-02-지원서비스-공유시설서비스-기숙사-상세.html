@@ -22,8 +22,9 @@
                     <div class="content-hgroup">
                         <div><strong>공동기술개발 사업</strong></div>
                         <div class="in-charge">
-                            <span class="team-name">담당부서 : <em>기업협력팀</em></span>
-                            <span class="team-info">문의(기업지원센터) : <em>063-720-0500</em></span>
+                            <span class="team-name">담당부서 : <em>기능성평가지원센터</em></span>
+                            <span class="team-info">담당자 : <em>잭슨황</em></span>
+                            <button class="btn btn-round btn-sm btn-dark">이용문의</button>
                         </div>
                     </div>
                     <div class="office-share-app">
@@ -31,7 +32,7 @@
                             <div class="office-info border-box">
                                 <div class="hgroup">
                                     <h3><span>[청년식품창업센터] 기숙사</span></h3>
-                                    <a class="link-blank" href="#">중,단기 숙박시설</a>
+                                    <!-- <a class="link-blank" href="#">중,단기 숙박시설</a> -->
                                 </div>
                                 <div class="photo-slide splide">
                                     <div class="splide__arrows">
@@ -46,6 +47,14 @@
                                     </div>
                                     <div class="splide__track">
                                         <ul class="splide__list">
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
+                                            <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
                                             <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
                                             <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
                                             <li class="splide__slide"><img src="https://dummyimage.com/610x340" alt=""></li>
@@ -100,13 +109,16 @@
                             <div class="border-box">
                                 <div class="border-box-title">1. 타입 선택 <i class="cs-icon-req"></i></div>
                                 <div class="office-tab-auto">
-                                    <button type="button">기숙사(남)</button>
+                                    <button type="button" class="selected">기숙사(남)</button>
+                                    <button type="button">기숙사(여)</button>
+                                    <button type="button">기숙사(여)</button>
+                                    <button type="button">기숙사(여)</button>
+                                    <button type="button">기숙사(여)</button>
                                     <button type="button">기숙사(여)</button>
                                 </div>
                             </div>
-
                             <div class="border-box">
-                                <div class="border-box-title">2. 이용 희망일자 선택</div>
+                                <div class="border-box-title">이용 희망일자 선택</div>
                                 <div class="hope-calendar">
                                     <div id="calendar"></div>
                                     <div class="legend">
@@ -116,16 +128,150 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="border-box">
+                                <div class="selected-day-head">
+                                    <div>
+                                        <b>2025-02-02</b>
+                                        <button type="button" class="btn-del"></button>
+                                    </div>
+                                    <div>
+                                        <label class="cs-checkbox"><input type="checkbox"><i></i><span>전일사용</span></label>
+                                        <label class="cs-checkbox"><input type="checkbox"><i></i><span>반일사용</span></label>
+                                    </div>
+                                </div>
+                                <div class="time-list">
+                                    <label class="text-check">
+                                        <input type="checkbox">
+                                        <span>09:00</span>
+                                    </label>
+                                    <label class="text-check">
+                                        <input type="checkbox" disabled>
+                                        <span>09:00</span>
+                                    </label>
+                                    <label class="text-check">
+                                        <input type="checkbox">
+                                        <span>09:00</span>
+                                    </label>
+                                    <label class="text-check">
+                                        <input type="checkbox">
+                                        <span>09:00</span>
+                                    </label>
+                                    <label class="text-check">
+                                        <input type="checkbox">
+                                        <span>09:00</span>
+                                    </label>
+                                </div>
+                            </div>
                             
                             <div class="border-box">
-                                <div class="border-box-title">3. 예약관련 문의 및 요청 사항</div>
-                                <textarea name="" id="" rows="6" class="cs-input" placeholder="특별한 문의 및 요청 사항을 등록해 주시면 입력해 주세요 "></textarea>
+                                <div class="border-box-title">예약관련 문의 및 요청 사항</div>
+                                <div class="none">
+                                    <textarea name="" id="" rows="6" class="cs-input limited-textarea" placeholder="특별한 문의 및 요청 사항을 등록해 주시면 입력해 주세요 "></textarea>
+                                    <div class="text-right mt-5 input-group-head"><span></span><p class="counting"><b>0</b>/1500</p></div>
+                                </div>
                             </div>
+
+                            <div class="border-rows">
+                                <div class="border-rows-content">
+                                    <div class="border-areement">
+                                        <strong class="subject">개인정보 수집 및 이용 <b class="text-orange-700">(필수)</b></strong>
+                                        <div class="text-view">
+                                            <div class="cs-data-table">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width:33.33%">
+                                                        <col style="width:33.33%">
+                                                        <col style="width:33.33%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>수집 및 이용 목적</th>
+                                                            <th>수집 항목</th>
+                                                            <th>보유 및 이용기간</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">지원사업 신청 및 컨설팅</td>
+                                                            <td class="text-center">성명, 직위, 연락처, 이메일</td>
+                                                            <td class="text-center">2년</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="areement-select">
+                                            <p>귀하는 개인정보 수집‧이용에 대한 동의를 거부할 권리가 있으며&nbsp;동의를 거부할 경우 서비스 신청·이용 등에 제한을 받을 수 있습니다.</p>
+                                            <label class="cs-checkbox">
+                                                <input type="radio">
+                                                <i></i>
+                                                <span>동의</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio">
+                                                <i></i>
+                                                <span>미동의</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-rows">
+                                <div class="border-rows-content">
+                                    <div class="border-areement">
+                                        <strong class="subject">개인정보 제 3자 제공 동의<b class="text-orange-700">(필수)</b></strong>
+                                        <div class="text-view">
+                                            <div class="cs-data-table">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>제공 받는 자</th>
+                                                            <th>제공 받는 자의 이용목적</th>
+                                                            <th>제공항목</th>
+                                                            <th>보유 및 이용기간</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">고충저리자문단</td>
+                                                            <td class="text-center">고충 해결</td>
+                                                            <td class="text-center">성명, 직위, 연락처, 이메일</td>
+                                                            <td class="text-center">2년</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="areement-select">
+                                            <p>귀하는 개인정보 수집‧이용에 대한 동의를 거부할 권리가 있으며&nbsp;동의를 거부할 경우 서비스 신청·이용 등에 제한을 받을 수 있습니다.</p>
+                                            <label class="cs-checkbox">
+                                                <input type="radio">
+                                                <i></i>
+                                                <span>동의</span>
+                                            </label>
+                                            <label class="cs-checkbox">
+                                                <input type="radio">
+                                                <i></i>
+                                                <span>미동의</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="sec flex justify-end gap-x-12">
                         <button type="button" class="btn btn_default-outline btn_l">목록</button>
-                        <button type="button" class="btn btn-primary">이용신청</button>
+                        <button type="button" class="btn btn_primary">이용신청</button>
                     </div>
 
                 </div>
@@ -133,6 +279,61 @@
         </div>
         @@include('./include/ng-footer.html')
     </div>
+    <script>
+        const splideEl = document.querySelector(".splide");
+        if (splideEl) {
+            var splide = new Splide(".splide", {
+            i18n: {
+                prev: "이전 슬라이드",
+                next: "다음 슬라이드",
+                first: "첫 번째 슬라이드로 이동",
+                last: "마지막 슬라이드로 이동",
+                slideX: "%s번 슬라이드로 이동",
+                pageX: "%s번 페이지로 이동",
+                play: "자동 재생 시작",
+                pause: "자동 재생 일시정지",
+            },
+            padding: 0,
+            gap: "0px",
+            type: "slide",
+            autoplay: true,
+            pagination: false,
+            arrows: true,
+            slideFocus: true, // 비활성 슬라이드에 있는 링크도 포커스 가능하게 만듦
+            focusableNodes: "a, button", // 포커스 가능한 노드를 a, button으로 제한
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            });
 
+            const totalSlidesElement = document.getElementById("total-slides");
+            const currentSlideElement = document.getElementById("current-slide");
+            splide.on("mounted", function () {
+            const totalSlides = splide.length; // mounted 이후에 슬라이드 개수 가져오기
+            totalSlidesElement.textContent = totalSlides; // 총 슬라이드 개수 표시
+            currentSlideElement.textContent = splide.index + 1; // 초기 슬라이드 인덱스
+            });
+
+            splide.on("move", function (newIndex) {
+            currentSlideElement.textContent = newIndex + 1; // 슬라이드 변경 시 인덱스 업데이트
+            });
+
+            const playPauseButton = document.querySelector(".play-pause");
+            let isPlaying = true;
+
+            playPauseButton.addEventListener("click", () => {
+            if (isPlaying) {
+                splide.Components.Autoplay.pause();
+                playPauseButton.textContent = "재생";
+                //playPauseButton.setAttribute('aria-label', '자동 재생 시작');
+            } else {
+                splide.Components.Autoplay.play();
+                playPauseButton.textContent = "일시정지";
+                //playPauseButton.setAttribute('aria-label', '재생 일시정지');
+            }
+            isPlaying = !isPlaying;
+            });
+            splide.mount();
+        }
+    </script>
     </body>
 </html>

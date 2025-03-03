@@ -1,7 +1,7 @@
 @use "sass:map";
 @use 'utils' as *;
 
-.overlay{
+#overlay{
     position: fixed;
     left: 0;
     top: 0;
@@ -21,7 +21,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 105;
+    z-index: 1501;
     transition: all .6s;
     transform: translateY(-50px);
     &.active{
@@ -62,10 +62,10 @@
             background-color: #fff;
         }
         &::after{
-            transform: rotate(45deg);
+            transform: rotate(45deg) translateY(11px);
         }
         &::before{
-            transform: rotate(-45deg);
+            transform: rotate(-45deg) translateX(-11px);
         }
         }
         @media (max-width: map.get($media,lg)) {
@@ -144,7 +144,7 @@
             background: transparent;
             border: 0;
             padding-right: 10px;
-            &::placehodler{
+            &::placeholder {
                 color: #555;
             }
             &:focus{
